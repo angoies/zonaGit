@@ -1,0 +1,1454 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../t01/03_git_intro_merge/">
+      
+      
+        <link rel="next" href="../../t02/git_pages/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Git Teams - Zona Git / GitHub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#git-trabajo-en-grupos-teams" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Zona Git / GitHub" class="md-header__button md-logo" aria-label="Zona Git / GitHub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zona Git / GitHub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Git Teams
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Zona Git / GitHub" class="md-nav__button md-logo" aria-label="Zona Git / GitHub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Zona Git / GitHub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Intro
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Intro
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t01/01_git_y_github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git y GitHub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t01/02_git_local/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git Local
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t01/03_git_intro_merge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fusiones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Git Teams
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Git Teams
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion-al-trabajo-en-equipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introducción al trabajo en equipo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducción al trabajo en equipo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-primer-paso-fork-del-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Primer paso: fork del repositorio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-segundo-paso-clonar-el-repositorio-forkeado" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Segundo paso: clonar el repositorio forkeado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-trabajar-en-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. Trabajar en local
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-subir-los-cambios-a-repo-forkeado" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4. Subir los cambios a repo forkeado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-hacer-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5. Hacer Pull Request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-en-el-lado-de-repositorio-original" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6. En el lado de repositorio original
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-pr-que-se-acepta" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.7. PR que se acepta
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-actualizar-repositorios-clone-y-forked-upstream-del-original" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Actualizar repositorios clone y forked (upstream del original)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-git-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Git Flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-buenas-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Buenas prácticas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Buenas prácticas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-buenas-practicas-en-los-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Buenas prácticas en los commits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-buenas-practicas-en-los-pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Buenas prácticas en los PR
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-todo-revisar-ejercicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. TODO REVISAr Ejercicios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. TODO REVISAr Ejercicios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-ejercicio-01-hacer-proceso-pull-reqeust" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. Ejercicio 01: Hacer proceso Pull Reqeust
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-ejercicio-02-procesar-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2. Ejercicio 02: Procesar Pull request
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-enlaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Enlaces
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documentación
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Documentación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t02/git_pages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pages de GitHub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t02/git_mkdocs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git y mkdocs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fuentes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ficheros
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Utiles
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Utiles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t02/git_vscode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git y VSCode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dudas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dudas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git_como_drive_UTILES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git como Drive
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://m.xkcd.com/1597/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chiste
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t04_git_seguro_TODO/git_seguro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git Seguro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion-al-trabajo-en-equipo" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introducción al trabajo en equipo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducción al trabajo en equipo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-primer-paso-fork-del-repositorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Primer paso: fork del repositorio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-segundo-paso-clonar-el-repositorio-forkeado" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Segundo paso: clonar el repositorio forkeado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-trabajar-en-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. Trabajar en local
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-subir-los-cambios-a-repo-forkeado" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4. Subir los cambios a repo forkeado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-hacer-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5. Hacer Pull Request
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-en-el-lado-de-repositorio-original" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6. En el lado de repositorio original
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-pr-que-se-acepta" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.7. PR que se acepta
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-actualizar-repositorios-clone-y-forked-upstream-del-original" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Actualizar repositorios clone y forked (upstream del original)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-git-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Git Flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-buenas-practicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Buenas prácticas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Buenas prácticas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-buenas-practicas-en-los-commits" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Buenas prácticas en los commits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-buenas-practicas-en-los-pr" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Buenas prácticas en los PR
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-todo-revisar-ejercicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. TODO REVISAr Ejercicios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. TODO REVISAr Ejercicios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-ejercicio-01-hacer-proceso-pull-reqeust" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. Ejercicio 01: Hacer proceso Pull Reqeust
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-ejercicio-02-procesar-pull-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2. Ejercicio 02: Procesar Pull request
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-enlaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Enlaces
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="git-trabajo-en-grupos-teams">Git. Trabajo en grupos: teams<a class="headerlink" href="#git-trabajo-en-grupos-teams" title="Permanent link">&para;</a></h1>
+<h2 id="1-introduccion-al-trabajo-en-equipo">1. Introducción al trabajo en equipo<a class="headerlink" href="#1-introduccion-al-trabajo-en-equipo" title="Permanent link">&para;</a></h2>
+<p>Cuando se colabora en el desarrollo de algún proyecto de SW libre o al participar en un grupo de trabajo cerrado <strong>se hace un fork</strong> del repositorio para poder trabajar con él. Al hacerlo obtenemos una copia de todo el repositorio (con todo su historial) en nuestra cuenta de GitHub.</p>
+<p>Antes de seguir con este documento es recomendable consultar este enlace: <em>Difference between Git Clone and Git Fork:</em> <a href="https://www.toolsqa.com/git/difference-between-git-clone-and-git-fork/">https://www.toolsqa.com/git/difference-between-git-clone-and-git-fork/</a> donde se explica de forma gráfica la diferencia entre hacer un clone y un fork, y el proceso de colaboración a través de <strong>Pulls Requests (PR)</strong> que se puede resumir en esta figura:</p>
+<p><img alt="" src="../figuras/4.1_Pull-Request.png" /></p>
+<p>Veremos que el proceso de incorporar cambios al repositorio central o principal es a través de PR desde el directorio <strong>forkeado</strong>. El trabajo en local se hace tras clonar el repositorio <em>forkeado</em>.</p>
+<h3 id="11-primer-paso-fork-del-repositorio">1.1. Primer paso: fork del repositorio<a class="headerlink" href="#11-primer-paso-fork-del-repositorio" title="Permanent link">&para;</a></h3>
+<p>Iniciamos el proceso de forma práctica. Para hacer un fork iniciamos sesión en GitHub, buscamos el repositorio principal y hacemos clic en el botón <strong>fork</strong> de la parte superior de la página. Esto creará una instancia del repositorio completo en nuestra cuenta.</p>
+<p><img alt="" src="../figuras/github_teams_fork.png" /></p>
+<p>Una vez creado el fork lo podemos ver en nuestra cuenta, con la leyenda <strong>forked from</strong></p>
+<p><img alt="" src="../figuras/github_teams_forkeado.png" /></p>
+<h3 id="12-segundo-paso-clonar-el-repositorio-forkeado">1.2. Segundo paso: clonar el repositorio forkeado<a class="headerlink" href="#12-segundo-paso-clonar-el-repositorio-forkeado" title="Permanent link">&para;</a></h3>
+<p>Una vez que el repositorio esté en tu cuenta, puede clonarlo a su computador para trabajarlo en local. Ya conocemos esta parte: <code>$ git clone [&lt;dir coderepo&gt;</code></p>
+<div class="highlight"><pre><span></span><code>clases@vm:~/tmp$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/clases-alu-01/CETI-PPS-Bloque02.git
+Clonando<span class="w"> </span>en<span class="w"> </span><span class="s1">&#39;CETI-PPS-Bloque02&#39;</span>...
+Username<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;https://github.com&#39;</span>:<span class="w"> </span>clases.alu+01@gmail.com
+Password<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;https://clases.alu+01@gmail.com@github.com&#39;</span>:<span class="w"> </span>
+remote:<span class="w"> </span>Enumerating<span class="w"> </span>objects:<span class="w"> </span><span class="m">30</span>,<span class="w"> </span><span class="k">done</span>.
+remote:<span class="w"> </span>Counting<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">30</span>/30<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+remote:<span class="w"> </span>Compressing<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">26</span>/26<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+remote:<span class="w"> </span>Total<span class="w"> </span><span class="m">30</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">3</span><span class="o">)</span>,<span class="w"> </span>reused<span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">3</span><span class="o">)</span>,<span class="w"> </span>pack-reused<span class="w"> </span><span class="m">0</span>
+Desempaquetando<span class="w"> </span>objetos:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">30</span>/30<span class="o">)</span>,<span class="w"> </span><span class="m">653</span>.50<span class="w"> </span>KiB<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">2</span>.42<span class="w"> </span>MiB/s,<span class="w"> </span>listo.
+clases@vm:~/tmp$<span class="w"> </span>ls
+CETI-PPS-Bloque02
+clases@vm:~/tmp$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>CETI-PPS-Bloque02/
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>
+a492dd0<span class="w"> </span><span class="o">(</span>HEAD<span class="w"> </span>-&gt;<span class="w"> </span>main,<span class="w"> </span>origin/main,<span class="w"> </span>origin/HEAD<span class="o">)</span><span class="w"> </span>update<span class="w"> </span>typos
+f8cf187<span class="w"> </span><span class="nb">test</span><span class="w"> </span>borrado
+bdc2f28<span class="w"> </span>Primera<span class="w"> </span>práctica<span class="w"> </span>Bloque<span class="w"> </span><span class="m">02</span><span class="w"> </span>-<span class="w"> </span>Git
+ef0ee73<span class="w"> </span>Initial<span class="w"> </span>commit
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>
+</code></pre></div>
+<p>Si lo desea puede modificar la configuración o iniciar la configuración de trabajo en local. Por ejemplo 
+<div class="highlight"><pre><span></span><code>clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Clases Alu 01&quot;</span>
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;clases.alu+01@gmail.com&quot;</span>
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>credential.helper<span class="w"> </span><span class="s1">&#39;cache --timeout 7200&#39;</span>
+</code></pre></div></p>
+<h3 id="13-trabajar-en-local">1.3. Trabajar en local<a class="headerlink" href="#13-trabajar-en-local" title="Permanent link">&para;</a></h3>
+<p>En esta fase se modifica el código, se hacen pruebas, etc. Al final se añade al seguimiento y se hacen commits etc. Lo más correcto sería trabajar sobre una rama creada para ese nuevo código. mejora o corrección de errores:</p>
+<div class="highlight"><pre><span></span><code>clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>branch<span class="w"> </span>featureA
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>switch<span class="w"> </span>featureA<span class="w"> </span>
+Cambiado<span class="w"> </span>a<span class="w"> </span>rama<span class="w"> </span><span class="s1">&#39;featureA&#39;</span>
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;para ejercicio de teams y PR&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>test.txt
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>test.txt<span class="w"> </span>
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;añado fichero de test&quot;</span>
+<span class="o">[</span>featureA<span class="w"> </span>84f935e<span class="o">]</span><span class="w"> </span>añado<span class="w"> </span>fichero<span class="w"> </span>de<span class="w"> </span><span class="nb">test</span>
+<span class="w"> </span><span class="m">1</span><span class="w"> </span>file<span class="w"> </span>changed,<span class="w"> </span><span class="m">1</span><span class="w"> </span>insertion<span class="o">(</span>+<span class="o">)</span>
+<span class="w"> </span>create<span class="w"> </span>mode<span class="w"> </span><span class="m">100644</span><span class="w"> </span>test.txt
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;segundo fichero para que haya un par de commits&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>leme.txt
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>leme.txt<span class="w"> </span>
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;añado segundo fichero&quot;</span>
+<span class="o">[</span>featureA<span class="w"> </span>f3fa288<span class="o">]</span><span class="w"> </span>añado<span class="w"> </span>segundo<span class="w"> </span>fichero
+<span class="w"> </span><span class="m">1</span><span class="w"> </span>file<span class="w"> </span>changed,<span class="w"> </span><span class="m">1</span><span class="w"> </span>insertion<span class="o">(</span>+<span class="o">)</span>
+<span class="w"> </span>create<span class="w"> </span>mode<span class="w"> </span><span class="m">100644</span><span class="w"> </span>leme.txt
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>
+f3fa288<span class="w"> </span><span class="o">(</span>HEAD<span class="w"> </span>-&gt;<span class="w"> </span>featureA<span class="o">)</span><span class="w"> </span>añado<span class="w"> </span>segundo<span class="w"> </span>fichero
+84f935e<span class="w"> </span>añado<span class="w"> </span>fichero<span class="w"> </span>de<span class="w"> </span><span class="nb">test</span>
+a492dd0<span class="w"> </span><span class="o">(</span>origin/main,<span class="w"> </span>origin/HEAD,<span class="w"> </span>main<span class="o">)</span><span class="w"> </span>update<span class="w"> </span>typos
+f8cf187<span class="w"> </span><span class="nb">test</span><span class="w"> </span>borrado
+bdc2f28<span class="w"> </span>Primera<span class="w"> </span>práctica<span class="w"> </span>Bloque<span class="w"> </span><span class="m">02</span><span class="w"> </span>-<span class="w"> </span>Git
+ef0ee73<span class="w"> </span>Initial<span class="w"> </span>commit
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>
+</code></pre></div>
+<h3 id="14-subir-los-cambios-a-repo-forkeado">1.4. Subir los cambios a repo forkeado<a class="headerlink" href="#14-subir-los-cambios-a-repo-forkeado" title="Permanent link">&para;</a></h3>
+<p>Cuando ya tengamos el código terminado, podemos incorporarlo a nuestro repositorio "forkeado". Observe que <code>git push</code> especifica el destino <code>origin</code> (el directorio clonado) y la rama a subir, <code>featureA</code></p>
+<div class="highlight"><pre><span></span><code>clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>featureA<span class="w"> </span>
+Username<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;https://github.com&#39;</span>:<span class="w"> </span>clases.alu+01@gmail.com
+Password<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;https://clases.alu+01@gmail.com@github.com&#39;</span>:<span class="w"> </span>
+Enumerando<span class="w"> </span>objetos:<span class="w"> </span><span class="m">7</span>,<span class="w"> </span>listo.
+Contando<span class="w"> </span>objetos:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">7</span>/7<span class="o">)</span>,<span class="w"> </span>listo.
+Compresión<span class="w"> </span>delta<span class="w"> </span>usando<span class="w"> </span>hasta<span class="w"> </span><span class="m">8</span><span class="w"> </span>hilos
+Comprimiendo<span class="w"> </span>objetos:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">4</span>/4<span class="o">)</span>,<span class="w"> </span>listo.
+Escribiendo<span class="w"> </span>objetos:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">6</span>/6<span class="o">)</span>,<span class="w"> </span><span class="m">653</span><span class="w"> </span>bytes<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">653</span>.00<span class="w"> </span>KiB/s,<span class="w"> </span>listo.
+Total<span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">1</span><span class="o">)</span>,<span class="w"> </span>reusado<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>
+remote:<span class="w"> </span>Resolving<span class="w"> </span>deltas:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">1</span>/1<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+remote:<span class="w"> </span>
+remote:<span class="w"> </span>Create<span class="w"> </span>a<span class="w"> </span>pull<span class="w"> </span>request<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;featureA&#39;</span><span class="w"> </span>on<span class="w"> </span>GitHub<span class="w"> </span>by<span class="w"> </span>visiting:
+remote:<span class="w">      </span>https://github.com/clases-alu-01/CETI-PPS-Bloque02/pull/new/featureA
+remote:<span class="w"> </span>
+To<span class="w"> </span>https://github.com/clases-alu-01/CETI-PPS-Bloque02.git
+<span class="w"> </span>*<span class="w"> </span><span class="o">[</span>new<span class="w"> </span>branch<span class="o">]</span><span class="w">      </span>featureA<span class="w"> </span>-&gt;<span class="w"> </span>featureA
+clases@vm:~/tmp/CETI-PPS-Bloque02$
+</code></pre></div>
+<p>Si vamos a nuestro repositorio en GitHub se puede observar la rama <code>main</code></p>
+<p><img alt="" src="../figuras/github_teams_forkeado_main.png" /></p>
+<p>Y la rama <code>featureA</code> con los nuevos ficheros:</p>
+<p><img alt="" src="../figuras/github_teams_forkeado_featureA.png" /></p>
+<p>Tengamos en cuenta que esta rama se ha incorporado al repositorio <em>forkeado</em>, no al inicial.</p>
+<p>Puede observar al hacer <code>git push</code> que además de subir el código a nuestro repositorio, nos indica como iniciar un <strong>Pull Request</strong> a través de un enlace:</p>
+<div class="highlight"><pre><span></span><code>remote: Create a pull request for &#39;featureA&#39; on GitHub by visiting:
+remote:      https://github.com/clases-alu-01/CETI-PPS-Bloque02/pull/new/featureA
+</code></pre></div>
+<h3 id="15-hacer-pull-request">1.5. Hacer Pull Request<a class="headerlink" href="#15-hacer-pull-request" title="Permanent link">&para;</a></h3>
+<p>El objetivo es incorporar el código de la rama <code>featureA</code> al repositorio original (que no es nuestro). Para eso se debe hacer un <em>Pull Request</em> (PR), una petición para que los cambios se incorporen al código.</p>
+<p>Se puede hacer el PR
+-  usando directamente el enlace que se ofrece al hacer <code>git push</code>
+-  o buscando en GitHub en el repositorio forkeado dicha opción:</p>
+<p><img alt="" src="../figuras/github_teams_PR_01.png" /></p>
+<p>Observe que tiene la opción de añadir información en la PR: nombre de la PR, descripción, etc. Y en la siguiente figura vea que además puede revisar su propia PR ya que se muestran en la misma ventana los commits de la rama <code>featureA</code> y las diferencias entre <code>main</code> y la nueva rama:</p>
+<p><img alt="" src="../figuras/github_teams_PR_02.png" /></p>
+<h3 id="16-en-el-lado-de-repositorio-original">1.6. En el lado de repositorio original<a class="headerlink" href="#16-en-el-lado-de-repositorio-original" title="Permanent link">&para;</a></h3>
+<p>Una vez realizada la PR en el directorio forkeado el propietario del repositorio original recibe la petición y puede acceder a ella a través de la pestaña  <strong>Pull Requests</strong> que en este caso aparece con un 1 a su derecha indicando las PR pendientes:</p>
+<p><img alt="" src="../figuras/github_teams_PR_03.png" /></p>
+<p>Si accedemos a las PR vemos que hay una pendiente (open):</p>
+<p><img alt="" src="../figuras/github_teams_PR_04.png" /></p>
+<p>Y si accede a ella podrá ver los commits, el código, etc:</p>
+<p><img alt="" src="../figuras/github_teams_PR_05.png" /></p>
+<p>En este caso en vez de aceptar directamente los cambios vamos a realizar un comentario solicitando cambios en el código.</p>
+<p><img alt="" src="../figuras/github_teams_PR_06_comentario.png" /></p>
+<p>En este caso el usuario <code>clases.alu+01</code> ve los comentarios a su PR y modifica el código y los nombres de los ficheros (directamente desde el interfaz de GitHub, creando dos nuevos commits a la rama.</p>
+<p><img alt="" src="../figuras/github_teams_PR_07_commit_tras_comentario.png" /></p>
+<p>Y vea que en este caso no tiene que hacer una nueva PR puesto que los cambios en la rama <code>featureA</code> son accesibles desde la pestaña de las PR:</p>
+<p><img alt="" src="../figuras/github_teams_PR_08_commit_tras_comentario_en_propietario.png" /></p>
+<p>En ese momento si el propietario está de acuerdo puede hacer la fusión con <strong>Merge Pull Request</strong>. O puede cerrar la petición con un comentario y no aceptar los cambios.</p>
+<p><img alt="" src="../figuras/github_teams_PR_09_closed_sin_merge.png" /></p>
+<h3 id="17-pr-que-se-acepta">1.7. PR que se acepta<a class="headerlink" href="#17-pr-que-se-acepta" title="Permanent link">&para;</a></h3>
+<p>Preparamos un escenario donde se crea una nueva rama <code>ejemplos_git_merge</code></p>
+<div class="highlight"><pre><span></span><code>clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>switch<span class="w"> </span>main<span class="w"> </span>
+Cambiado<span class="w"> </span>a<span class="w"> </span>rama<span class="w"> </span><span class="s1">&#39;main&#39;</span>
+Tu<span class="w"> </span>rama<span class="w"> </span>está<span class="w"> </span>actualizada<span class="w"> </span>con<span class="w"> </span><span class="s1">&#39;origin/main&#39;</span>.
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>branch<span class="w"> </span>ejemplos_git_merge
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>switch<span class="w"> </span>ejemplos_git_merge<span class="w"> </span>
+Cambiado<span class="w"> </span>a<span class="w"> </span>rama<span class="w"> </span><span class="s1">&#39;ejemplos_git_merge&#39;</span>
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>ls
+docs<span class="w">  </span>README.md
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>--oneline<span class="w"> </span>
+a492dd0<span class="w"> </span><span class="o">(</span>HEAD<span class="w"> </span>-&gt;<span class="w"> </span>ejemplos_git_merge,<span class="w"> </span>origin/main,<span class="w"> </span>origin/HEAD,<span class="w"> </span>main<span class="o">)</span><span class="w"> </span>update<span class="w"> </span>typos
+f8cf187<span class="w"> </span><span class="nb">test</span><span class="w"> </span>borrado
+bdc2f28<span class="w"> </span>Primera<span class="w"> </span>práctica<span class="w"> </span>Bloque<span class="w"> </span><span class="m">02</span><span class="w"> </span>-<span class="w"> </span>Git
+ef0ee73<span class="w"> </span>Initial<span class="w"> </span>commit
+clases@vm:~/tmp/CETI-PPS-Bloque02$
+</code></pre></div>
+<p>y se incorporan tres ficheros a dicha rama: un fichero Markdown y un par de figuras:</p>
+<div class="highlight"><pre><span></span><code>clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>code<span class="w"> </span>docs/01_git_intro_test.merge.md<span class="w"> </span>
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>status<span class="w"> </span>
+En<span class="w"> </span>la<span class="w"> </span>rama<span class="w"> </span>ejemplos_git_merge
+Archivos<span class="w"> </span>sin<span class="w"> </span>seguimiento:
+<span class="w">  </span><span class="o">(</span>usa<span class="w"> </span><span class="s2">&quot;git add &lt;archivo&gt;...&quot;</span><span class="w"> </span>para<span class="w"> </span>incluirlo<span class="w"> </span>a<span class="w"> </span>lo<span class="w"> </span>que<span class="w"> </span>se<span class="w"> </span>será<span class="w"> </span>confirmado<span class="o">)</span>
+<span class="w">        </span>docs/01_git_intro_test.merge.md
+<span class="w">        </span>docs/figuras/git-merge-conflicto.png
+<span class="w">        </span>docs/figuras/git-merge-recursive.png
+
+no<span class="w"> </span>hay<span class="w"> </span>nada<span class="w"> </span>agregado<span class="w"> </span>al<span class="w"> </span>commit<span class="w"> </span>pero<span class="w"> </span>hay<span class="w"> </span>archivos<span class="w"> </span>sin<span class="w"> </span>seguimiento<span class="w"> </span>presentes<span class="w"> </span><span class="o">(</span>usa<span class="w"> </span><span class="s2">&quot;git add&quot;</span><span class="w"> </span>para<span class="w"> </span>hacerles<span class="w"> </span>seguimiento<span class="o">)</span>
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>.
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>status<span class="w"> </span>
+En<span class="w"> </span>la<span class="w"> </span>rama<span class="w"> </span>ejemplos_git_merge
+Cambios<span class="w"> </span>a<span class="w"> </span>ser<span class="w"> </span>confirmados:
+<span class="w">  </span><span class="o">(</span>usa<span class="w"> </span><span class="s2">&quot;git restore --staged &lt;archivo&gt;...&quot;</span><span class="w"> </span>para<span class="w"> </span>sacar<span class="w"> </span>del<span class="w"> </span>área<span class="w"> </span>de<span class="w"> </span>stage<span class="o">)</span>
+<span class="w">        </span>nuevo<span class="w"> </span>archivo:<span class="w">  </span>docs/01_git_intro_test.merge.md
+<span class="w">        </span>nuevo<span class="w"> </span>archivo:<span class="w">  </span>docs/figuras/git-merge-conflicto.png
+<span class="w">        </span>nuevo<span class="w"> </span>archivo:<span class="w">  </span>docs/figuras/git-merge-recursive.png
+
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Ejemplos de casos git merge&quot;</span>
+<span class="o">[</span>ejemplos_git_merge<span class="w"> </span>fb2f3d8<span class="o">]</span><span class="w"> </span>Ejemplos<span class="w"> </span>de<span class="w"> </span>casos<span class="w"> </span>git<span class="w"> </span>merge
+<span class="w"> </span><span class="m">3</span><span class="w"> </span>files<span class="w"> </span>changed,<span class="w"> </span><span class="m">334</span><span class="w"> </span>insertions<span class="o">(</span>+<span class="o">)</span>
+<span class="w"> </span>create<span class="w"> </span>mode<span class="w"> </span><span class="m">100644</span><span class="w"> </span>docs/01_git_intro_test.merge.md
+<span class="w"> </span>create<span class="w"> </span>mode<span class="w"> </span><span class="m">100644</span><span class="w"> </span>docs/figuras/git-merge-conflicto.png
+<span class="w"> </span>create<span class="w"> </span>mode<span class="w"> </span><span class="m">100644</span><span class="w"> </span>docs/figuras/git-merge-recursive.png
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>
+</code></pre></div>
+<p>Ahora hacemos <code>push</code> al repositorio <em>forkeado</em>:</p>
+<div class="highlight"><pre><span></span><code>clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>ejemplos_git_merge<span class="w"> </span>
+Username<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;https://github.com&#39;</span>:<span class="w"> </span>clases.alu+01@gmail.com
+Password<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;https://clases.alu+01@gmail.com@github.com&#39;</span>:<span class="w"> </span>
+Enumerando<span class="w"> </span>objetos:<span class="w"> </span><span class="m">10</span>,<span class="w"> </span>listo.
+Contando<span class="w"> </span>objetos:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">10</span>/10<span class="o">)</span>,<span class="w"> </span>listo.
+Compresión<span class="w"> </span>delta<span class="w"> </span>usando<span class="w"> </span>hasta<span class="w"> </span><span class="m">8</span><span class="w"> </span>hilos
+Comprimiendo<span class="w"> </span>objetos:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">7</span>/7<span class="o">)</span>,<span class="w"> </span>listo.
+Escribiendo<span class="w"> </span>objetos:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">7</span>/7<span class="o">)</span>,<span class="w"> </span><span class="m">222</span>.22<span class="w"> </span>KiB<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">13</span>.89<span class="w"> </span>MiB/s,<span class="w"> </span>listo.
+Total<span class="w"> </span><span class="m">7</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">2</span><span class="o">)</span>,<span class="w"> </span>reusado<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>
+remote:<span class="w"> </span>Resolving<span class="w"> </span>deltas:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">2</span>/2<span class="o">)</span>,<span class="w"> </span>completed<span class="w"> </span>with<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="nb">local</span><span class="w"> </span>objects.
+remote:<span class="w"> </span>
+remote:<span class="w"> </span>Create<span class="w"> </span>a<span class="w"> </span>pull<span class="w"> </span>request<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;ejemplos_git_merge&#39;</span><span class="w"> </span>on<span class="w"> </span>GitHub<span class="w"> </span>by<span class="w"> </span>visiting:
+remote:<span class="w">      </span>https://github.com/clases-alu-01/CETI-PPS-Bloque02/pull/new/ejemplos_git_merge
+remote:<span class="w"> </span>
+To<span class="w"> </span>https://github.com/clases-alu-01/CETI-PPS-Bloque02.git
+<span class="w"> </span>*<span class="w"> </span><span class="o">[</span>new<span class="w"> </span>branch<span class="o">]</span><span class="w">      </span>ejemplos_git_merge<span class="w"> </span>-&gt;<span class="w"> </span>ejemplos_git_merge
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>
+</code></pre></div>
+<p>Ahora nos queda hacer el PR (tenemos el enlace en la salida del comando <code>git push</code>) y que el propietario lo acepte. De hecho sin usar el enlace al acceder a GitHub nos ofrece hacer el PR:</p>
+<p><img alt="" src="../figuras/github_teams_PR_10.png" /></p>
+<p>Accedemos a la ventana de creación de PR:</p>
+<p><img alt="" src="../figuras/github_teams_PR_11.png" /></p>
+<p>Y tras crearla vemos como queda:</p>
+<p><img alt="" src="../figuras/github_teams_PR_12.png" /></p>
+<p>Ahora vemos de nuevo como el propietario del repositorio vería el PR abierto:</p>
+<p><img alt="" src="../figuras/github_teams_PR_13.png" /></p>
+<p>Lo abrimos si queremos ver los detalles. Y en este caso lo aceptamos haciendo <strong>Merge Pull Request</strong></p>
+<p><img alt="" src="../figuras/github_teams_PR_14.png" /></p>
+<p>Ahora el PR está aceptado y cerrado, y los ficheros se han incorporado a la rama <code>main</code> del repositorio inicial.</p>
+<p><img alt="" src="../figuras/github_teams_PR_15.png" /></p>
+<p>Puede apreciar dos commits nuevos en <code>main</code>: el original de la rama fusionada y uno más de la fusión realizada:</p>
+<p><img alt="" src="../figuras/github_teams_PR_16.png" /></p>
+<p>Y confirmamos que el fichero se ha incorporado a <code>main</code>:</p>
+<p><img alt="" src="../figuras/github_teams_PR_17.png" /></p>
+<h2 id="2-actualizar-repositorios-clone-y-forked-upstream-del-original">2. Actualizar repositorios clone y forked (<em>upstream</em> del original)<a class="headerlink" href="#2-actualizar-repositorios-clone-y-forked-upstream-del-original" title="Permanent link">&para;</a></h2>
+<p>Ahora tenemos algo que considerar: el repositorio principal está actualizado, pero el repositorio <em>forkeado</em> y/o el clonado no. Además es posible que haya incorporaciones de código de otras personas que no tengamos tampoco.</p>
+<p>Los pasos a dar para conseguir que los repositorios clonados y forkeado estén  actualizados serían: </p>
+<ol>
+<li>Agregar en local el repositorio Git original como un <strong>repositorio upstream</strong>. Eso nos permite extraer los cambios desde el repositorio original a la versión local (<code>git remote add upstream &lt;repo_original&gt;</code>).</li>
+<li>Descargar el repositorio original (<code>git fetch upstream</code>). Las confirmaciones (commits) del repositorio original serán almacenadas en una rama local llamada <code>upstream/main</code>.</li>
+<li>Fusionar  los cambios de la rama <code>upstream/main</code> a tu rama maestra local (<code>git merge upstream/main</code>). Esto hará que tu rama <code>main</code> se sincronice con el repositorio <code>upstream</code> sin perder tus cambios locales.</li>
+<li>Envíar (<code>git push origin main</code>) los cambios al repositorio forkeado. Esto actualiza los cambios en el repositorio forkeado, y si es necesario genera la posibilidad de una PR.</li>
+</ol>
+<p>Paso 1: observe los remotos originales (creados al hacer <code>git clone</code>) y los que se añaden como <code>upstream</code>
+<div class="highlight"><pre><span></span><code>clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>remote<span class="w"> </span>-v
+origin<span class="w">  </span>https://github.com/clases-alu-01/CETI-PPS-Bloque02.git<span class="w"> </span><span class="o">(</span>fetch<span class="o">)</span>
+origin<span class="w">  </span>https://github.com/clases-alu-01/CETI-PPS-Bloque02.git<span class="w"> </span><span class="o">(</span>push<span class="o">)</span>
+<span class="c1">### 1.</span>
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>upstream<span class="w"> </span>https://github.com/IES-Francisco-Romero-Vargas/CETI-PPS-Bloque02.git
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>remote<span class="w"> </span>-v
+origin<span class="w">  </span>https://github.com/clases-alu-01/CETI-PPS-Bloque02.git<span class="w"> </span><span class="o">(</span>fetch<span class="o">)</span>
+origin<span class="w">  </span>https://github.com/clases-alu-01/CETI-PPS-Bloque02.git<span class="w"> </span><span class="o">(</span>push<span class="o">)</span>
+upstream<span class="w">        </span>https://github.com/IES-Francisco-Romero-Vargas/CETI-PPS-Bloque02.git<span class="w"> </span><span class="o">(</span>fetch<span class="o">)</span>
+upstream<span class="w">        </span>https://github.com/IES-Francisco-Romero-Vargas/CETI-PPS-Bloque02.git<span class="w"> </span><span class="o">(</span>push<span class="o">)</span>
+clases@vm:~/tmp/CETI-PPS-Bloque02$
+</code></pre></div></p>
+<p>Paso 2: Descargamos del repositorio original (<code>git fetch upstream</code>):
+<div class="highlight"><pre><span></span><code>clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>fetch<span class="w"> </span>upstream<span class="w"> </span>
+Username<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;https://github.com&#39;</span>:<span class="w"> </span>clases.alu+01@gmail.com
+Password<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;https://clases.alu+01@gmail.com@github.com&#39;</span>:<span class="w"> </span>
+remote:<span class="w"> </span>Enumerating<span class="w"> </span>objects:<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="k">done</span>.
+remote:<span class="w"> </span>Counting<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">1</span>/1<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+remote:<span class="w"> </span>Total<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>,<span class="w"> </span>reused<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>,<span class="w"> </span>pack-reused<span class="w"> </span><span class="m">0</span>
+Desempaquetando<span class="w"> </span>objetos:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">1</span>/1<span class="o">)</span>,<span class="w"> </span><span class="m">669</span><span class="w"> </span>bytes<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">669</span>.00<span class="w"> </span>KiB/s,<span class="w"> </span>listo.
+Desde<span class="w"> </span>https://github.com/IES-Francisco-Romero-Vargas/CETI-PPS-Bloque02
+<span class="w"> </span>*<span class="w"> </span><span class="o">[</span>nueva<span class="w"> </span>rama<span class="o">]</span><span class="w">      </span>main<span class="w">       </span>-&gt;<span class="w"> </span>upstream/main
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>
+</code></pre></div></p>
+<p>Se ha creado  una rama <code>upstream/main</code> que podemos fusionar con nuestro <code>main</code> local</p>
+<p>Paso 3: desde la rama <code>main</code> local hacemos un merge con la rama descargada</p>
+<div class="highlight"><pre><span></span><code>clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>switch<span class="w"> </span>main
+Ya<span class="w"> </span>en<span class="w"> </span><span class="s1">&#39;main&#39;</span>
+Tu<span class="w"> </span>rama<span class="w"> </span>está<span class="w"> </span>actualizada<span class="w"> </span>con<span class="w"> </span><span class="s1">&#39;origin/main&#39;</span>.
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>merge<span class="w"> </span>upstream/main<span class="w"> </span>
+Actualizando<span class="w"> </span>a492dd0..91b56f1
+Fast-forward
+<span class="w"> </span>docs/01_git_intro_test.merge.md<span class="w">      </span><span class="p">|</span><span class="w"> </span><span class="m">334</span><span class="w"> </span>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+<span class="w"> </span>docs/figuras/git-merge-conflicto.png<span class="w"> </span><span class="p">|</span><span class="w"> </span>Bin<span class="w"> </span><span class="m">0</span><span class="w"> </span>-&gt;<span class="w"> </span><span class="m">118405</span><span class="w"> </span>bytes
+<span class="w"> </span>docs/figuras/git-merge-recursive.png<span class="w"> </span><span class="p">|</span><span class="w"> </span>Bin<span class="w"> </span><span class="m">0</span><span class="w"> </span>-&gt;<span class="w"> </span><span class="m">120730</span><span class="w"> </span>bytes
+<span class="w"> </span><span class="m">3</span><span class="w"> </span>files<span class="w"> </span>changed,<span class="w"> </span><span class="m">334</span><span class="w"> </span>insertions<span class="o">(</span>+<span class="o">)</span>
+<span class="w"> </span>create<span class="w"> </span>mode<span class="w"> </span><span class="m">100644</span><span class="w"> </span>docs/01_git_intro_test.merge.md
+<span class="w"> </span>create<span class="w"> </span>mode<span class="w"> </span><span class="m">100644</span><span class="w"> </span>docs/figuras/git-merge-conflicto.png
+<span class="w"> </span>create<span class="w"> </span>mode<span class="w"> </span><span class="m">100644</span><span class="w"> </span>docs/figuras/git-merge-recursive.png
+clases@vm:~/tmp/CETI-PPS-Bloque02$
+</code></pre></div>
+<p>Podemos comprobar como nuestro repositorio local está ahora adelantado respecto a <code>origin/main</code> (el repositorio forkeado)</p>
+<div class="highlight"><pre><span></span><code>clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>status<span class="w"> </span>
+En<span class="w"> </span>la<span class="w"> </span>rama<span class="w"> </span>main
+Tu<span class="w"> </span>rama<span class="w"> </span>está<span class="w"> </span>adelantada<span class="w"> </span>a<span class="w"> </span><span class="s1">&#39;origin/main&#39;</span><span class="w"> </span>por<span class="w"> </span><span class="m">2</span><span class="w"> </span>commits.
+<span class="w">  </span><span class="o">(</span>usa<span class="w"> </span><span class="s2">&quot;git push&quot;</span><span class="w"> </span>para<span class="w"> </span>publicar<span class="w"> </span>tus<span class="w"> </span>commits<span class="w"> </span>locales<span class="o">)</span>
+
+nada<span class="w"> </span>para<span class="w"> </span>hacer<span class="w"> </span>commit,<span class="w"> </span>el<span class="w"> </span>árbol<span class="w"> </span>de<span class="w"> </span>trabajo<span class="w"> </span>está<span class="w"> </span>limpio
+clases@vm:~/tmp/CETI-PPS-Bloque02$
+</code></pre></div>
+<p>Y ahora damos el último paso, actualizar origin, el repositorio <em>forkeado</em></p>
+<p>Paso 4:</p>
+<div class="highlight"><pre><span></span><code>clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+Total<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>,<span class="w"> </span>reusado<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>
+To<span class="w"> </span>https://github.com/clases-alu-01/CETI-PPS-Bloque02.git
+<span class="w">   </span>a492dd0..91b56f1<span class="w">  </span>main<span class="w"> </span>-&gt;<span class="w"> </span>main
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>status<span class="w"> </span>
+En<span class="w"> </span>la<span class="w"> </span>rama<span class="w"> </span>main
+Tu<span class="w"> </span>rama<span class="w"> </span>está<span class="w"> </span>actualizada<span class="w"> </span>con<span class="w"> </span><span class="s1">&#39;origin/main&#39;</span>.
+
+nada<span class="w"> </span>para<span class="w"> </span>hacer<span class="w"> </span>commit,<span class="w"> </span>el<span class="w"> </span>árbol<span class="w"> </span>de<span class="w"> </span>trabajo<span class="w"> </span>está<span class="w"> </span>limpio
+clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>
+</code></pre></div>
+<p>Nota: <strong>es muy recomendable actualizar el repositorio local antes de hacer un PR</strong> ya que es más sencillo solucionar los posibles conflictos en local antes de incorporarlos a GitHub. Esta gráfica le puede servir de referencia: antes de hacer <code>push</code> y <code>pull request</code> actualizamos el repositorio en local a través de <em>upstream</em>.</p>
+<p><img alt="" src="../figuras/github_teams_fork-clone-upstream.png" /></p>
+<h2 id="3-git-flow">3. Git Flow<a class="headerlink" href="#3-git-flow" title="Permanent link">&para;</a></h2>
+<p>Hemos visto un ejemplo sencillo de cómo funciona el trabajo en equipo y las PR. Cuando la aplicación y el equipo crece es fundamental definir un flujo de trabajo.</p>
+<p>Eso es lo que pretende git flow: sistematizar el uso (y nombres) de las ramas, cómo incorporar nuevas características, resolver fallos ,etc.</p>
+<p>En este primer enlace <a href="https://www.programoergosum.es/tutoriales/flujo-de-trabajo-en-git-con-gitflow/">https://www.programoergosum.es/tutoriales/flujo-de-trabajo-en-git-con-gitflow/</a> se muestra una gráfica que resume todo el funcionamiento de git flow:</p>
+<p><img alt="" src="../figuras/gitflow-ramas.jpg" /></p>
+<blockquote>
+<p>El modelo de GitFlow cuenta con dos ramas principales, master y develop, y varias de soporte para estas que podrán ser ramas de feature, release y hotfix.</p>
+<ul>
+<li>La rama master es la que contiene la última versión de nuestro proyecto y usaremos para desplegar en producción.</li>
+<li>La rama develop es la que contiene el último estado del desarrollo del mismo, es decir, hasta el último commit que hayamos hecho.</li>
+<li>Las ramas de feature se usarán para desarrollar nuevas funcionalidades, se crearán a partir de la rama develop y al terminar se fusiona con develop.</li>
+<li>Las ramas release se usarán para lanzar una nueva versión de nuestro proyecto y se fusionaran tanto con master como con develop.</li>
+<li>Las ramas hotfix se usarán para cambios rápidos sobre la rama master y se fusionan con master y develop.</li>
+</ul>
+</blockquote>
+<p>Para seguir este modelo de trabajo se puede instalar el paquete git flow con el comando
+<code>apt install git-flow</code> y este paquete nos facilita comandos específicos que comienzan con <code>git flow</code> y simplifican el trabajo de crear ramas, fusionarlas, etc.</p>
+<p>En este segundo enlace <a href="https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow">https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow</a> se explica el uso de cada rama y el uso de los comandos <code>git flow</code> y sus comandos <code>git</code> equivalentes. Por ejemplo:</p>
+<blockquote>
+<p>Al igual que al finalizar una rama release, una rama hotfix se fusiona tanto en main como en develop.
+con git tenemos que ejecutar</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>main
+git<span class="w"> </span>merge<span class="w"> </span>hotfix_branch
+git<span class="w"> </span>checkout<span class="w"> </span>develop
+git<span class="w"> </span>merge<span class="w"> </span>hotfix_branch
+git<span class="w"> </span>branch<span class="w"> </span>-D<span class="w"> </span>hotfix_branch
+</code></pre></div>
+<p>Con git flow sería equivalente a</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span>git<span class="w"> </span>flow<span class="w"> </span>hotfix<span class="w"> </span>finish<span class="w"> </span>hotfix_branch
+</code></pre></div>
+</blockquote>
+<p>Si quiere profundizar más tiene un Curso en Openwebminar sobre <code>git flow</code>: https://openwebinars.net/academia/aprende/gitflow/</p>
+<h2 id="4-buenas-practicas">4. Buenas prácticas<a class="headerlink" href="#4-buenas-practicas" title="Permanent link">&para;</a></h2>
+<p>Cada empresa tiene su método de trabajo, etc. Pero hay una serie de recomendaciones generales que se pueden aplicar siempre</p>
+<h3 id="41-buenas-practicas-en-los-commits">4.1. Buenas prácticas en los commits<a class="headerlink" href="#41-buenas-practicas-en-los-commits" title="Permanent link">&para;</a></h3>
+<p>En este artículo "Cómo escribir un buen mensaje de commit en Git" <a href="https://geekytheory.com/como-escribir-buen-mensaje-commit-git/">https://geekytheory.com/como-escribir-buen-mensaje-commit-git/</a> tiene ejemplos. En particular hace referencia a la guía de estilo que se aplica en el desarrollo de angular, <em>Git Commit Guidelines</em> <a href="https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits">https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits</a></p>
+<h3 id="42-buenas-practicas-en-los-pr">4.2. Buenas prácticas en los PR<a class="headerlink" href="#42-buenas-practicas-en-los-pr" title="Permanent link">&para;</a></h3>
+<p>Algo similar nos encontramos con los PR en este artículo: <em>Buenas prácticas para crear una Pull Request</em>
+<a href="https://geekytheory.com/como-crear-pull-request-buenas-practicas/">https://geekytheory.com/como-crear-pull-request-buenas-practicas/</a></p>
+<ul>
+<li>Revisa tu propia Pull Request</li>
+<li>Comenta tu propia Pull Request</li>
+<li>Haz Pull Requests pequeñas</li>
+<li>etc..</li>
+</ul>
+<h2 id="5-todo-revisar-ejercicios">5. TODO REVISAr Ejercicios<a class="headerlink" href="#5-todo-revisar-ejercicios" title="Permanent link">&para;</a></h2>
+<h3 id="51-ejercicio-01-hacer-proceso-pull-reqeust">5.1. Ejercicio 01: Hacer proceso Pull Reqeust<a class="headerlink" href="#51-ejercicio-01-hacer-proceso-pull-reqeust" title="Permanent link">&para;</a></h3>
+<p>Pasos:</p>
+<ul>
+<li>Hacer fork del repositorio <code>CETI-PPS-aficiones</code> en GitHub.</li>
+<li>Clonar en local</li>
+<li>Cambiar a rama <code>develop</code></li>
+<li>Crear nueva rama (<code>feature-&lt;user&gt;</code>) y trabajar en ella</li>
+<li>Incluir un fichero en formato Markdown en el directorio <code>docs</code> con una breve reseña de su serie, libro o programa preferido y hacer commit del mismo.</li>
+<li>Modificar el fichero <code>indice.md</code> en la raíz y añada una línea con su nombre, su serie, libro o programa preferido, y un enlace al nombre del fichero creado previamente en el directorio <code>docs</code>. El formato de un enlace en MarkDown es <code>[Texto del enlace](ruta_al_documento)</code>. Vuelva a hacer commit para añadir este fichero al repositorio.</li>
+<li>Hacer <code>git push</code> al repositorio <em>forkeado</em> de la rama creada: <code>git push origin feature-&lt;user&gt;</code></li>
+<li>Observe que en el propio mensaje de push indica la posibilidad de hacer PR (y muestra un enlace para hacerlo)</li>
+<li>Hacer el Pull Request desde el enlace (o desde el repositorio <em>forkeado</em>). Tenga en cuenta que debe hacer el PR <strong>a la rama <code>develop</code> del repositorio principal</strong>.</li>
+<li>Esperar que se acepte su PR (o se le propongan modificaciones)</li>
+</ul>
+<p>Esperar a que se acepten varios PR de otros miembros del equipo en el repositorio original. En ese momento el repositorio clonado y el forkeado no  coinciden con original.
+- Configurar un remote upstream y hacer <code>fetch &amp; merge</code> del repositorio principal en su repositorio clonado y luego update del forkeado.</p>
+<h3 id="52-ejercicio-02-procesar-pull-request">5.2. Ejercicio 02: Procesar Pull request<a class="headerlink" href="#52-ejercicio-02-procesar-pull-request" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Crear un repositorio en GitHub</li>
+<li>Añadir algunos fichero y commits.</li>
+<li>Crear rama <code>develop</code>.</li>
+<li>Que un compañero intente añadir un documento y modificar un  fichero existente sobre su repositorio y haga un PR</li>
+<li>Aceptar el PR sobre la rama develop o sugerir cambios antes de aceptar el PR.</li>
+</ul>
+<h2 id="6-enlaces">6. Enlaces<a class="headerlink" href="#6-enlaces" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Artículos tipo Paso a paso</li>
+<li>Cómo hacer tu primer PR, muy clarito: <a href="https://www.freecodecamp.org/espanol/news/como-hacer-tu-primer-pull-request-en-github/">https://www.freecodecamp.org/espanol/news/como-hacer-tu-primer-pull-request-en-github/</a></li>
+<li>Añade sobre el anterior la configuración de remote y su uso tras la aceptación del PR final actualizar el repositorio local clonado: <a href="https://blog.desdelinux.net/tutorial-simple-primer-pr-pull-request/">https://blog.desdelinux.net/tutorial-simple-primer-pr-pull-request/</a></li>
+<li>
+<p>Ejemplo paso a paso de dos usuarios trabajando a través de PR. Añade el uso de "<em>issues</em>" y asignaciones.  Potions online: <a href="https://dev.to/colocodes/learn-how-to-use-git-and-github-in-a-team-like-a-pro-2dk7">https://dev.to/colocodes/learn-how-to-use-git-and-github-in-a-team-like-a-pro-2dk7</a></p>
+</li>
+<li>
+<p>Explicación del proceso fork/clone/push/PR: <a href="https://www.toolsqa.com/git/difference-between-git-clone-and-git-fork">https://www.toolsqa.com/git/difference-between-git-clone-and-git-fork</a></p>
+</li>
+<li>Buena explicación gráfica de clone/fork/upstream: <a href="https://medium.com/@androidmatheny/using-git-and-github-on-group-projects-d636be2cdd4d">https://medium.com/@androidmatheny/using-git-and-github-on-group-projects-d636be2cdd4d</a></li>
+<li>
+<p>Diferencia entre fork y clone: <a href="https://www.toolsqa.com/git/difference-between-git-clone-and-git-fork/">https://www.toolsqa.com/git/difference-between-git-clone-and-git-fork/</a></p>
+</li>
+<li>
+<p>Git flow:</p>
+</li>
+<li>Gráfica resumen y comandos <code>git flow</code>: <a href="https://www.programoergosum.es/tutoriales/flujo-de-trabajo-en-git-con-gitflow/">https://www.programoergosum.es/tutoriales/flujo-de-trabajo-en-git-con-gitflow/</a></li>
+<li>Git flow: explica uso cada rama y comandos git flow y comandos git equivalentes: <a href="https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow">https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow</a></li>
+<li>
+<p>Curso Openwebminar git flow (1h:15m) : <a href="https://openwebinars.net/academia/aprende/gitflow/">https://openwebinars.net/academia/aprende/gitflow/</a></p>
+</li>
+<li>
+<p>Buenas prácticas</p>
+</li>
+<li>en PR: <a href="https://geekytheory.com/como-crear-pull-request-buenas-practicas/">https://geekytheory.com/como-crear-pull-request-buenas-practicas/</a></li>
+<li>en commits: <a href="https://geekytheory.com/como-escribir-buen-mensaje-commit-git/">https://geekytheory.com/como-escribir-buen-mensaje-commit-git/</a></li>
+<li>en GitHub Issues: <a href="https://www.backhub.co/blog/best-practices-for-using-github-issues">https://www.backhub.co/blog/best-practices-for-using-github-issues</a><ul>
+<li>Sobre Issues: <a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues">https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues</a></li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>

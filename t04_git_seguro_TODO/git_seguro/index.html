@@ -1,0 +1,1688 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../git_como_drive_UTILES/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Git Seguro - Zona Git / GitHub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#git-seguro" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Zona Git / GitHub" class="md-header__button md-logo" aria-label="Zona Git / GitHub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zona Git / GitHub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Git Seguro
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Zona Git / GitHub" class="md-nav__button md-logo" aria-label="Zona Git / GitHub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Zona Git / GitHub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Intro
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Intro
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t01/01_git_y_github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git y GitHub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t01/02_git_local/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git Local
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t01/03_git_intro_merge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fusiones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t03_TODO/git_teams/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git Teams
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documentación
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Documentación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t02/git_pages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pages de GitHub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t02/git_mkdocs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git y mkdocs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fuentes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ficheros
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Utiles
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Utiles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t02/git_vscode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git y VSCode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dudas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dudas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git_como_drive_UTILES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git como Drive
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://m.xkcd.com/1597/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chiste
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Git Seguro
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Git Seguro
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-fichero-gitignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Fichero .gitignore
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-git-leaks" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Git leaks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-mejorando-el-proceso-pre-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Mejorando el proceso: pre-commit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Mejorando el proceso: pre-commit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-pre-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. pre-commit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-ejercicio-pre-commit-con-linter" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Ejercicio: pre-commit con linter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-otras-consideraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Otras consideraciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Otras consideraciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-informacion-sensible" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. Información sensible
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-proteger-el-acceso-al-repositorio-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2. Proteger el acceso al repositorio git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-mantener-git-y-herramientas-actualizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3. Mantener git (y herramientas) actualizadas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-ejemplos-de-fugas-por-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4. Ejemplos de fugas por git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-github-seguro-recomendaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5. GitHub seguro: Recomendaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Práctica
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-anexos" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Anexos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Anexos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-commits-verificados-con-gpg" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1. Commits verificados con GPG
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-uso-del-agente-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2. Uso del agente SSH
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-mejorando-el-pre-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3. Mejorando el pre-commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-pre-commit-en-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4. Pre-commit en Python
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-dudas-tras-la-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5. Dudas tras la clase
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-fichero-gitignore" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Fichero .gitignore
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-git-leaks" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Git leaks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-mejorando-el-proceso-pre-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Mejorando el proceso: pre-commit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Mejorando el proceso: pre-commit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-pre-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. pre-commit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-ejercicio-pre-commit-con-linter" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Ejercicio: pre-commit con linter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-otras-consideraciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Otras consideraciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Otras consideraciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-informacion-sensible" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. Información sensible
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-proteger-el-acceso-al-repositorio-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2. Proteger el acceso al repositorio git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-mantener-git-y-herramientas-actualizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3. Mantener git (y herramientas) actualizadas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-ejemplos-de-fugas-por-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4. Ejemplos de fugas por git
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55-github-seguro-recomendaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5. GitHub seguro: Recomendaciones
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-practica" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Práctica
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-anexos" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Anexos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Anexos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-commits-verificados-con-gpg" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1. Commits verificados con GPG
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-uso-del-agente-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2. Uso del agente SSH
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-mejorando-el-pre-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3. Mejorando el pre-commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-pre-commit-en-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.4. Pre-commit en Python
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#75-dudas-tras-la-clase" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.5. Dudas tras la clase
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="git-seguro">Git seguro<a class="headerlink" href="#git-seguro" title="Permanent link">&para;</a></h1>
+<p>Veamos distintas formas de trabajar de una forma más segura con git y GitHub.</p>
+<h2 id="1-fichero-gitignore">1. Fichero .gitignore<a class="headerlink" href="#1-fichero-gitignore" title="Permanent link">&para;</a></h2>
+<p>El fichero <code>.gitignore</code> permite especificar ficheros o carpetas del directorio de trabajo que no se añadirán al repositorio al hacer un <code>git add .</code> o similar.</p>
+<p>Como ejemplo vamos a crear algunos ficheros en un repositorio ya existente:</p>
+<div class="highlight"><pre><span></span><code>alu@tos:~/git-seguro$<span class="w"> </span>git<span class="w"> </span>status<span class="w"> </span>
+En<span class="w"> </span>la<span class="w"> </span>rama<span class="w"> </span>main
+Tu<span class="w"> </span>rama<span class="w"> </span>está<span class="w"> </span>actualizada<span class="w"> </span>con<span class="w"> </span><span class="s1">&#39;origin/main&#39;</span>.
+
+nada<span class="w"> </span>para<span class="w"> </span>hacer<span class="w"> </span>commit,<span class="w"> </span>el<span class="w"> </span>árbol<span class="w"> </span>de<span class="w"> </span>trabajo<span class="w"> </span>está<span class="w"> </span>limpio
+alu@tos:~/git-seguro$<span class="w"> </span>ls<span class="w"> </span>-a
+.<span class="w">  </span>..<span class="w">  </span>.git<span class="w">  </span>README.md
+alu@tos:~/git-seguro$<span class="w"> </span>
+</code></pre></div>
+<p>Creamos el fichero <code>.env</code> con información de configuración (que no queremos añadir ni al repositorio local ni al remoto), el fichero <code>.gitignore</code> y el fichero <code>todo.md</code>:</p>
+<div class="highlight"><pre><span></span><code>alu@tos:~/git-seguro$<span class="w"> </span>nano<span class="w"> </span>.env
+alu@tos:~/git-seguro$<span class="w"> </span>nano<span class="w"> </span>.gitignore
+alu@tos:~/git-seguro$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot; # Todo &quot;</span><span class="w"> </span>&gt;<span class="w"> </span>todo.md
+alu@tos:~/git-seguro$<span class="w"> </span>cat<span class="w"> </span>.env<span class="w"> </span>
+<span class="nv">USER</span><span class="o">=</span>clases@locla.com
+<span class="nv">TOKEN</span><span class="o">=</span>1234567890QWERTYASDFGHH
+alu@tos:~/git-seguro$<span class="w"> </span>cat<span class="w"> </span>.gitignore<span class="w"> </span>
+.env
+venv/
+alu@tos:~/git-seguro$
+</code></pre></div>
+<p>Observe que en el fichero <code>.gitignore</code> se han añadido dos líneas: una para ignorar el fichero <code>.env</code> y otra para ignorar si existe el directorio <code>venv</code> (posible entorno virtual)</p>
+<p>Si hace <code>git status</code> verá que aunque hay ficheros nuevos sólo "rastrea" los que no están incluido en <code>.gitignore</code>: <code>todo.md</code> y el propio <code>.gitignore</code>, pero no <code>.env</code>:</p>
+<div class="highlight"><pre><span></span><code>alu@tos:~/git-seguro$<span class="w"> </span>git<span class="w"> </span>status<span class="w"> </span>
+En<span class="w"> </span>la<span class="w"> </span>rama<span class="w"> </span>main
+Tu<span class="w"> </span>rama<span class="w"> </span>está<span class="w"> </span>actualizada<span class="w"> </span>con<span class="w"> </span><span class="s1">&#39;origin/main&#39;</span>.
+
+Archivos<span class="w"> </span>sin<span class="w"> </span>seguimiento:
+<span class="w">  </span><span class="o">(</span>usa<span class="w"> </span><span class="s2">&quot;git add &lt;archivo&gt;...&quot;</span><span class="w"> </span>para<span class="w"> </span>incluirlo<span class="w"> </span>a<span class="w"> </span>lo<span class="w"> </span>que<span class="w"> </span>se<span class="w"> </span>será<span class="w"> </span>confirmado<span class="o">)</span>
+<span class="w">        </span>.gitignore
+<span class="w">        </span>todo.md
+
+no<span class="w"> </span>hay<span class="w"> </span>nada<span class="w"> </span>agregado<span class="w"> </span>al<span class="w"> </span>commit<span class="w"> </span>pero<span class="w"> </span>hay<span class="w"> </span>archivos<span class="w"> </span>sin<span class="w"> </span>seguimiento<span class="w"> </span>presentes<span class="w"> </span><span class="o">(</span>usa<span class="w"> </span><span class="s2">&quot;git add&quot;</span><span class="w"> </span>para<span class="w"> </span>hacerles<span class="w"> </span>seguimiento<span class="o">)</span>
+alu@tos:~/git-seguro$<span class="w"> </span>
+</code></pre></div>
+<p>Observe que incluso haciendo un <code>git add .</code> el fichero <code>.env</code> no se añade al <em>stage</em>:</p>
+<p><div class="highlight"><pre><span></span><code>alu@tos:~/git-seguro$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>.
+alu@tos:~/git-seguro$<span class="w"> </span>git<span class="w"> </span>status<span class="w"> </span>
+En<span class="w"> </span>la<span class="w"> </span>rama<span class="w"> </span>main
+Tu<span class="w"> </span>rama<span class="w"> </span>está<span class="w"> </span>actualizada<span class="w"> </span>con<span class="w"> </span><span class="s1">&#39;origin/main&#39;</span>.
+
+Cambios<span class="w"> </span>a<span class="w"> </span>ser<span class="w"> </span>confirmados:
+<span class="w">  </span><span class="o">(</span>usa<span class="w"> </span><span class="s2">&quot;git restore --staged &lt;archivo&gt;...&quot;</span><span class="w"> </span>para<span class="w"> </span>sacar<span class="w"> </span>del<span class="w"> </span>área<span class="w"> </span>de<span class="w"> </span>stage<span class="o">)</span>
+<span class="w">        </span>nuevo<span class="w"> </span>archivo:<span class="w">  </span>.gitignore
+<span class="w">        </span>nuevo<span class="w"> </span>archivo:<span class="w">  </span>todo.md
+
+alu@tos:~/git-seguro$
+</code></pre></div>
+Hacemos <em>push</em> al repositorio remoto</p>
+<div class="highlight"><pre><span></span><code>alu@tos:~/git-seguro$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+Username<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;https://github.com&#39;</span>:<span class="w"> </span>clases.alu+01@gmail.com
+Password<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;https://clases.alu+01@gmail.com@github.com&#39;</span>:<span class="w"> </span>
+Enumerando<span class="w"> </span>objetos:<span class="w"> </span><span class="m">5</span>,<span class="w"> </span>listo.
+Contando<span class="w"> </span>objetos:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">5</span>/5<span class="o">)</span>,<span class="w"> </span>listo.
+Compresión<span class="w"> </span>delta<span class="w"> </span>usando<span class="w"> </span>hasta<span class="w"> </span><span class="m">8</span><span class="w"> </span>hilos
+Comprimiendo<span class="w"> </span>objetos:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">2</span>/2<span class="o">)</span>,<span class="w"> </span>listo.
+Escribiendo<span class="w"> </span>objetos:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">4</span>/4<span class="o">)</span>,<span class="w"> </span><span class="m">351</span><span class="w"> </span>bytes<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">351</span>.00<span class="w"> </span>KiB/s,<span class="w"> </span>listo.
+Total<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>,<span class="w"> </span>reusado<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>
+To<span class="w"> </span>https://github.com/clases-alu-01/git-seguro.git
+<span class="w">   </span>c3b190d..968a431<span class="w">  </span>main<span class="w"> </span>-&gt;<span class="w"> </span>main
+alu@tos:~/git-seguro$<span class="w"> </span>
+</code></pre></div>
+<p>y se puede comprobar en GitHub que se han añadido <code>.gitignore</code> y <code>todo.md</code>, pero no el fichero <code>.env</code> (ni el directorio <code>venv</code> si existiera).</p>
+<p><img alt="" src="../figuras/git-seguro-01.png" /></p>
+<p>Se pueden ignorar archivos individuales, directorios completos, o utilizar patrones. Tiene más información en este enlace: <a href="https://aprendegit.com/tag/gitignore/">https://aprendegit.com/tag/gitignore/</a></p>
+<p>Nota: existe la posibilidad al crear el repositorio en GitHub de marcar la opción de añadir un fichero <code>.gitignore</code>, seleccionar el tipo de <em>framewok</em> o lenguaje a utilizar y GitHub crea un fichero <code>.gitignore</code> muy completo. A pesar de usar <code>.gitignore</code> en general debe ser precavido con el uso de <code>git add .</code>, a veces es preferible añadir los ficheros explícitamente.</p>
+<h2 id="2-git-leaks">2. Git leaks<a class="headerlink" href="#2-git-leaks" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><a href="https://github.com/zricethezav/gitleaks">https://github.com/zricethezav/gitleaks</a></p>
+<p>Gitleaks is a tool for detecting secrets like passwords, API keys, and tokens in git repos, files, and whatever else you wanna throw at it via stdin.</p>
+</blockquote>
+<p>Primero descargue de (<a href="https://github.com/zricethezav/gitleaks/releases">https://github.com/zricethezav/gitleaks/releases</a>) el fichero adecuado a su sistema. En el caso de estas prácticas algo similar a <code>gitleaks_X.YY.Z.linux_x64.tar.gz</code>. Descomprimir el fichero y copiar el fichero <code>gitleaks</code> al directorio <code>/usr/local/bin</code> (o incluir el directorio del ejecutable en el PATH). </p>
+<p>Las reglas que se aplican las puede consultar en GitHub. De aplican expresiones regulares para buscar tokens, API keys, etc.  Para acceder a la ayuda:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>gitleaks<span class="w">  </span>-h
+Gitleaks<span class="w"> </span>scans<span class="w"> </span>code,<span class="w"> </span>past<span class="w"> </span>or<span class="w"> </span>present,<span class="w"> </span><span class="k">for</span><span class="w"> </span>secrets
+
+Usage:
+<span class="w">  </span>gitleaks<span class="w"> </span><span class="o">[</span>command<span class="o">]</span>
+
+...
+</code></pre></div>
+<p>El uso básico de est comando podría ser:</p>
+<ul>
+<li><code>gitleaks git</code>: escanea el repositorio</li>
+<li><code>gitleaks git --staged</code>: escanea lso ficheros en la zona de seguimiento</li>
+<li><code>gitleaks dir</code>: escanea el directorio de trabajo</li>
+</ul>
+<p>Para probar esta utilidad se añaden a añadir dos ficheros con información sensible:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>cat<span class="w"> </span>clave.txt<span class="w"> </span>
+<span class="nv">Key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;e7322523fb86ed64c836a979cf8465fbd43637812&quot;</span>
+$<span class="w"> </span>cat<span class="w"> </span>discord.txt<span class="w"> </span>
+<span class="nv">Discord_Public_Key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;e7322523fb86ed64c836a979cf8465fbd436378c653c1db38f9ae87bc62a6fd5&quot;</span>
+$
+</code></pre></div>
+<p>Como estos ficheros no están añadidos al repositorio, al escanear el repositorio no detecta las fugas:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>gitleaks<span class="w"> </span>git
+<span class="w">    </span>○
+<span class="w">    </span>│╲
+<span class="w">    </span>│<span class="w"> </span>○
+<span class="w">    </span>○<span class="w"> </span>░
+<span class="w">    </span>░<span class="w">    </span>gitleaks
+<span class="m">10</span>:54AM<span class="w"> </span>INF<span class="w"> </span><span class="m">2</span><span class="w"> </span>commits<span class="w"> </span>scanned.
+<span class="m">10</span>:54AM<span class="w"> </span>INF<span class="w"> </span>scanned<span class="w"> </span>~92<span class="w"> </span>bytes<span class="w"> </span><span class="o">(</span><span class="m">92</span><span class="w"> </span>bytes<span class="o">)</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>119ms
+<span class="m">10</span>:54AM<span class="w"> </span>INF<span class="w"> </span>no<span class="w"> </span>leaks<span class="w"> </span>found
+$<span class="w"> </span>
+</code></pre></div>
+<p>Con la opción <code>dir</code> se escanea el  directorio y ahora si detecta las fugas:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>gitleaks<span class="w"> </span>dir<span class="w"> </span>
+
+<span class="w">    </span>○
+<span class="w">    </span>│╲
+<span class="w">    </span>│<span class="w"> </span>○
+<span class="w">    </span>○<span class="w"> </span>░
+<span class="w">    </span>░<span class="w">    </span>gitleaks
+
+<span class="m">11</span>:46AM<span class="w"> </span>INF<span class="w"> </span>scanned<span class="w"> </span>~22948<span class="w"> </span>bytes<span class="w"> </span><span class="o">(</span><span class="m">22</span>.95<span class="w"> </span>KB<span class="o">)</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">18</span>.2ms
+<span class="m">11</span>:46AM<span class="w"> </span>WRN<span class="w"> </span>leaks<span class="w"> </span>found:<span class="w"> </span><span class="m">2</span>
+$<span class="w"> </span>
+</code></pre></div>
+<p>Si desea información detalle use la opción <code>-v</code> </p>
+<div class="highlight"><pre><span></span><code>$ gitleaks dir -v --no-banner
+Finding:     Key = &quot;e7322523fb86ed64c836a979cf8465fbd43637812&quot;
+Secret:      e7322523fb86ed64c836a979cf8465fbd43637812
+RuleID:      generic-api-key
+Entropy:     3.760383
+File:        clave.txt
+Line:        1
+Fingerprint: clave.txt:generic-api-key:1
+
+Finding:     Discord_Public_Key = &quot;e7322523fb86ed64c836a979cf8465fbd436378c653c1db38f9ae87bc62a6fd5&quot;
+Secret:      e7322523fb86ed64c836a979cf8465fbd436378c653c1db38f9ae87bc62a6fd5
+RuleID:      discord-api-token
+Entropy:     3.790624
+File:        discord.txt
+Line:        1
+Fingerprint: discord.txt:discord-api-token:1
+
+11:47AM INF scanned ~22948 bytes (22.95 KB) in 20.4ms
+11:47AM WRN leaks found: 2
+$ 
+</code></pre></div>
+<p>Se pueden volcar los resultados en un fichero con la opción <code>-r</code> y especificando el formato con <code>-f</code>:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>gitleaks<span class="w"> </span>dir<span class="w"> </span>--no-banner<span class="w"> </span>-f<span class="w"> </span>json<span class="w"> </span>-r<span class="w"> </span><span class="nb">test</span><span class="w"> </span>
+<span class="m">11</span>:52AM<span class="w"> </span>INF<span class="w"> </span>scanned<span class="w"> </span>~22948<span class="w"> </span>bytes<span class="w"> </span><span class="o">(</span><span class="m">22</span>.95<span class="w"> </span>KB<span class="o">)</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">16</span>.6ms
+<span class="m">11</span>:52AM<span class="w"> </span>WRN<span class="w"> </span>leaks<span class="w"> </span>found:<span class="w"> </span><span class="m">2</span>
+$<span class="w"> </span>head<span class="w"> </span>-n<span class="w"> </span><span class="m">24</span><span class="w"> </span><span class="nb">test</span>
+<span class="o">[</span>
+<span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="s2">&quot;RuleID&quot;</span>:<span class="w"> </span><span class="s2">&quot;generic-api-key&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;Description&quot;</span>:<span class="w"> </span><span class="s2">&quot;Detected a Generic API Key, potentially exposing access to various services and sensitive operations.&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;StartLine&quot;</span>:<span class="w"> </span><span class="m">1</span>,
+<span class="w">  </span><span class="s2">&quot;EndLine&quot;</span>:<span class="w"> </span><span class="m">1</span>,
+<span class="w">  </span><span class="s2">&quot;StartColumn&quot;</span>:<span class="w"> </span><span class="m">1</span>,
+<span class="w">  </span><span class="s2">&quot;EndColumn&quot;</span>:<span class="w"> </span><span class="m">49</span>,
+<span class="w">  </span><span class="s2">&quot;Match&quot;</span>:<span class="w"> </span><span class="s2">&quot;Key = \&quot;e7322523fb86ed64c836a979cf8465fbd43637812\&quot;&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;Secret&quot;</span>:<span class="w"> </span><span class="s2">&quot;e7322523fb86ed64c836a979cf8465fbd43637812&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;File&quot;</span>:<span class="w"> </span><span class="s2">&quot;clave.txt&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;Commit&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>,
+<span class="w">  </span><span class="s2">&quot;Entropy&quot;</span>:<span class="w"> </span><span class="m">3</span>.7603827,
+<span class="w">  </span><span class="s2">&quot;Fingerprint&quot;</span>:<span class="w"> </span><span class="s2">&quot;clave.txt:generic-api-key:1&quot;</span>
+<span class="w"> </span><span class="o">}</span>,
+<span class="w"> </span><span class="o">{</span>
+<span class="w">  </span><span class="s2">&quot;RuleID&quot;</span>:<span class="w"> </span><span class="s2">&quot;generic-api-key&quot;</span>,
+<span class="w"> </span>...
+</code></pre></div>
+<p>Si quiere analizar sólo la zona de seguimeinto o staged antes de un <em>commit</em> debe usar  el comando de esta forma</p>
+<p><code>gitleaks git --staged</code> </p>
+<p>Aquí tiene un ejemplo: añada sólo uno de los ficheros a la zona de seguimento </p>
+<div class="highlight"><pre><span></span><code>$ git add discord.txt
+$ git status
+En la rama main
+Tu rama está actualizada con &#39;origin/main&#39;.
+
+Cambios a ser confirmados:
+  (usa &quot;git restore --staged &lt;archivo&gt;...&quot; para sacar del área de stage)
+    nuevos archivos: discord.txt
+
+
+Archivos sin seguimiento:
+  (usa &quot;git add &lt;archivo&gt;...&quot; para incluirlo a lo que será confirmado)
+    clave.txt
+$ 
+</code></pre></div>
+<p>y observe cómo <code>gitleaks git --staged</code>  detecta una fuga y <code>gitleaks dir</code> detecta dos.</p>
+<div class="highlight"><pre><span></span><code>$ gitleaks git --staged --no-banner
+11:59AM INF 1 commits scanned.
+11:59AM INF scanned ~88 bytes (88 bytes) in 117ms
+11:59AM WRN leaks found: 1
+$ gitleaks dir --no-banner
+11:59AM INF scanned ~22948 bytes (22.95 KB) in 12.5ms
+11:59AM WRN leaks found: 2
+$ 
+</code></pre></div>
+<h2 id="3-mejorando-el-proceso-pre-commit">3. Mejorando el proceso: pre-commit<a class="headerlink" href="#3-mejorando-el-proceso-pre-commit" title="Permanent link">&para;</a></h2>
+<p>Ahora parece claro que antes de hacer un commit debería comprobar los ficheros a confirmar con gitleaks (y sobre todo antes de hacer un push al remoto). </p>
+<p>Incluso condicionar la realización del commit a un resultado sin fugas. Tenga en cuenta que el comando gitleaks devuelve el valor 1 si hay fugas y cero si no (y que la variable de entorno <code>$?</code> almacena el valor de la última ejecución de un comando en CLI)</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>gitleaks<span class="w"> </span>git<span class="w"> </span>--no-banner
+<span class="m">12</span>:05PM<span class="w"> </span>INF<span class="w"> </span><span class="m">2</span><span class="w"> </span>commits<span class="w"> </span>scanned.
+<span class="m">12</span>:05PM<span class="w"> </span>INF<span class="w"> </span>scanned<span class="w"> </span>~92<span class="w"> </span>bytes<span class="w"> </span><span class="o">(</span><span class="m">92</span><span class="w"> </span>bytes<span class="o">)</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>128ms
+<span class="m">12</span>:05PM<span class="w"> </span>INF<span class="w"> </span>no<span class="w"> </span>leaks<span class="w"> </span>found
+$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span>
+<span class="m">0</span>
+$<span class="w"> </span>gitleaks<span class="w"> </span>git<span class="w"> </span>--staged<span class="w"> </span>--no-banner
+<span class="m">12</span>:05PM<span class="w"> </span>INF<span class="w"> </span><span class="m">1</span><span class="w"> </span>commits<span class="w"> </span>scanned.
+<span class="m">12</span>:05PM<span class="w"> </span>INF<span class="w"> </span>scanned<span class="w"> </span>~88<span class="w"> </span>bytes<span class="w"> </span><span class="o">(</span><span class="m">88</span><span class="w"> </span>bytes<span class="o">)</span><span class="w"> </span><span class="k">in</span><span class="w"> </span>123ms
+<span class="m">12</span>:05PM<span class="w"> </span>WRN<span class="w"> </span>leaks<span class="w"> </span>found:<span class="w"> </span><span class="m">1</span>
+$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$?</span>
+<span class="m">1</span>
+$
+</code></pre></div>
+<p>En el siguiente apartado se automatiza este proceso con pre-commit.</p>
+<h3 id="31-pre-commit">3.1. pre-commit<a class="headerlink" href="#31-pre-commit" title="Permanent link">&para;</a></h3>
+<p>El proceso de buscar fugas y detener el commit se puede automatizar usando los <em>hooks</em> de git, en este caso el del tipo <em>pre-commit</em>. </p>
+<blockquote>
+<p>Git cuenta con mecanismos para lanzar scripts de usuario cuando suceden ciertas acciones importantes, llamados puntos de enganche (hooks). Hay dos grupos de esos puntos de lanzamiento: los del lado cliente y los del lado servidor. Los puntos de enganche del lado cliente están relacionados con operaciones tales como la confirmación de cambios (commit) o la fusión (merge). 
+...</p>
+<p>Los puntos de enganche se guardan en la subcarpeta <em>hooks</em> de la carpeta Git. En la mayoría de proyectos, estará en <code>.git/hooks</code>. Por defecto, esta carpeta contiene unos cuantos scripts de ejemplo.</p>
+<p><a href="https://git-scm.com/book/es/v2/Personalizaci%C3%B3n-de-Git-Puntos-de-enganche-en-Git">https://git-scm.com/book/es/v2/Personalizaci%C3%B3n-de-Git-Puntos-de-enganche-en-Git</a></p>
+</blockquote>
+<p>El objetivo es que cada vez que se invoque un commit se ejecute antes un script que <em>comprueba cosas</em>, y si todo es correcto se ejecuta el commit. En nuestro caso la comprobación será que gitleaks no encuentre fugas. </p>
+<p>Para ello se crea un fichero <code>.git/hooks/pre-commit</code> y se le  añade el script que se muestra a continuación:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>nano<span class="w"> </span>.git/hooks/pre-commit
+$<span class="w"> </span>cat<span class="w"> </span>.git/hooks/pre-commit
+<span class="c1">#!/bin/sh</span>
+<span class="c1"># This is an example of what adding gitleaks to a pre-commit ...</span>
+
+gitleaks<span class="w"> </span>git<span class="w"> </span>--staged<span class="w"> </span>-v
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">      </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;\n&gt;&gt; pre-commit: Error: gitleaks ha detectado fugas de información en tus cambios.&quot;</span>
+<span class="w">      </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&gt;&gt; pre-commit: No se realizará el commit&quot;</span>
+<span class="w">    </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="k">fi</span>
+</code></pre></div>
+<p>El script invoca gitleaks y comprueba el valor de retorno (<code>$?</code>). Si es 1 indica que hay fugas, y el script devbuelve como resultado del script  el valor 1 provocando que el commit no se realice.</p>
+<p>Tenga en cuenta que debe dar permisos de ejecución al fichero <code>pre-commit</code>:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>chmod<span class="w"> </span>+x<span class="w"> </span>.git/hooks/pre-commit
+$
+</code></pre></div>
+<p>Y sólo queda probar el commit. Al ejecutarlo se muestra la salida de gitleaks, el mensaje de error del script, y el commit no se realiza:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;testing pre-commit: debe dar error pro clave.txt&quot;</span>
+...
+<span class="m">9</span>:42PM<span class="w"> </span>WRN<span class="w"> </span>leaks<span class="w"> </span>found:<span class="w"> </span><span class="m">1</span>
+<span class="m">9</span>:42PM<span class="w"> </span>INF<span class="w"> </span>scan<span class="w"> </span>duration:<span class="w"> </span><span class="m">51</span>.923786ms
+
+&gt;&gt;<span class="w"> </span>Error:<span class="w"> </span>gitleaks<span class="w"> </span>ha<span class="w"> </span>detectado<span class="w"> </span>fugas<span class="w"> </span>de<span class="w"> </span>información<span class="w"> </span>en<span class="w"> </span>tus<span class="w"> </span>cambios.
+&gt;&gt;<span class="w"> </span>pre-commit:<span class="w"> </span>No<span class="w"> </span>se<span class="w"> </span>realizará<span class="w"> </span>el<span class="w"> </span>commit<span class="s2">&quot;</span>
+$<span class="s2"> </span>
+</code></pre></div>
+<h2 id="4-ejercicio-pre-commit-con-linter">4. Ejercicio: pre-commit con linter<a class="headerlink" href="#4-ejercicio-pre-commit-con-linter" title="Permanent link">&para;</a></h2>
+<p>Crear un pre-commit para una aplicación en Python que verifique 
+* que el código Python supera el linting con <code>flake8</code> o <code>pylint</code>. 
+* que el código Python supere un test unitario.</p>
+<h2 id="5-otras-consideraciones">5. Otras consideraciones<a class="headerlink" href="#5-otras-consideraciones" title="Permanent link">&para;</a></h2>
+<h3 id="51-informacion-sensible">5.1. Información sensible<a class="headerlink" href="#51-informacion-sensible" title="Permanent link">&para;</a></h3>
+<p>Debe evitar respaldar información sensible en el repositorio. Para evitarlo hasta ahora:
+- El  primer paso es usar <code>.gitignore</code> . Ficheros del tipo <em>.pem</em> o <em>.key</em> deberían estar incluidos. Pero no olvide por ejemplo si tiene una aplicación PHP las credenciales de la BD, etc. 
+- El segundo, usar git add <files> en vez de <code>git add .</code> para controalr con exactitud qeu se añade a la zona de seguimiento.
+- Usar una herramienta como gitlekas para buscar fugas
+- Configurar <code>pre-commit</code>  para automatizar esta tarea.</p>
+<p>Otras herramientas adicionales que puede usar:
+- <a href="https://github.com/apuigsech/git-seekret">git-seekret</a>: <em>inspect on commits and/or staged (and uncommited yet) files, to prevent adding sensitive information into the git repository. It can be easily integrated with git hooks, forcing it to analise all staged files before they are included into a commit.</em> Sus reglas se basan en <a href="https://github.com/apuigsech/seekret">seekret</a>. 
+- <a href="https://rtyley.github.io/bfg-repo-cleaner/">BFG</a>: <em>The BFG is a simpler, faster alternative to git-filter-branch for cleaning bad data out of your Git repository history, removing Crazy Big Files and removing Passwords, Credentials &amp; other Private data</em></p>
+<p>Si la información sensible se ha añadido al repositorio remoto en GitHub se recomienda leer este enlace <a href="https://docs.github.com/es/enterprise-cloud@latest/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository">Eliminación de datos confidenciales de un repositorio</a>. </p>
+<p>Cuando has subido datos sensibles (por error) a un repo de GitHub, no basta con borrar el archivo y hacer un commit, porque Git guarda todo el historial. El dato seguirá allí en la historia del repositorio. Por eso necesitas reescribir el historial para eliminarlo de verdad. Las dos herramientas más usadas son:</p>
+<ul>
+<li>git filter-branch</li>
+<li>BFG Repo-Cleaner</li>
+</ul>
+<h3 id="52-proteger-el-acceso-al-repositorio-git">5.2. Proteger el acceso al repositorio git<a class="headerlink" href="#52-proteger-el-acceso-al-repositorio-git" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Hay que proteger el directorio <code>.git</code>: <em>These internal files contain the whole history of your committed changes. In other words, the .git folder is your Git repository and consequently should never be exposed to people not authorized to clone it.</em></li>
+<li>Si se usan varios equipos de trabajo (en la oficina, en casa, porta´til, etc) se recomienda crear pares de claves SSH distintas para cada equipo. De esa forma se puede revocar la clave del equipo que pueda estar comprometido.</li>
+<li>Si da acceso a terceras aplicaciones, usar tokens de acceso que son fácilmente revocables.</li>
+<li>Si utiliza GitHub o GitLab debería usar <em>Two-Factor Authentication (2FA)</em>.</li>
+</ul>
+<h3 id="53-mantener-git-y-herramientas-actualizadas">5.3. Mantener git (y herramientas) actualizadas<a class="headerlink" href="#53-mantener-git-y-herramientas-actualizadas" title="Permanent link">&para;</a></h3>
+<p>Y por supuesto, una vez más: git y todo el conjunto de utilidades alrededor del mismo pueden tener vulnerabilidades, así que todos deberían estar siempre actualizados.</p>
+<h3 id="54-ejemplos-de-fugas-por-git">5.4. Ejemplos de fugas por git<a class="headerlink" href="#54-ejemplos-de-fugas-por-git" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><a href="https://securereading.com/data-of-16-million-brazilian-covid-19-patients-exposed-online/">Data of 16 million Brazilian COVID-19 patients exposed online</a>: </p>
+<blockquote>
+<p>The personal and healthcare records of 16 million Brazilian COVID-19 patients, including government representatives, exposed online.</p>
+<p>The leak came to limelight after a GitHub user noticed the spreadsheet containing the passwords on the personal GitHub account of an employee working with Albert Einstein Hospital in the city of Sao Paulo.</p>
+<p>The spreadsheet included the login credentials for systems including E-SUS-VE and Sivep-Gripe, two government databases used to store information on COVID-19 patients.</p>
+</blockquote>
+</li>
+<li>
+<p><a href="https://www.zdnet.com/article/nissan-source-code-leaked-online-after-git-repo-misconfiguration/">Nissan source code leaked online after Git repo misconfiguration</a></p>
+</li>
+</ul>
+<blockquote>
+<p>Nissan source code leaked online after Git repo misconfiguration
+Nissan was allegedly running a Bitbucket Git server with the default credentials of admin/admin.</p>
+</blockquote>
+<h3 id="55-github-seguro-recomendaciones">5.5. GitHub seguro: Recomendaciones<a class="headerlink" href="#55-github-seguro-recomendaciones" title="Permanent link">&para;</a></h3>
+<p>En este apartado se enumeran algunas recomendaciones específicas para GitHub tomadas de <a href="https://cycode.com/blog/security-best-practices-for-github/">Security Best Practices for Github</a>. </p>
+<p>Entre ellas:</p>
+<ul>
+<li>Autenticación: </li>
+<li>Usar <a href="https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-two-factor-authentication-for-your-organization/requiring-two-factor-authentication-in-your-organization">doble factor de autenticación</a></li>
+<li>limitar la IP de acceso a GitHub</li>
+<li>Configuración de los repositorios</li>
+<li>fijar al mínimo los permisos base para los repositorio de la organización a ninguno. Esto obkliga a especificar los permisos en cada repositorio</li>
+<li>Controlar el acceso de loscolaboradores externos, fijando sus permisos al mínimo posible. </li>
+<li>Revisar permisos de acceso en la configuración del repositorio:
+    <img alt="figuras/github-seguro-01.png" src="../figuras/github-seguro-01.png" /></li>
+<li>Controlar el forking de un repositorio:<ul>
+<li>Es dificil manejar la seguridad de cada fork.</li>
+<li>Puede crearse un copia del fork en la cuenta personal del usuario lo cual puede ser otro problema de seguridad.</li>
+</ul>
+</li>
+<li>No permitir cambios en la visibilidad de los repositorios (público/privado)</li>
+<li>Elegir si los miembros pueden crear repositorios en tu organización o no. Si se permite que los miembros creen repositorios, elegir si pueden crear tanto repositorios públicos como privados o solo públicos. </li>
+<li>Habilitar las reglas de protección de ramas (<em>branch protection rules</em>)<ul>
+<li>Revisar el código antes de hacer un merge</li>
+<li>Forzar un número de revisores para permitir un commit</li>
+<li>Obligar a que los commits estén firmados </li>
+</ul>
+</li>
+<li>Seguridad en el código fuente y<ul>
+<li>Habilitar chequeo de dependencias</li>
+<li>Revisar los logs</li>
+<li>Revisar el acceso de terceros y de aplicaciones a GitHub</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-practica">6. Práctica<a class="headerlink" href="#6-practica" title="Permanent link">&para;</a></h2>
+<p>Entregar memoria que refleje con enlaces y capturas lo siguiente:</p>
+<ol>
+<li>Crear un repositorio en local con al menos dos commit.</li>
+<li>Crear fichero <code>.gitignore</code> que impida añadir al repositorio ficheros con extensión .log y el directorio del entorno virtual (pero sí el fichero .gitignore). Cree algún fichero de log en el directorio de trabajo  para comprobar que son ignorados.</li>
+<li>Deberá conectar ese repositorio con un repositorio remoto en GitHub. Este deberá ser público y deberá indicar su URL en la práctica.</li>
+<li>Verificar que su repositorio no tiene fugas con la utilidad <em>gitleaks</em>. Añada un fichero de entorno con alguna clave como la del tema para comprobar que si hay fugas las detecta. Finalmente incluya el fichero de variables de entorno al <code>.gitignore</code> para evitar que se añada al repositorio.</li>
+<li>Crear hook pre-commit en repositorio local para comprobar las fugas con gitleaks antes de hacer el commit.</li>
+<li>Añadir al hook pre-commit el linting del código. Probar con algún fichero python con errores para verificar.</li>
+<li>Opcional: Usar la firma GPG en al menos un commit.</li>
+</ol>
+<h2 id="7-anexos">7. Anexos<a class="headerlink" href="#7-anexos" title="Permanent link">&para;</a></h2>
+<h3 id="71-commits-verificados-con-gpg">7.1. Commits verificados con GPG<a class="headerlink" href="#71-commits-verificados-con-gpg" title="Permanent link">&para;</a></h3>
+<p>En GitHub puede ver la información de los commit realizados justo debajo del botón "<em>Code</em>" (el de color  verde). Justo a la izquierda del <em>hash</em> aparece una marca indicando si el <em>commit</em> tiene un autor "<strong>verificado</strong>";</p>
+<p><img alt="" src="../figuras/git-seguro-02.png" /></p>
+<p>Aparecen como verificados los <em>commits</em> realizados en GitHub (por ejemplo el de creación inicial del repositorio) y  los generados a partir de un <em>Merge</em> en GitHub.</p>
+<p>Si el <em>commit</em> provine del repositorio local no aparece como verificado excepto si el <em>commit</em> en local se han firmado con clave GPG.</p>
+<p>Para poder firmar necesita generar claves GPG con <code>gpg --gen-key</code>. El comando solicitará nombre, email y una frase de contraseña de protección para la clave GPG (se pedirá cada vez que vaya a firmar con ella).</p>
+<div class="highlight"><pre><span></span><code>alu@tos:~$<span class="w"> </span>gpg<span class="w"> </span>--full-gen-key
+gpg<span class="w"> </span><span class="o">(</span>GnuPG<span class="o">)</span><span class="w"> </span><span class="m">2</span>.2.19<span class="p">;</span><span class="w"> </span>Copyright<span class="w"> </span><span class="o">(</span>C<span class="o">)</span><span class="w"> </span><span class="m">2019</span><span class="w"> </span>Free<span class="w"> </span>Software<span class="w"> </span>Foundation,<span class="w"> </span>Inc.
+This<span class="w"> </span>is<span class="w"> </span>free<span class="w"> </span>software:<span class="w"> </span>you<span class="w"> </span>are<span class="w"> </span>free<span class="w"> </span>to<span class="w"> </span>change<span class="w"> </span>and<span class="w"> </span>redistribute<span class="w"> </span>it.
+There<span class="w"> </span>is<span class="w"> </span>NO<span class="w"> </span>WARRANTY,<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>extent<span class="w"> </span>permitted<span class="w"> </span>by<span class="w"> </span>law.
+
+Por<span class="w"> </span>favor<span class="w"> </span>seleccione<span class="w"> </span>tipo<span class="w"> </span>de<span class="w"> </span>clave<span class="w"> </span>deseado:
+<span class="w">   </span><span class="o">(</span><span class="m">1</span><span class="o">)</span><span class="w"> </span>RSA<span class="w"> </span>y<span class="w"> </span>RSA<span class="w"> </span><span class="o">(</span>por<span class="w"> </span>defecto<span class="o">)</span>
+<span class="w">   </span><span class="o">(</span><span class="m">2</span><span class="o">)</span><span class="w"> </span>DSA<span class="w"> </span>y<span class="w"> </span>ElGamal
+<span class="w">   </span><span class="o">(</span><span class="m">3</span><span class="o">)</span><span class="w"> </span>DSA<span class="w"> </span><span class="o">(</span>sólo<span class="w"> </span>firmar<span class="o">)</span>
+<span class="w">   </span><span class="o">(</span><span class="m">4</span><span class="o">)</span><span class="w"> </span>RSA<span class="w"> </span><span class="o">(</span>sólo<span class="w"> </span>firmar<span class="o">)</span>
+<span class="w">  </span><span class="o">(</span><span class="m">14</span><span class="o">)</span><span class="w"> </span>Existing<span class="w"> </span>key<span class="w"> </span>from<span class="w"> </span>card
+Su<span class="w"> </span>elección:<span class="w"> </span>
+las<span class="w"> </span>claves<span class="w"> </span>RSA<span class="w"> </span>pueden<span class="w"> </span>tener<span class="w"> </span>entre<span class="w"> </span><span class="m">1024</span><span class="w"> </span>y<span class="w"> </span><span class="m">4096</span><span class="w"> </span>bits<span class="w"> </span>de<span class="w"> </span>longitud.
+¿De<span class="w"> </span>qué<span class="w"> </span>tamaño<span class="w"> </span>quiere<span class="w"> </span>la<span class="w"> </span>clave?<span class="w"> </span><span class="o">(</span><span class="m">3072</span><span class="o">)</span><span class="w"> </span><span class="m">4096</span>
+El<span class="w"> </span>tamaño<span class="w"> </span>requerido<span class="w"> </span>es<span class="w"> </span>de<span class="w"> </span><span class="m">4096</span><span class="w"> </span>bits
+Por<span class="w"> </span>favor,<span class="w"> </span>especifique<span class="w"> </span>el<span class="w"> </span>período<span class="w"> </span>de<span class="w"> </span>validez<span class="w"> </span>de<span class="w"> </span>la<span class="w"> </span>clave.
+<span class="w">         </span><span class="nv">0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>la<span class="w"> </span>clave<span class="w"> </span>nunca<span class="w"> </span>caduca
+<span class="w">      </span>&lt;n&gt;<span class="w">  </span><span class="o">=</span><span class="w"> </span>la<span class="w"> </span>clave<span class="w"> </span>caduca<span class="w"> </span>en<span class="w"> </span>n<span class="w"> </span>días
+<span class="w">      </span>&lt;n&gt;w<span class="w"> </span><span class="o">=</span><span class="w"> </span>la<span class="w"> </span>clave<span class="w"> </span>caduca<span class="w"> </span>en<span class="w"> </span>n<span class="w"> </span>semanas
+<span class="w">      </span>&lt;n&gt;m<span class="w"> </span><span class="o">=</span><span class="w"> </span>la<span class="w"> </span>clave<span class="w"> </span>caduca<span class="w"> </span>en<span class="w"> </span>n<span class="w"> </span>meses
+<span class="w">      </span>&lt;n&gt;y<span class="w"> </span><span class="o">=</span><span class="w"> </span>la<span class="w"> </span>clave<span class="w"> </span>caduca<span class="w"> </span>en<span class="w"> </span>n<span class="w"> </span>años
+¿Validez<span class="w"> </span>de<span class="w"> </span>la<span class="w"> </span>clave<span class="w"> </span><span class="o">(</span><span class="m">0</span><span class="o">)</span>?<span class="w"> </span>
+La<span class="w"> </span>clave<span class="w"> </span>nunca<span class="w"> </span>caduca
+¿Es<span class="w"> </span>correcto?<span class="w"> </span><span class="o">(</span>s/n<span class="o">)</span><span class="w"> </span>s
+
+GnuPG<span class="w"> </span>debe<span class="w"> </span>construir<span class="w"> </span>un<span class="w"> </span>ID<span class="w"> </span>de<span class="w"> </span>usuario<span class="w"> </span>para<span class="w"> </span>identificar<span class="w"> </span>su<span class="w"> </span>clave.
+
+Nombre<span class="w"> </span>y<span class="w"> </span>apellidos:<span class="w"> </span>Clases<span class="w"> </span>Alu<span class="w"> </span><span class="m">01</span>
+Dirección<span class="w"> </span>de<span class="w"> </span>correo<span class="w"> </span>electrónico:<span class="w"> </span>clases.alu+01@gmail.com
+Comentario:<span class="w"> </span>
+Ha<span class="w"> </span>seleccionado<span class="w"> </span>este<span class="w"> </span>ID<span class="w"> </span>de<span class="w"> </span>usuario:
+<span class="w">    </span><span class="s2">&quot;Clases Alu 01 &lt;clases.alu+01@gmail.com&gt;&quot;</span>
+
+¿Cambia<span class="w"> </span><span class="o">(</span>N<span class="o">)</span>ombre,<span class="w"> </span><span class="o">(</span>C<span class="o">)</span>omentario,<span class="w"> </span><span class="o">(</span>D<span class="o">)</span>irección<span class="w"> </span>o<span class="w"> </span><span class="o">(</span>V<span class="o">)</span>ale/<span class="o">(</span>S<span class="o">)</span>alir?<span class="w"> </span>v
+Es<span class="w"> </span>necesario<span class="w"> </span>generar<span class="w"> </span>muchos<span class="w"> </span>bytes<span class="w"> </span>aleatorios.<span class="w"> </span>Es<span class="w"> </span>una<span class="w"> </span>buena<span class="w"> </span>idea<span class="w"> </span>realizar
+....
+gpg:<span class="w"> </span>clave<span class="w"> </span>1D4EC5FC181F659E<span class="w"> </span>marcada<span class="w"> </span>como<span class="w"> </span>de<span class="w"> </span>confianza<span class="w"> </span>absoluta
+gpg:<span class="w"> </span>certificado<span class="w"> </span>de<span class="w"> </span>revocación<span class="w"> </span>guardado<span class="w"> </span>como<span class="w"> </span><span class="s1">&#39;/home/alu/.gnupg/openpgp-revocs.d/6E1C43C8C0C42ED71084ECE61D4EC5FC181F659E.rev&#39;</span>
+claves<span class="w"> </span>pública<span class="w"> </span>y<span class="w"> </span>secreta<span class="w"> </span>creadas<span class="w"> </span>y<span class="w"> </span>firmadas.
+
+pub<span class="w">   </span>rsa4096<span class="w"> </span><span class="m">2022</span>-02-14<span class="w"> </span><span class="o">[</span>SC<span class="o">]</span>
+<span class="w">      </span>6E1C43C8C0C42ED71084ECE61D4EC5FC181F659E
+uid<span class="w">                      </span>Clases<span class="w"> </span>Alu<span class="w"> </span><span class="m">01</span><span class="w"> </span>&lt;clases.alu+01@gmail.com&gt;
+sub<span class="w">   </span>rsa4096<span class="w"> </span><span class="m">2022</span>-02-14<span class="w"> </span><span class="o">[</span>E<span class="o">]</span>
+
+alu@tos:~$
+</code></pre></div>
+<p>Debe anotar el id de la clave (en este ejemplo <code>1D4EC5FC181F659E</code>) que se puede obtener también con <code>gpg --list-secret-keys --keyid-format LONG</code></p>
+<div class="highlight"><pre><span></span><code>alu@tos:~$<span class="w"> </span>gpg<span class="w"> </span>--list-secret-keys<span class="w"> </span>--keyid-format<span class="w"> </span>LONG
+/home/alu/.gnupg/pubring.kbx
+----------------------------
+sec<span class="w">   </span>rsa4096/1D4EC5FC181F659E<span class="w"> </span><span class="m">2022</span>-02-14<span class="w"> </span><span class="o">[</span>SC<span class="o">]</span>
+<span class="w">      </span>6E1C43C8C0C42ED71084ECE61D4EC5FC181F659E
+uid<span class="w">              </span><span class="o">[</span><span class="w">  </span>absoluta<span class="w"> </span><span class="o">]</span><span class="w"> </span>Clases<span class="w"> </span>Alu<span class="w"> </span><span class="m">01</span><span class="w"> </span>&lt;clases.alu+01@gmail.com&gt;
+ssb<span class="w">   </span>rsa4096/6047FF0F707B2B66<span class="w"> </span><span class="m">2022</span>-02-14<span class="w"> </span><span class="o">[</span>E<span class="o">]</span>
+
+alu@tos:~$<span class="w"> </span>
+</code></pre></div>
+<p>En este ejemplo es <em><code>1D4EC5FC181F659E</code></em>, y es el id que se utiliza con el comando <code>gpg --armor --export &lt;id&gt;</code> para extraer la parte publica de la clave que luego debe añadir en GitHub:</p>
+<div class="highlight"><pre><span></span><code>alu@tos:~$<span class="w">  </span>gpg<span class="w"> </span>--armor<span class="w"> </span>--export<span class="w"> </span>1D4EC5FC181F659E
+-----BEGIN<span class="w"> </span>PGP<span class="w"> </span>PUBLIC<span class="w"> </span>KEY<span class="w"> </span>BLOCK-----
+
+mQINBGIKg1QBEACdugTGBydTQR6e+y08y1XW/+A7wbM/5O/UDjfOc/ptrjcN2+B5
+...
+...
++l6uxkkZ4HyWfYdd4rPVPtYrBeF2zJe5ciORL0JBcuHn8qXlz7iGxyIiq9UGi/jW
+<span class="nv">8uNn</span>
+<span class="o">=</span>gU2J
+-----END<span class="w"> </span>PGP<span class="w"> </span>PUBLIC<span class="w"> </span>KEY<span class="w"> </span>BLOCK-----
+</code></pre></div>
+<p>Copie el bloque incluyendo las dos líneas que delimitan <code>-----BEGIN PGP PUBLIC KEY BLOCK-----</code> y  <code>-----END PGP PUBLIC KEY BLOCK-----</code> y nos vamos a GitHub, Menú principal, <em>Settings</em>. opción  <em>SSH and GPG keys</em>. Haga clic en el botón "<em>New GPG Key"</em>, añada el texto copiado y pulse "<em>Add GPG Key</em>".</p>
+<p><img alt="" src="../figuras/git-seguro-03.png" /></p>
+<p><img alt="" src="../figuras/git-seguro-04.png" /></p>
+<p>Tras copiar la clave pública en GitHub debes configurar git en local para que use la firma GPG segun estas instricciones:
+<a href="https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key">https://docs.github.com/en/authentication/managing-commit-signature-verification/telling-git-about-your-signing-key</a></p>
+<p>Se le indica a git (a nivel local o global) que <code>id</code> de firma va a usar con <code>git config user.signingKey &lt;id&gt;</code> :</p>
+<div class="highlight"><pre><span></span><code>~/git-module$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>user.signingKey<span class="w">  </span>1D4EC5FC181F659E
+~/git-module$<span class="w"> </span>
+</code></pre></div>
+<p>Y ya puede firmar sus commits. Al hacer <code>commit</code>  use la opción <code>-S</code>  y pedirá la frase de paso de la clave GPG. Para probar modifique algún fichero y haga <code>git add</code>, <code>git commit -S</code>  y <code>git push</code>.</p>
+<div class="highlight"><pre><span></span><code>alu@tos:~/git-seguro$<span class="w"> </span>nano<span class="w"> </span>README.md<span class="w">        </span>
+alu@tos:~/git-seguro$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>README.md<span class="w"> </span>
+alu@tos:~/git-seguro$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-S<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;test sin -S desactivada commit.gpgsign&quot;</span>
+<span class="o">[</span>main<span class="w"> </span>0444a7c<span class="o">]</span><span class="w"> </span><span class="nb">test</span><span class="w"> </span>sin<span class="w"> </span>-S<span class="w"> </span>desactivada<span class="w"> </span>commit.gpgsign
+<span class="w"> </span><span class="m">1</span><span class="w"> </span>file<span class="w"> </span>changed,<span class="w"> </span><span class="m">2</span><span class="w"> </span>insertions<span class="o">(</span>+<span class="o">)</span>
+alu@tos:~/git-seguro$<span class="w">  </span>git<span class="w"> </span>push
+....
+alu@tos:~/git-seguro$
+</code></pre></div>
+<p>En local puede ver el <em>commit</em> firmado con <code>git log --show-signature</code>:</p>
+<div class="highlight"><pre><span></span><code>alu@tos:~/git-seguro$<span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>--show-signature<span class="w">                   </span>
+commit<span class="w"> </span>0444a7cc7506c5975c56e92e8735cd6632a93aeb<span class="w"> </span><span class="o">(</span>HEAD<span class="w"> </span>-&gt;<span class="w"> </span>main<span class="o">)</span>
+gpg:<span class="w"> </span>Firmado<span class="w"> </span>el<span class="w"> </span>mar<span class="w"> </span><span class="m">15</span><span class="w"> </span>feb<span class="w"> </span><span class="m">2022</span><span class="w"> </span><span class="m">16</span>:51:39<span class="w"> </span>CET
+gpg:<span class="w">                </span>usando<span class="w"> </span>RSA<span class="w"> </span>clave<span class="w"> </span>6E1C43C8C0C42ED71084ECE61D4EC5FC181F659E
+gpg:<span class="w"> </span>Firma<span class="w"> </span>correcta<span class="w"> </span>de<span class="w"> </span><span class="s2">&quot;Clases Alu 01 &lt;clases.alu+01@gmail.com&gt;&quot;</span><span class="w"> </span><span class="o">[</span>absoluta<span class="o">]</span>
+Author:<span class="w"> </span>Clases<span class="w"> </span>alu<span class="w"> </span><span class="m">01</span><span class="w"> </span>&lt;clases.alu+01@gmail.com&gt;
+Date:<span class="w">   </span>Tue<span class="w"> </span>Feb<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">16</span>:51:39<span class="w"> </span><span class="m">2022</span><span class="w"> </span>+0100
+
+<span class="w">    </span><span class="nb">test</span><span class="w"> </span>sin<span class="w"> </span>-S<span class="w"> </span>desactivada<span class="w"> </span>commit.gpgsign
+...
+alu@tos:~/git-seguro$
+</code></pre></div>
+<p>Si accede a GitHub puede comprobar que el commit aparece "<em>Verified</em>" y que puede visualizar el ID de la clave GPG, etc:</p>
+<p><img alt="" src="../figuras/git-seguro-05.png" /></p>
+<p>Nota: Si quiere indicarle a git que por defecto firme los commits ejecute el comando  <code>git config commit.gpgsign true</code> (para firmar los commit en cualquier repositorio <code>git config --global commit.gpgsign true</code>).</p>
+<div class="highlight"><pre><span></span><code>alu@tos:~/git-seguro$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>commit.gpgsign<span class="w"> </span><span class="nb">true</span>
+alu@tos:~/git-seguro$<span class="w"> </span>nano<span class="w"> </span>README.md<span class="w"> </span>
+alu@tos:~/git-seguro$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;test sin opción -S&quot;</span>
+<span class="o">[</span>main<span class="w"> </span>f81e10d<span class="o">]</span><span class="w"> </span><span class="nb">test</span><span class="w"> </span>sin<span class="w"> </span>opción<span class="w"> </span>-S
+<span class="w"> </span><span class="m">1</span><span class="w"> </span>file<span class="w"> </span>changed,<span class="w"> </span><span class="m">3</span><span class="w"> </span>insertions<span class="o">(</span>+<span class="o">)</span>
+alu@tos:~/git-seguro$<span class="w"> </span>
+/*<span class="w"> </span>Ha<span class="w"> </span>pedido<span class="w"> </span>la<span class="w"> </span>frase<span class="w">  </span>de<span class="w"> </span>paso<span class="w"> </span>y<span class="w"> </span>ha<span class="w"> </span>firmado<span class="w"> </span>*/
+alu@tos:~/git-seguro$<span class="w"> </span>git<span class="w"> </span>log<span class="w"> </span>--show-signature<span class="w"> </span>
+commit<span class="w"> </span>f81e10d2e444a6ebc9f1d30c7458b9b994ed9d70<span class="w"> </span><span class="o">(</span>HEAD<span class="w"> </span>-&gt;<span class="w"> </span>main<span class="o">)</span>
+gpg:<span class="w"> </span>Firmado<span class="w"> </span>el<span class="w"> </span>mar<span class="w"> </span><span class="m">15</span><span class="w"> </span>feb<span class="w"> </span><span class="m">2022</span><span class="w"> </span><span class="m">16</span>:45:28<span class="w"> </span>CET
+gpg:<span class="w">                </span>usando<span class="w"> </span>RSA<span class="w"> </span>clave<span class="w"> </span>6E1C43C8C0C42ED71084ECE61D4EC5FC181F659E
+gpg:<span class="w"> </span>Firma<span class="w"> </span>correcta<span class="w"> </span>de<span class="w"> </span><span class="s2">&quot;Clases Alu 01 &lt;clases.alu+01@gmail.com&gt;&quot;</span><span class="w"> </span><span class="o">[</span>absoluta<span class="o">]</span>
+Author:<span class="w"> </span>Clases<span class="w"> </span>alu<span class="w"> </span><span class="m">01</span><span class="w"> </span>&lt;clases.alu+01@gmail.com&gt;
+Date:<span class="w">   </span>Tue<span class="w"> </span>Feb<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="m">16</span>:45:28<span class="w"> </span><span class="m">2022</span><span class="w"> </span>+0100
+
+<span class="w">    </span><span class="nb">test</span><span class="w"> </span>sin<span class="w"> </span>opción<span class="w"> </span>-S
+...
+alu@tos:~/git-seguro$
+</code></pre></div>
+<p>Si es necesario borrar una clave GPG:
+  <div class="highlight"><pre><span></span><code><span class="c1"># Listar las claves de tu anillo de claves públicas</span>
+$<span class="w"> </span>gpg<span class="w"> </span>--list-keys
+<span class="c1"># Eliminar una clave pública (de tu anillo de claves públicas):</span>
+$<span class="w"> </span>gpg<span class="w"> </span>--delete-key<span class="w"> </span><span class="s2">&quot;ID|Nombre de Usuario&quot;</span>
+<span class="c1"># Listar las claves de tu anillo de claves secretas</span>
+$<span class="w"> </span>gpg<span class="w"> </span>--list-secret-keys<span class="w"> </span>
+<span class="c1">#  Esto elimina la clave secreta de tu anillo de claves secretas.</span>
+$<span class="w"> </span>gpg<span class="w"> </span>--delete-secret-key<span class="w"> </span><span class="s2">&quot;ID|Nombre de Usuario&quot;</span>
+</code></pre></div></p>
+<h3 id="72-uso-del-agente-ssh">7.2. Uso del agente SSH<a class="headerlink" href="#72-uso-del-agente-ssh" title="Permanent link">&para;</a></h3>
+<p>Se puede añadir la clave SSH al agente SSH para que no pida la palabra de paso reiteradamente. Para ello:</p>
+<ol>
+<li>Primero compruebe si está iniciado el agente ssh con el comando <code>ssh-add -l</code>
+    <div class="highlight"><pre><span></span><code>alu@tos:~$<span class="w"> </span>ssh-add<span class="w"> </span>-l
+Could<span class="w"> </span>not<span class="w"> </span>open<span class="w"> </span>a<span class="w"> </span>connection<span class="w"> </span>to<span class="w"> </span>your<span class="w"> </span>authentication<span class="w"> </span>agent.
+alu@tos:~$<span class="w"> </span>
+</code></pre></div></li>
+<li>Si indica que no puede abrir la conexión es necesario iniciar el agente SSH. Si no pasar al paso 3.
+    <div class="highlight"><pre><span></span><code>alu@tos:~$<span class="w"> </span><span class="nb">eval</span><span class="w"> </span><span class="sb">`</span>ssh-agent<span class="w"> </span>-s<span class="sb">`</span>
+Agent<span class="w"> </span>pid<span class="w"> </span><span class="m">916589</span>
+alu@tos:~$<span class="w"> </span>ssh-add<span class="w"> </span>-l
+The<span class="w"> </span>agent<span class="w"> </span>has<span class="w"> </span>no<span class="w"> </span>identities.
+alu@tos:~$
+</code></pre></div></li>
+<li>Añadir la clave con <code>ssh-add -t &lt;time&gt; &lt;file&gt;</code> (si se omite <code>-t time</code> se añade de forma permanente). Si se omite <code>file</code> toma la clave por defecto. Puede comprobar que se ha añadido con <code>ssh-add -l</code>:
+    <div class="highlight"><pre><span></span><code>alu@tos:~$<span class="w"> </span>ssh-add<span class="w"> </span>-t<span class="w"> </span>2h
+Enter<span class="w"> </span>passphrase<span class="w"> </span><span class="k">for</span><span class="w"> </span>/home/alu/.ssh/id_ed25519:<span class="w"> </span>
+Identity<span class="w"> </span>added:<span class="w"> </span>/home/alu/.ssh/id_ed25519<span class="w"> </span><span class="o">(</span>clases.alu+01@gmail.com<span class="o">)</span>
+Lifetime<span class="w"> </span><span class="nb">set</span><span class="w"> </span>to<span class="w"> </span><span class="m">7200</span><span class="w"> </span>seconds
+alu@tos:~$<span class="w"> </span>ssh-add<span class="w"> </span>-l
+<span class="m">256</span><span class="w"> </span>SHA256:W9Ka18JIVwQfuC68EUUplwpv7acGwroNdzucFnG4wr4<span class="w"> </span>clases.alu+01@gmail.com<span class="w"> </span><span class="o">(</span>ED25519<span class="o">)</span>
+alu@tos:~$
+</code></pre></div></li>
+</ol>
+<p>Ya puede usar la clave SSH durante ese periodo sin introducir la frase de paso. Se pueden borrar las claves del agente con <code>ssh-add -D</code>.</p>
+<h3 id="73-mejorando-el-pre-commit">7.3. Mejorando el pre-commit<a class="headerlink" href="#73-mejorando-el-pre-commit" title="Permanent link">&para;</a></h3>
+<p>Podemos mejorar el script, y controlar la ejecución de gitleaks con la variable lógica  <code>gitleaksEnabled</code> (que se obtiene de la variables <code>hooks.gitleaks</code> de la configuración de git). </p>
+<p>Para ello:</p>
+<ol>
+<li>
+<p>Modificamos el script
+<div class="highlight"><pre><span></span><code><span class="w">  </span>alu@tos:~/git-seguro$<span class="w"> </span>cat<span class="w"> </span>.git/hooks/pre-commit
+<span class="w">  </span><span class="c1">#!/bin/sh</span>
+<span class="w">  </span><span class="c1"># This is an example of what adding gitleaks to a pre-commit...</span>
+
+<span class="w">  </span><span class="c1"># Buscamos valor asignado: &lt;&gt; true no se ejecuta gitleaks</span>
+<span class="w">  </span><span class="nv">gitleaksEnabled</span><span class="o">=</span><span class="k">$(</span>git<span class="w"> </span>config<span class="w"> </span>--bool<span class="w"> </span>hooks.gitleaks<span class="k">)</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$gitleaksEnabled</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">          </span>gitleaks<span class="w"> </span>protect<span class="w"> </span>--staged<span class="w"> </span>-v
+<span class="w">          </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">                  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;\n&gt;&gt; pre-commit: Error: gitleaks protect has detected sensitive information in your changes.&quot;</span>
+<span class="w">                  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&gt;&gt; pre-commit: No se realizará el commit&quot;</span>
+<span class="w">                  </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="w">          </span><span class="k">fi</span>
+<span class="w">  </span><span class="k">fi</span>
+<span class="w">  </span>alu@tos:~/git-seguro$<span class="w"> </span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Definimos en la configuración de git la variable <code>hooks.gitleaks</code> a <code>true</code> para poder activar (o desactivar) este <em>hook</em> desde línea de comandos:</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>alu@tos:~/git-seguro$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--bool<span class="w"> </span>hooks.gitleaks<span class="w"> </span><span class="nb">true</span>
+alu@tos:~/git-seguro$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--bool<span class="w"> </span>hooks.gitleaks<span class="w"> </span>
+<span class="nb">true</span>
+alu@tos:~/git-seguro$
+</code></pre></div>
+<p>Comprobamos que el nuevo script funciona de forma similar:</p>
+<div class="highlight"><pre><span></span><code>alu@tos:~/git-seguro$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;test&quot;</span>
+...
+<span class="m">9</span>:52PM<span class="w"> </span>WRN<span class="w"> </span>leaks<span class="w"> </span>found:<span class="w"> </span><span class="m">1</span>
+<span class="m">9</span>:52PM<span class="w"> </span>INF<span class="w"> </span>scan<span class="w"> </span>duration:<span class="w"> </span><span class="m">54</span>.537883ms
+
+&gt;&gt;<span class="w"> </span>pre-commit:<span class="w"> </span>Error:<span class="w"> </span>gitleaks<span class="w"> </span>protect<span class="w"> </span>has<span class="w"> </span>detected<span class="w"> </span>sensitive<span class="w"> </span>information<span class="w"> </span><span class="k">in</span><span class="w"> </span>your<span class="w"> </span>changes.
+&gt;&gt;<span class="w"> </span>pre-commit:<span class="w"> </span>No<span class="w"> </span>se<span class="w"> </span>realizará<span class="w"> </span>el<span class="w"> </span>commit
+alu@tos:~/git-seguro$<span class="w"> </span>
+</code></pre></div>
+<p>Y si está seguros de lo que hace y considera que es un "falso positivo" puede desactivar <code>hooks.gitleaks</code> con el valor <code>false</code> para hacer el pre-commit sin ejecutar gitleaks:</p>
+<div class="highlight"><pre><span></span><code>alu@tos:~/git-seguro$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--bool<span class="w"> </span>hooks.gitleaks<span class="w"> </span><span class="nb">false</span>
+alu@tos:~/git-seguro$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;testing pre-commit: me salto validación clave.txt&quot;</span>
+<span class="o">[</span>main<span class="w"> </span>e864dcf<span class="o">]</span><span class="w"> </span>testing<span class="w"> </span>pre-commit:<span class="w"> </span>me<span class="w"> </span>salto<span class="w"> </span>validación<span class="w"> </span>clave.txt
+<span class="w"> </span><span class="m">1</span><span class="w"> </span>file<span class="w"> </span>changed,<span class="w"> </span><span class="m">1</span><span class="w"> </span>insertion<span class="o">(</span>+<span class="o">)</span>
+<span class="w"> </span>create<span class="w"> </span>mode<span class="w"> </span><span class="m">100644</span><span class="w"> </span>clave.txt
+alu@tos:~/git-seguro$
+</code></pre></div>
+<h3 id="74-pre-commit-en-python">7.4. Pre-commit en Python<a class="headerlink" href="#74-pre-commit-en-python" title="Permanent link">&para;</a></h3>
+<p>Es posible usar en vez de un <a href="https://github.com/gitleaks/gitleaks/blob/master/scripts/pre-commit.py"><em>shell script</em> un script en Python</a> como el que proponen los autores de gitleaks:</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/usr/bin/env python3</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">gitleaksEnabled</span><span class="p">():</span>
+    <span class="n">out</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">getoutput</span><span class="p">(</span><span class="s2">&quot;git config --bool hooks.gitleaks&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">out</span> <span class="o">==</span> <span class="s2">&quot;false&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span>
+
+<span class="k">if</span> <span class="n">gitleaksEnabled</span><span class="p">():</span>
+    <span class="n">exitCode</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">WEXITSTATUS</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="s1">&#39;gitleaks protect -v --staged&#39;</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">exitCode</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;Warning: gitleaks has detected sensitive information in your changes. To disable  git config hooks.gitleaks false &#39;&#39;&#39;</span><span class="p">)</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;gitleaks disabled (enable `git config hooks.gitleaks true`)&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="75-dudas-tras-la-clase">7.5. Dudas tras la clase<a class="headerlink" href="#75-dudas-tras-la-clase" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><a href="https://midu.dev/como-deshacer-el-ultimo-commit-git/">Cómo deshacer el último commit</a>: Si no quieres mantener los cambios y no ha publicado en GitHub: <code>git reset --hard HEAD~1</code>. Si quieres deshacer el commit pero mantener los cambios <code>--soft</code> en vez de <code>--hard.</code></p>
+</li>
+<li>
+<p>Como borrar información sensible ya incluida en el repositorio remoto:</p>
+</li>
+<li>Si hay token y claves implicados revocarlos.</li>
+<li>Cambiar los datos sensibles o comprometidos.</li>
+<li>Borrar los ficheros afectados con la utilidad <a href="https://docs.github.com/en/github/authenticating-to-github/removing-sensitive-data-from-a-repository">git filter-repo</a> o BFG.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1232 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../git_pages/">
+      
+      
+        <link rel="next" href="../../fuentes/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Git y mkdocs - Zona Git / GitHub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#mkdocs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Zona Git / GitHub" class="md-header__button md-logo" aria-label="Zona Git / GitHub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zona Git / GitHub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Git y mkdocs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Zona Git / GitHub" class="md-nav__button md-logo" aria-label="Zona Git / GitHub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Zona Git / GitHub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Intro
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Intro
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t01/01_git_y_github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git y GitHub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t01/02_git_local/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git Local
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t01/03_git_intro_merge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fusiones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t03_TODO/git_teams/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git Teams
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documentación
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Documentación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git_pages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pages de GitHub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Git y mkdocs
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Git y mkdocs
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-instalar-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Instalar mkdocs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-crear-el-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Crear el proyecto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-mostrar-la-documentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Mostrar la documentación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-documentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Documentación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Documentación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-temas" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Temas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Build
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-despliegue" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. despliegue
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-github-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. GitHub Deploy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-anexos" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Anexos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Anexos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-enlaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1. Enlaces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-anexo-instalacion-de-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2. Anexo: instalación de mkdocs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-instalacion-de-mkdocs-en-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3. Instalación de mkdocs en Windows
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fuentes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ficheros
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Utiles
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Utiles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git_vscode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git y VSCode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dudas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dudas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git_como_drive_UTILES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git como Drive
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://m.xkcd.com/1597/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chiste
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t04_git_seguro_TODO/git_seguro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git Seguro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-instalar-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Instalar mkdocs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-crear-el-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Crear el proyecto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-mostrar-la-documentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Mostrar la documentación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-documentacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Documentación
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Documentación">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-temas" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Temas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-build" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Build
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-despliegue" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. despliegue
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-github-deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. GitHub Deploy
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-anexos" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Anexos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Anexos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-enlaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1. Enlaces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-anexo-instalacion-de-mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2. Anexo: instalación de mkdocs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-instalacion-de-mkdocs-en-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3. Instalación de mkdocs en Windows
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="mkdocs">mkdocs<a class="headerlink" href="#mkdocs" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>MkDocs: Project documentation with Markdown.</p>
+<p>MkDocs is a fast, simple and downright gorgeous static site generator that's geared towards building project documentation. Documentation source files are written in Markdown, and configured with a single YAML configuration file.
+<a href="https://www.mkdocs.org">https://www.mkdocs.org</a>.</p>
+</blockquote>
+<p>La idea es simplificar el trabajo de documentar, y poder hacerlo en Markdown. Seguiremos las indicaciones de <a href="https://www.mkdocs.org/getting-started/">https://www.mkdocs.org/getting-started/</a>. </p>
+<p>Pasos a dar:
+- Instalar <code>mkdocs</code>: Ver anexo (requiere python3, pip, y uso de venv). 
+- Usando como guía <a href="https://www.mkdocs.org/getting-started/#getting-started-with-mkdocs">Getting Started with MkDocs</a>
+  - Crear proyecto dentro de directorio clonado con <code>mkdocs new misdocs</code>
+  - Lanzar <code>mkdocs serve</code> para ver cambios en vivo antes de subirlos a GitHub.
+  - Añadir al menos dos ficheros en formato Markdown.
+  - Modificar el fichero de configuración para que indexe los tres ficheros.
+  - Probar a modificar el tema por defecto
+- Una vez terminado hacer <code>mkdocs gh-deploy</code>, esperar unos momentos y ver la página en GitHub Pages. <code>mkdocs</code> activa Pages y crea una rama de nombre <code>gh-pages</code> donde sube el sitio web generado. </p>
+<h2 id="1-instalar-mkdocs">1. Instalar mkdocs<a class="headerlink" href="#1-instalar-mkdocs" title="Permanent link">&para;</a></h2>
+<p>Usaremos un entorno virtual e instalaremos <code>mkdocs</code>:</p>
+<div class="highlight"><pre><span></span><code>clases@vm:~/tmp$<span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+clases@vm:~/tmp$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>venv/bin/activate
+<span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>clases@vm:~/tmp$<span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>mkdocs
+Collecting<span class="w"> </span>mkdocs
+<span class="w">  </span>Using<span class="w"> </span>cached<span class="w"> </span>mkdocs-1.2.3-py3-none-any.whl<span class="w"> </span><span class="o">(</span><span class="m">6</span>.4<span class="w"> </span>MB<span class="o">)</span>
+Collecting<span class="w"> </span>packaging&gt;<span class="o">=</span><span class="m">20</span>.5
+...
+Successfully<span class="w"> </span>installed<span class="w"> </span>Jinja2-3.0.3<span class="w"> </span>Markdown-3.3.6<span class="w"> </span>MarkupSafe-2.0.1<span class="w"> </span>PyYAML-6.0<span class="w"> </span>click-8.0.3<span class="w"> </span>ghp-import-2.0.2<span class="w"> </span>importlib-metadata-4.10.1<span class="w"> </span>mergedeep-1.3.4<span class="w"> </span>mkdocs-1.2.3<span class="w"> </span>packaging-21.3<span class="w"> </span>pyparsing-3.0.7<span class="w"> </span>python-dateutil-2.8.2<span class="w"> </span>pyyaml-env-tag-0.1<span class="w"> </span>six-1.16.0<span class="w"> </span>watchdog-2.1.6<span class="w"> </span>zipp-3.7.0
+<span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>clases@vm:~/tmp$<span class="w"> </span>
+</code></pre></div>
+<h2 id="2-crear-el-proyecto">2. Crear el proyecto<a class="headerlink" href="#2-crear-el-proyecto" title="Permanent link">&para;</a></h2>
+<p>Para crear un proyecto de documentación usamos el comando <code>mkdocs new &lt;nombre_proyecto&gt;</code>, que crea un directorio con el nombre del proyecto,y dentro un fichero de configuración <code>mkdocs.yml</code>, un directorio <code>docs</code>  y dentro de este un fichero <code>index.md</code> inicial. En <code>docs</code> es donde crearemos y editaremos nuestros ficheros en Markdown.</p>
+<div class="highlight"><pre><span></span><code><span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>clases@vm:~/tmp$<span class="w"> </span>mkdocs<span class="w"> </span>new<span class="w"> </span>test-mkdocs
+INFO<span class="w">     </span>-<span class="w">  </span>Creating<span class="w"> </span>project<span class="w"> </span>directory:<span class="w"> </span>test-mkdocs
+INFO<span class="w">     </span>-<span class="w">  </span>Writing<span class="w"> </span>config<span class="w"> </span>file:<span class="w"> </span>test-mkdocs/mkdocs.yml
+INFO<span class="w">     </span>-<span class="w">  </span>Writing<span class="w"> </span>initial<span class="w"> </span>docs:<span class="w"> </span>test-mkdocs/docs/index.md
+<span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>clases@vm:~/tmp$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>test-mkdocs/
+<span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>clases@vm:~/tmp/test-mkdocs$<span class="w"> </span>ls<span class="w"> </span>-a
+.<span class="w">  </span>..<span class="w">  </span>docs<span class="w">  </span>mkdocs.yml
+<span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>clases@vm:~/tmp/test-mkdocs$<span class="w"> </span>
+</code></pre></div>
+<p>Por defecto nos crea una estructura inicial con el tema por defecto y un fichero <code>index.md</code> con información sobre <code>mkdocs</code>.</p>
+<h2 id="3-mostrar-la-documentacion">3. Mostrar la documentación<a class="headerlink" href="#3-mostrar-la-documentacion" title="Permanent link">&para;</a></h2>
+<p>Con el comando <code>mkdocs serve</code>  se inicia un servidor web de desarrollo (en la URL <code>http://127.0.0.1:8000/</code>) que muestra el resultado de mkdocs en formato web:</p>
+<p><img alt="" src="../figuras/mkdocs-01.png" /></p>
+<p>El servidor soporta auto-reload, y reconstruye la documentación si hay cambios en el fichero de configuración o en el directorio de documentación. </p>
+<p>Por ejemplo, si edita <code>index.md</code> y cambia el título de dicha página  <code>mkdocs serve</code> lo detecta (<code>INFO - [17:07:16] Detected file changes</code>) y reconstruye la documentación (<code>INFO - Building documentation...</code>) :</p>
+<p><img alt="" src="../figuras/mkdocs-02.png" /></p>
+<p>Ahora el proceso quedaría:</p>
+<ol>
+<li>Preparar la documentación en ficheros Markdown, etc.</li>
+<li>Subirla a un hosting, en nuestro caso usaremos GitHub.</li>
+</ol>
+<h2 id="4-documentacion">4. Documentación<a class="headerlink" href="#4-documentacion" title="Permanent link">&para;</a></h2>
+<p>Puede tener ficheros en Markdown y <code>mkdocs</code> los convertirá en HTML. Y en cada fichero .md crea un índice con las cabeceras de nivel 1 y 2 que incorpora al HTML.</p>
+<p>Además <code>mkdocs</code> genera un barra de navegación que permite navegar secuencialmente, e incorpora la opción de buscar. </p>
+<p>Si tenemos varios ficheros que queremos referenciar en la barra de navegación hay que hacerlo en <code>mkdocs.yml</code> usando el apartado <code>nav</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ejemplo uso mkdocs</span>
+<span class="nt">site_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://local.com</span>
+<span class="nt">nav</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Home</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Ejercicios</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">E01</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ejercicio_01.md</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">E02</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ejercicio_02.md</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Sobre nosotros</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">about.md</span>
+<span class="nt">theme</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">readthedocs</span>
+</code></pre></div>
+<h3 id="41-temas">4.1. Temas<a class="headerlink" href="#41-temas" title="Permanent link">&para;</a></h3>
+<p>Si quiere modificar el tema (por defecto usa uno llamado <em>mkdocs</em>) debe usar  el fichero de configuración e indicar otro. En este caso hemos indicado el tema <em>readthedocs</em> incluido en mkdocs. Hay temas adicionales disponibles <a href="https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes">en este enlace</a></p>
+<h3 id="42-build">4.2. Build<a class="headerlink" href="#42-build" title="Permanent link">&para;</a></h3>
+<p>Una vez haya terminado de trabajar con su documentación podría hacer un <code>build</code> de la misma. Esto genera un directorio <code>site</code> con todo el HTML, estilos, javascript, imágenes, fuentes, etc:</p>
+<div class="highlight"><pre><span></span><code>clases@vm:~/tmp/test-mkdocs$<span class="w"> </span>mkdocs<span class="w"> </span>build
+INFO<span class="w">     </span>-<span class="w">  </span>Cleaning<span class="w"> </span>site<span class="w"> </span>directory
+INFO<span class="w">     </span>-<span class="w">  </span>Building<span class="w"> </span>documentation<span class="w"> </span>to<span class="w"> </span>directory:<span class="w"> </span>/home/ango/tmp/test-mkdocs/site
+INFO<span class="w">     </span>-<span class="w">  </span>Documentation<span class="w"> </span>built<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span>.21<span class="w"> </span>seconds
+clases@vm:~/tmp/test-mkdocs$<span class="w"> </span>ls<span class="w"> </span>-al<span class="w"> </span>site/
+total<span class="w"> </span><span class="m">68</span>
+drwxrwxr-x<span class="w"> </span><span class="m">9</span><span class="w"> </span>ango<span class="w"> </span>ango<span class="w"> </span><span class="m">4096</span><span class="w"> </span>feb<span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">11</span>:31<span class="w"> </span>.
+drwxrwxr-x<span class="w"> </span><span class="m">5</span><span class="w"> </span>ango<span class="w"> </span>ango<span class="w"> </span><span class="m">4096</span><span class="w"> </span>feb<span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">20</span>:58<span class="w"> </span>..
+-rw-rw-r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>ango<span class="w"> </span>ango<span class="w"> </span><span class="m">3919</span><span class="w"> </span>feb<span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">11</span>:31<span class="w"> </span><span class="m">404</span>.html
+drwxrwxr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>ango<span class="w"> </span>ango<span class="w"> </span><span class="m">4096</span><span class="w"> </span>feb<span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">11</span>:31<span class="w"> </span>css
+drwxrwxr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>ango<span class="w"> </span>ango<span class="w"> </span><span class="m">4096</span><span class="w"> </span>feb<span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">11</span>:31<span class="w"> </span>ejercicio_01
+drwxrwxr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>ango<span class="w"> </span>ango<span class="w"> </span><span class="m">4096</span><span class="w"> </span>feb<span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">11</span>:31<span class="w"> </span>ejercicio_02
+drwxrwxr-x<span class="w"> </span><span class="m">4</span><span class="w"> </span>ango<span class="w"> </span>ango<span class="w"> </span><span class="m">4096</span><span class="w"> </span>feb<span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">11</span>:31<span class="w"> </span>fonts
+drwxrwxr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>ango<span class="w"> </span>ango<span class="w"> </span><span class="m">4096</span><span class="w"> </span>feb<span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">11</span>:31<span class="w"> </span>img
+-rw-rw-r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>ango<span class="w"> </span>ango<span class="w"> </span><span class="m">5463</span><span class="w"> </span>feb<span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">11</span>:31<span class="w"> </span>index.html
+-rw-rw-r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>ango<span class="w"> </span>ango<span class="w">  </span><span class="m">558</span><span class="w"> </span>feb<span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">11</span>:31<span class="w"> </span>index.md.old
+drwxrwxr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>ango<span class="w"> </span>ango<span class="w"> </span><span class="m">4096</span><span class="w"> </span>feb<span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">11</span>:31<span class="w"> </span>js
+drwxrwxr-x<span class="w"> </span><span class="m">2</span><span class="w"> </span>ango<span class="w"> </span>ango<span class="w"> </span><span class="m">4096</span><span class="w"> </span>feb<span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">11</span>:31<span class="w"> </span>search
+-rw-rw-r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>ango<span class="w"> </span>ango<span class="w"> </span><span class="m">4366</span><span class="w"> </span>feb<span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">11</span>:31<span class="w"> </span>search.html
+-rw-rw-r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>ango<span class="w"> </span>ango<span class="w">  </span><span class="m">549</span><span class="w"> </span>feb<span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">11</span>:31<span class="w"> </span>sitemap.xml
+-rw-rw-r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>ango<span class="w"> </span>ango<span class="w">  </span><span class="m">215</span><span class="w"> </span>feb<span class="w"> </span><span class="m">26</span><span class="w"> </span><span class="m">11</span>:31<span class="w"> </span>sitemap.xml.gz
+clases@vm:~/tmp/test-mkdocs$<span class="w"> </span>
+</code></pre></div>
+<h3 id="43-despliegue">4.3. despliegue<a class="headerlink" href="#43-despliegue" title="Permanent link">&para;</a></h3>
+<p>Si quisiera desplegarlo en un hosting sólo tendría que subir el directorio <code>site</code>. Pero nuestro objetivo es desplegarlo sobre GitHub Pages, y eso lo hace de una forma muy sencilla <code>mkdocs</code>. Y es lo que vemos en el siguiente apartado.</p>
+<h2 id="5-github-deploy">5. GitHub Deploy<a class="headerlink" href="#5-github-deploy" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Al final de este apartado hay una nota aclaratoria, leer antes de seguir...</p>
+</blockquote>
+<p>Primero creamos un repositorio en GitHub <strong>sin inicializar</strong>: no marque ninguna de las opciones sobre README, .gitignore y LICENSE:</p>
+<p><img alt="" src="../figuras/mkdocs-03.png" /></p>
+<p>Y luego en local, en el directorio del proyecto iniciamos el repositorio local, configuramos el remoto y hacemos un primer commit:</p>
+<div class="highlight"><pre><span></span><code><span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>clases@vm:~/tmp/test-mkdocs$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;# test-mkdocs&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>README.md
+<span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>clases@vm:~/tmp/test-mkdocs$<span class="w"> </span>git<span class="w"> </span>init
+Inicializado<span class="w"> </span>repositorio<span class="w"> </span>Git<span class="w"> </span>vacío<span class="w"> </span>en<span class="w"> </span>/home/ango/tmp/test-mkdocs/.git/
+<span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>clases@vm:~/tmp/test-mkdocs$<span class="w"> </span>git<span class="w"> </span>add<span class="w"> </span>README.md<span class="w"> </span>
+<span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>clases@vm:~/tmp/test-mkdocs$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;first commit&quot;</span>
+<span class="o">[</span>master<span class="w"> </span><span class="o">(</span>commit-raíz<span class="o">)</span><span class="w"> </span>44ae340<span class="o">]</span><span class="w"> </span>first<span class="w"> </span>commit
+<span class="w"> </span><span class="m">1</span><span class="w"> </span>file<span class="w"> </span>changed,<span class="w"> </span><span class="m">1</span><span class="w"> </span>insertion<span class="o">(</span>+<span class="o">)</span>
+<span class="w"> </span>create<span class="w"> </span>mode<span class="w"> </span><span class="m">100644</span><span class="w"> </span>README.md
+<span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>clases@vm:~/tmp/test-mkdocs$<span class="w"> </span>git<span class="w"> </span>branch<span class="w"> </span>-M<span class="w"> </span>main
+<span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>clases@vm:~/tmp/test-mkdocs$<span class="w"> </span>git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://github.com/clases-alu-01/test-mkdocs.git
+<span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>clases@vm:~/tmp/test-mkdocs$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
+Enumerando<span class="w"> </span>objetos:<span class="w"> </span><span class="m">3</span>,<span class="w"> </span>listo.
+Contando<span class="w"> </span>objetos:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">3</span>/3<span class="o">)</span>,<span class="w"> </span>listo.
+Escribiendo<span class="w"> </span>objetos:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">3</span>/3<span class="o">)</span>,<span class="w"> </span><span class="m">237</span><span class="w"> </span>bytes<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">237</span>.00<span class="w"> </span>KiB/s,<span class="w"> </span>listo.
+Total<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>,<span class="w"> </span>reusado<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>
+To<span class="w"> </span>https://github.com/clases-alu-01/test-mkdocs.git
+<span class="w"> </span>*<span class="w"> </span><span class="o">[</span>new<span class="w"> </span>branch<span class="o">]</span><span class="w">      </span>main<span class="w"> </span>-&gt;<span class="w"> </span>main
+Rama<span class="w"> </span><span class="s1">&#39;main&#39;</span><span class="w"> </span>configurada<span class="w"> </span>para<span class="w"> </span>hacer<span class="w"> </span>seguimiento<span class="w"> </span>a<span class="w"> </span>la<span class="w"> </span>rama<span class="w"> </span>remota<span class="w"> </span><span class="s1">&#39;main&#39;</span><span class="w"> </span>de<span class="w"> </span><span class="s1">&#39;origin&#39;</span>.
+<span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>clases@vm:~/tmp/test-mkdocs$
+</code></pre></div>
+<blockquote>
+<p>Nota: <code>git push -u</code> es equivalente a <code>git push --set-upstream</code> y configura un remoto por defecto apra esa rama si git push no recibe parámetros.</p>
+</blockquote>
+<p>Tenemos ya el repositorio local enlazado con el remoto. Ahora podemos hacer el <em>deploy</em> de la documentación con el comando <code>mkdocs gh-deploy</code>. Este comando hace el <em>build</em> de la documentación, la mueve a una rama gh-pages y hace un <em>push</em> al remoto:</p>
+<p><div class="highlight"><pre><span></span><code><span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>clases@vm:~/tmp/test-mkdocs$<span class="w"> </span>mkdocs<span class="w"> </span>gh-deploy
+INFO<span class="w">     </span>-<span class="w">  </span>Cleaning<span class="w"> </span>site<span class="w"> </span>directory
+INFO<span class="w">     </span>-<span class="w">  </span>Building<span class="w"> </span>documentation<span class="w"> </span>to<span class="w"> </span>directory:<span class="w"> </span>/home/ango/tmp/test-mkdocs/site
+INFO<span class="w">     </span>-<span class="w">  </span>Documentation<span class="w"> </span>built<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span>.12<span class="w"> </span>seconds
+WARNING<span class="w">  </span>-<span class="w">  </span>Version<span class="w"> </span>check<span class="w"> </span>skipped:<span class="w"> </span>No<span class="w"> </span>version<span class="w"> </span>specified<span class="w"> </span><span class="k">in</span><span class="w"> </span>previous<span class="w"> </span>deployment.
+INFO<span class="w">     </span>-<span class="w">  </span>Copying<span class="w"> </span><span class="s1">&#39;/home/ango/tmp/test-mkdocs/site&#39;</span><span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;gh-pages&#39;</span><span class="w"> </span>branch<span class="w"> </span>and
+<span class="w">            </span>pushing<span class="w"> </span>to<span class="w"> </span>GitHub.
+Enumerando<span class="w"> </span>objetos:<span class="w"> </span><span class="m">60</span>,<span class="w"> </span>listo.
+Contando<span class="w"> </span>objetos:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">60</span>/60<span class="o">)</span>,<span class="w"> </span>listo.
+Compresión<span class="w"> </span>delta<span class="w"> </span>usando<span class="w"> </span>hasta<span class="w"> </span><span class="m">8</span><span class="w"> </span>hilos
+Comprimiendo<span class="w"> </span>objetos:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">56</span>/56<span class="o">)</span>,<span class="w"> </span>listo.
+Escribiendo<span class="w"> </span>objetos:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">60</span>/60<span class="o">)</span>,<span class="w"> </span><span class="m">5</span>.18<span class="w"> </span>MiB<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">5</span>.77<span class="w"> </span>MiB/s,<span class="w"> </span>listo.
+Total<span class="w"> </span><span class="m">60</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">4</span><span class="o">)</span>,<span class="w"> </span>reusado<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>
+remote:<span class="w"> </span>Resolving<span class="w"> </span>deltas:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">4</span>/4<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+remote:<span class="w"> </span>
+remote:<span class="w"> </span>Create<span class="w"> </span>a<span class="w"> </span>pull<span class="w"> </span>request<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;gh-pages&#39;</span><span class="w"> </span>on<span class="w"> </span>GitHub<span class="w"> </span>by<span class="w"> </span>visiting:
+remote:<span class="w">      </span>https://github.com/clases-alu-01/test-mkdocs/pull/new/gh-pages
+remote:<span class="w"> </span>
+To<span class="w"> </span>https://github.com/clases-alu-01/test-mkdocs.git
+<span class="w"> </span>*<span class="w"> </span><span class="o">[</span>new<span class="w"> </span>branch<span class="o">]</span><span class="w">      </span>gh-pages<span class="w"> </span>-&gt;<span class="w"> </span>gh-pages
+INFO<span class="w">     </span>-<span class="w">  </span>Your<span class="w"> </span>documentation<span class="w"> </span>should<span class="w"> </span>shortly<span class="w"> </span>be<span class="w"> </span>available<span class="w"> </span>at:
+<span class="w">            </span>https://clases-alu-01.github.io/test-mkdocs/
+<span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>clases@vm:~/tmp/test-mkdocs$<span class="w"> </span>
+</code></pre></div>
+Además nos informa que en breve (<em>shortly</em>) la documentación estará disponible  en la URL <code>https://clases-alu-01.github.io/test-mkdocs/</code></p>
+<p><img alt="" src="../figuras/mkdocs-05.png" /></p>
+<p>Nuevamente el proceso se realiza con Actions, puede comprobarlo en la pestaña Actions del repositorio:
+<img alt="" src="../figuras/mkdocs-06.png" /></p>
+<p><strong>NOTA</strong> <strong>IMPORTANTE</strong>: Se podría haber cambiado el orden de los pasos:</p>
+<ol>
+<li>Crear e <strong>iniciar</strong> el repositorio en Github.</li>
+<li>Clonarlo en local.</li>
+<li>Dentro del directorio del repositorio ejecutar el comamdo <code>mkdocs init .</code> (se indica un . en vez de un directorio) de forma que se inicie el proyecto en el directorio del repositorio.</li>
+<li>Trabajar en local</li>
+<li>Al terminar hacer un <code>mkdocs deploy</code>.</li>
+</ol>
+<h2 id="6-anexos">6. Anexos<a class="headerlink" href="#6-anexos" title="Permanent link">&para;</a></h2>
+<h3 id="61-enlaces">6.1. Enlaces<a class="headerlink" href="#61-enlaces" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Mkdocs: <a href="https://www.mkdocs.org/">https://www.mkdocs.org/</a></li>
+</ul>
+<h3 id="62-anexo-instalacion-de-mkdocs">6.2. Anexo: instalación de mkdocs<a class="headerlink" href="#62-anexo-instalacion-de-mkdocs" title="Permanent link">&para;</a></h3>
+<p>Debe tener instalado previamente:
+- <code>python3</code>
+- <code>python-venv</code></p>
+<p>Si no los tiene instalados:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># apt install python3</span>
+<span class="c1"># apt install python3-venv</span>
+</code></pre></div>
+<p>Creamos un entorno virtual en el repositorio:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>mivenv
+</code></pre></div>
+<p>Ese comando crea un directorio de nombre <code>mivenv</code>.  Añadimos el entorno virtual al fichero <code>.gitignore</code>:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;mivenv&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.gitignore
+$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;.gitignore&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.gitignore
+</code></pre></div>
+<p>Activamos el entorno virtual creado en <code>mienv</code>:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>mivenv/bin/activate
+<span class="o">(</span>mivenv<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>
+</code></pre></div>
+<p>Observe como ahora el prompt muestra entre paréntesis el nombre del entorno virtual. 
+Ahora instalamos el modulo <code>mkdocs</code> con la utilidad <code>pip</code> en el entorno virtual:</p>
+<div class="highlight"><pre><span></span><code><span class="o">(</span>mivenv<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>mkdocs
+...
+<span class="o">(</span>mivenv<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>
+</code></pre></div>
+<p>Y ya podemos usar <code>mkdocs</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="o">(</span>mivenv<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>mkdocs<span class="w"> </span>
+</code></pre></div>
+<p>Al terminar de trabajar con el entorno:</p>
+<p><div class="highlight"><pre><span></span><code><span class="o">(</span>mivenv<span class="o">)</span><span class="w"> </span>$<span class="w"> </span>deactivate
+$<span class="w"> </span>
+</code></pre></div>
+Una vez fuera del entorno virtual no es posible acceder a mkdocs</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>mkdocs
+bash:<span class="w"> </span>mkdocs:<span class="w"> </span>orden<span class="w"> </span>no<span class="w"> </span>encontrada
+$<span class="w"> </span>
+</code></pre></div>
+<p>Si desea eliminar el entorno viertual basta con borrar el directorio <code>mienv</code></p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>mienv
+$<span class="w"> </span>
+</code></pre></div>
+<h3 id="63-instalacion-de-mkdocs-en-windows">6.3. Instalación de mkdocs en Windows<a class="headerlink" href="#63-instalacion-de-mkdocs-en-windows" title="Permanent link">&para;</a></h3>
+<p>Pasos a dar:</p>
+<ul>
+<li>
+<p>Instalar python (y quizás haga falta pip, opcional venv)</p>
+</li>
+<li>
+<p>Descargar <a href="https://www.python.org/">https://www.python.org/</a></p>
+</li>
+<li>Instalar seleccionando en primera pantalla <strong>"Add Python.exe to PATH"</strong></li>
+<li>Probar instalación:
+    <div class="highlight"><pre><span></span><code>User@WinDev2004Eval<span class="w"> </span>MINGW64<span class="w"> </span>~
+$<span class="w"> </span>python<span class="w"> </span>--version
+Python<span class="w"> </span><span class="m">3</span>.12.2
+
+User@WinDev2004Eval<span class="w"> </span>MINGW64<span class="w"> </span>~
+$<span class="w"> </span>pip<span class="w"> </span>--version
+pip<span class="w"> </span><span class="m">24</span>.0<span class="w"> </span>from<span class="w"> </span>C:<span class="se">\U</span>sers<span class="se">\U</span>ser<span class="se">\A</span>ppData<span class="se">\L</span>ocal<span class="se">\P</span>rograms<span class="se">\P</span>ython<span class="se">\P</span>ython312<span class="se">\L</span>ib<span class="se">\s</span>ite-packages<span class="se">\p</span>ip<span class="w"> </span><span class="o">(</span>python<span class="w"> </span><span class="m">3</span>.12<span class="o">)</span>
+
+User@WinDev2004Eval<span class="w"> </span>MINGW64<span class="w"> </span>~
+$<span class="w"> </span>
+</code></pre></div></li>
+<li>
+<p>Instalar <code>mkdocs</code>:
+    <div class="highlight"><pre><span></span><code>User@WinDev2004Eval<span class="w"> </span>MINGW64<span class="w"> </span>~
+$<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>mkdocs
+Collecting<span class="w"> </span>mkdocs
+Downloading<span class="w"> </span>mkdocs-1.5.3-py3-none-any.whl.metadata<span class="w"> </span><span class="o">(</span><span class="m">6</span>.2<span class="w"> </span>kB<span class="o">)</span>
+
+...
+Installing<span class="w"> </span>collected<span class="w"> </span>packages:<span class="w"> </span>...
+Successfully<span class="w"> </span>installed<span class="w"> </span>....
+
+User@WinDev2004Eval<span class="w"> </span>MINGW64<span class="w"> </span>~
+$<span class="w"> </span>
+</code></pre></div></p>
+<p>Y probar la instalación
+<div class="highlight"><pre><span></span><code>User@WinDev2004Eval<span class="w"> </span>MINGW64<span class="w"> </span>~
+$<span class="w"> </span>mkdocs.exe<span class="w"> </span>--version
+mkdocs,<span class="w"> </span>version<span class="w"> </span><span class="m">1</span>.5.3<span class="w"> </span>from<span class="w"> </span>C:<span class="se">\U</span>sers<span class="se">\U</span>ser<span class="se">\A</span>ppData<span class="se">\L</span>ocal<span class="se">\P</span>rograms<span class="se">\P</span>ython<span class="se">\P</span>ython312<span class="se">\L</span>ib<span class="se">\s</span>ite-packages<span class="se">\m</span>kdocs<span class="w"> </span><span class="o">(</span>Python<span class="w"> </span><span class="m">3</span>.12<span class="o">)</span>
+
+User@WinDev2004Eval<span class="w"> </span>MINGW64<span class="w"> </span>~
+$
+</code></pre></div></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>

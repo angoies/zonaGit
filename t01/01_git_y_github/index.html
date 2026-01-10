@@ -1,0 +1,1226 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../02_git_local/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>Git y GitHub - Zona Git / GitHub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#git-y-github" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Zona Git / GitHub" class="md-header__button md-logo" aria-label="Zona Git / GitHub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Zona Git / GitHub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Git y GitHub
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Zona Git / GitHub" class="md-nav__button md-logo" aria-label="Zona Git / GitHub" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Zona Git / GitHub
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inicio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Intro
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Intro
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Git y GitHub
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Git y GitHub
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion-al-control-de-versiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introducción al Control de Versiones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-git-instalacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Git: instalación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. GitHub
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-creacion-de-un-repositorio-en-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Creación de un repositorio en GitHub
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-acceso-github-desde-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Acceso GitHub desde local
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Acceso GitHub desde local">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-acceso-con-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Acceso con ssh
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-proceso-basico-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Proceso básico desarrollo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-enlaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Enlaces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-anexos" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Anexos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Anexos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-paso-de-repositorio-https-a-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1. Paso de repositorio HTTPS a SSH
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-acceso-a-github-con-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2. Acceso a GitHub con tokens
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_git_local/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git Local
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_git_intro_merge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fusiones
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t03_TODO/git_teams/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git Teams
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Documentación
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Documentación
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t02/git_pages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pages de GitHub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t02/git_mkdocs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git y mkdocs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fuentes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ficheros
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Utiles
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Utiles
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t02/git_vscode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git y VSCode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dudas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dudas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git_como_drive_UTILES/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git como Drive
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://m.xkcd.com/1597/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chiste
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t04_git_seguro_TODO/git_seguro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git Seguro
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion-al-control-de-versiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introducción al Control de Versiones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-git-instalacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Git: instalación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. GitHub
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-creacion-de-un-repositorio-en-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Creación de un repositorio en GitHub
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-acceso-github-desde-local" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Acceso GitHub desde local
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Acceso GitHub desde local">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-acceso-con-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Acceso con ssh
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-proceso-basico-desarrollo" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Proceso básico desarrollo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-enlaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Enlaces
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-anexos" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Anexos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Anexos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-paso-de-repositorio-https-a-ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1. Paso de repositorio HTTPS a SSH
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-acceso-a-github-con-tokens" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2. Acceso a GitHub con tokens
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="git-y-github">Git y Github<a class="headerlink" href="#git-y-github" title="Permanent link">&para;</a></h1>
+<h2 id="1-introduccion-al-control-de-versiones">1. Introducción al Control de Versiones<a class="headerlink" href="#1-introduccion-al-control-de-versiones" title="Permanent link">&para;</a></h2>
+<p>Lectura de los apartados 1.1, 1.2 y 1.3 de este enlace:</p>
+<blockquote>
+<p>The entire Pro Git book, written by Scott Chacon and Ben Straub and published by Apress, is available here:
+<a href="https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Acerca-del-Control-de-Versiones">https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Acerca-del-Control-de-Versiones</a></p>
+</blockquote>
+<ol>
+<li>Acerca del Control de Versiones</li>
+<li>Una breve historia de Git</li>
+<li>Fundamentos de Git</li>
+</ol>
+<h2 id="2-git-instalacion">2. Git: instalación<a class="headerlink" href="#2-git-instalacion" title="Permanent link">&para;</a></h2>
+<p>Es posible que <code>git</code> ya esté ya instalado en su máquina virtual. Si no: </p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>git
+</code></pre></div>
+<h2 id="3-github">3. GitHub<a class="headerlink" href="#3-github" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>GitHub, Inc. is an Internet hosting service for software development and version control using Git. It provides the distributed version control of Git plus access control, bug tracking, software feature requests, task management, continuous integration, and wikis for every project.</p>
+</blockquote>
+<p>Para la práctica debe tener cuenta creada en GitHub.</p>
+<h3 id="31-creacion-de-un-repositorio-en-github">3.1. Creación de un repositorio en GitHub<a class="headerlink" href="#31-creacion-de-un-repositorio-en-github" title="Permanent link">&para;</a></h3>
+<p>Para la práctica se crea en GitHub un repositorio de nombre <code>test-md-clases</code>:
+- privado 
+- con fichero README</p>
+<h2 id="4-acceso-github-desde-local">4. Acceso GitHub desde local<a class="headerlink" href="#4-acceso-github-desde-local" title="Permanent link">&para;</a></h2>
+<p>GitHub ya <strong>no</strong> permite acceder desde línea de comandos con usuario y clave. En su lugar deberá usar el acceso ssh (o un <em>token</em> personal, esta segunda forma se explica en el anexo).  </p>
+<h3 id="41-acceso-con-ssh">4.1. Acceso con ssh<a class="headerlink" href="#41-acceso-con-ssh" title="Permanent link">&para;</a></h3>
+<p>Debe seguir los pasos indicados en  <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">Connecting to GitHub with SSH</a>. Es necesario crear claves SSH. Para ello puede seguir estos dos enlaces:</p>
+<ol>
+<li><a href="https://docs.github.com/es/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">Generación de una nueva clave SSH </a></li>
+<li><a href="https://docs.github.com/es/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account">Agregar una clave SSH nueva a tu cuenta de GitHub</a></li>
+</ol>
+<p>Vea paso a paso un ejemplo de creación de las claves:</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>ed25519<span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;profesor@iesromerovargas.com&quot;</span>
+<span class="go">Generating public/private ed25519 key pair.</span>
+<span class="go">Enter file in which to save the key (/home/alu/.ssh/id_ed25519): </span>
+<span class="go">Enter passphrase (empty for no passphrase): </span>
+<span class="go">Enter same passphrase again: </span>
+<span class="go">Your identification has been saved in /home/alu/.ssh/id_ed25519</span>
+<span class="go">Your public key has been saved in /home/alu/.ssh/id_ed25519.pub</span>
+<span class="go">The key fingerprint is:</span>
+<span class="go">SHA256:10h/UuiiNSGtpnb7brUoPdyu79mQSyBtsPiQGHLgicc profesor@iesromerovargas.com</span>
+<span class="go">The key&#39;s randomart image is:</span>
+<span class="go">+--[ED25519 256]--+</span>
+<span class="go">|  .              |</span>
+<span class="go">| + o     .   .   |</span>
+<span class="go">|. E o   o + . .  |</span>
+<span class="go">| . o o o B * .   |</span>
+<span class="go">|    . + S X = .  |</span>
+<span class="go">|       = * +.+   |</span>
+<span class="go">|      o +o ++.   |</span>
+<span class="go">|     . ...*.o=   |</span>
+<span class="go">|        .=+** .  |</span>
+<span class="go">+----[SHA256]-----+</span>
+<span class="gp">$ </span>ls<span class="w"> </span>-al<span class="w"> </span>.ssh/*.pub
+<span class="go">-rw-r--r-- 1 alu alu 108 feb 23 09:12 .ssh/id_ed25519.pub</span>
+<span class="gp">$ </span>cat<span class="w"> </span>.ssh/id_ed25519.pub<span class="w"> </span>
+<span class="go">ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIbaMp/uhRclwPz0AbQhooXxQN7IsUMfhqE9KtAOtoXa profesor@iesromerovargas.com</span>
+<span class="gp">$</span>
+</code></pre></div>
+<p>Luego se <a href="https://docs.github.com/es/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account">añade la clave SSH a GitHub</a> </p>
+<p>Y finalmente puede probar la configuración con el comando <code>ssh -T git@github</code>.com</p>
+<div class="highlight"><pre><span></span><code>$ ssh -T git@github.com
+Hi angoies! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+$ 
+</code></pre></div>
+<p>Si todo es correcto ahora puede clonar el repositorio de GitHub en local usando el comando <code>git clone</code>. La referencia del repositorio a usar la proporciona Github en el botón "Code"</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:angoies/test-md-clase.git
+<span class="go">Clonando en &#39;test-md-clase&#39;...</span>
+<span class="go">Enter passphrase for key &#39;/home/alu/.ssh/id_ed25519&#39;: </span>
+<span class="go">remote: Enumerating objects: 15, done.</span>
+<span class="go">remote: Counting objects: 100% (15/15), done.</span>
+<span class="go">remote: Compressing objects: 100% (12/12), done.</span>
+<span class="go">Recibiendo objetos: 100% (15/15), listo.</span>
+<span class="go">Resolviendo deltas: 100% (2/2), listo.</span>
+<span class="go">remote: Total 15 (delta 2), reused 9 (delta 1), pack-reused 0</span>
+<span class="gp">$</span>
+</code></pre></div>
+<blockquote>
+<p>Nota: Puede mantener en cache la autenticación usando <code>ssh-agent</code> como se indica en <a href="https://docs.github.com/es/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#adding-your-ssh-key-to-the-ssh-agent">este enlace</a>.</p>
+</blockquote>
+<h2 id="5-proceso-basico-desarrollo">5. Proceso básico desarrollo<a class="headerlink" href="#5-proceso-basico-desarrollo" title="Permanent link">&para;</a></h2>
+<p>Se muestran en este apartado los pasos básicos para trabajar en local y subir los cambios a GitHub.</p>
+<ul>
+<li>
+<p><code>git clone</code>: descargar el repositorio creado previamente en GitHub</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span>git<span class="w"> </span>clone<span class="w"> </span>git@github.com:angoies/test-md-github.git
+<span class="go">Clonando en &#39;test-md-github&#39;...</span>
+<span class="go">remote: Enumerating objects: 3, done.</span>
+<span class="go">remote: Counting objects: 100% (3/3), done.</span>
+<span class="go">remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0</span>
+<span class="go">Recibiendo objetos: 100% (3/3), listo.</span>
+<span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>test-md-github/
+<span class="go">~/test-md-github$ ls</span>
+<span class="go">README.md</span>
+<span class="go">~/test-md-github$</span>
+</code></pre></div>
+</li>
+<li>
+<p>Trabajo en local: modificar fichero del repositorio, por ejemplo <code>README.md</code>
+    <div class="highlight"><pre><span></span><code><span class="go">~/test-md-github$ code README.md </span>
+<span class="go">~/test-md-github$</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><code>git status</code>: comprobar el estado del repositorio, del área de trabajo y de la zona de seguimiento:</p>
+<div class="highlight"><pre><span></span><code><span class="go">~/test-md-github$ git status</span>
+<span class="go">En la rama main</span>
+<span class="go">Tu rama está actualizada con &#39;origin/main&#39;.</span>
+
+<span class="go">Cambios no rastreados para el commit:</span>
+<span class="gp gp-VirtualEnv">(usa &quot;git add &lt;archivo&gt;...&quot; para actualizar lo que será confirmado)</span>
+<span class="gp gp-VirtualEnv">(usa &quot;git restore &lt;archivo&gt;...&quot; para descartar los cambios en el directorio de trabajo)</span>
+<span class="go">    modificado:     README.md</span>
+
+<span class="go">sin cambios agregados al commit (usa &quot;git add&quot; y/o &quot;git commit -a&quot;)</span>
+<span class="go">~/test-md-github$</span>
+</code></pre></div>
+</li>
+<li>
+<p><code>git add</code>: añadir a la zona de seguimiento los ficheros modificados que queremos añadir al repositorio</p>
+<div class="highlight"><pre><span></span><code><span class="go">~/test-md-github$ git add README.md </span>
+<span class="go">~/test-md-github$ git status</span>
+<span class="go">En la rama main</span>
+<span class="go">Tu rama está actualizada con &#39;origin/main&#39;.</span>
+
+<span class="go">Cambios a ser confirmados:</span>
+<span class="gp gp-VirtualEnv">(usa &quot;git restore --staged &lt;archivo&gt;...&quot; para sacar del área de stage)</span>
+<span class="go">    modificado:     README.md</span>
+
+<span class="go">~/test-md-github$ </span>
+</code></pre></div>
+</li>
+<li>
+<p><code>git commit</code>: añadir los cambios en la zona de seguimiento al repositorio</p>
+<div class="highlight"><pre><span></span><code><span class="go">~/test-md-github$ git commit -m &quot;cambios en README para demo&quot;</span>
+<span class="go">Author identity unknown</span>
+
+<span class="go">*** Por favor cuéntame quien eres.</span>
+<span class="go">Ejecuta</span>
+
+<span class="go">git config --global user.email &quot;you@example.com&quot;</span>
+<span class="go">git config --global user.name &quot;Tu Nombre&quot;</span>
+
+<span class="go">para configurar la identidad por defecto de tu cuenta.</span>
+<span class="go">Omite --global para configurar tu identidad solo en este repositorio.</span>
+
+<span class="go">fatal: no es posible auto-detectar la dirección de correo (se obtuvo &#39;alu@xdebian11.(none)&#39;)</span>
+<span class="go">~/test-md-github$</span>
+</code></pre></div>
+<p>El commit <strong>no se ha realizado</strong>, <code>git</code> necesita que configuremos el nombre y correo para añadirlo a la información de confirmación. Esto se puede hacer en modo local (opción por defecto) sólo para el repositorio actual, o en modo global. </p>
+<p>En este ejemplo lo hacemos en modo local:</p>
+<div class="highlight"><pre><span></span><code>~/test-md-github$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;jgomez@iesromerovargas.com&quot;</span>
+~/test-md-github$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Jose Gomez&quot;</span>
+</code></pre></div>
+<p>Y ahora si se ejecuta el commit:</p>
+<div class="highlight"><pre><span></span><code>~/test-md-github$<span class="w"> </span>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;cambios en README para demo&quot;</span>
+<span class="o">[</span>main<span class="w"> </span>64f7ed1<span class="o">]</span><span class="w"> </span>cambios<span class="w"> </span>en<span class="w"> </span>README<span class="w"> </span>para<span class="w"> </span>demo
+<span class="m">1</span><span class="w"> </span>file<span class="w"> </span>changed,<span class="w"> </span><span class="m">20</span><span class="w"> </span>insertions<span class="o">(</span>+<span class="o">)</span>
+~/test-md-github$
+</code></pre></div>
+</li>
+<li>
+<p><code>git push</code>: sincronizar  el  estado actual del repositorio local con el de GitHub</p>
+<p><div class="highlight"><pre><span></span><code>~/test-md-github$<span class="w"> </span>git<span class="w"> </span>push
+Enumerando<span class="w"> </span>objetos:<span class="w"> </span><span class="m">5</span>,<span class="w"> </span>listo.
+Contando<span class="w"> </span>objetos:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">5</span>/5<span class="o">)</span>,<span class="w"> </span>listo.
+Comprimiendo<span class="w"> </span>objetos:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">2</span>/2<span class="o">)</span>,<span class="w"> </span>listo.
+Escribiendo<span class="w"> </span>objetos:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">3</span>/3<span class="o">)</span>,<span class="w"> </span><span class="m">431</span><span class="w"> </span>bytes<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">431</span>.00<span class="w"> </span>KiB/s,<span class="w"> </span>listo.
+Total<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>,<span class="w"> </span>reusado<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>,<span class="w"> </span>pack-reusado<span class="w"> </span><span class="m">0</span>
+To<span class="w"> </span>github.com:angoies/test-md-github.git
+c9a4725..64f7ed1<span class="w">  </span>main<span class="w"> </span>-&gt;<span class="w"> </span>main
+~/test-md-github$<span class="w"> </span>
+</code></pre></div>
+* Verificar en la web de GitHub los cambios.</p>
+</li>
+</ul>
+<h2 id="6-enlaces">6. Enlaces<a class="headerlink" href="#6-enlaces" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://rogerdudler.github.io/git-guide/index.es.html">Git - la guía sencilla</a></li>
+<li>Vídeos: <a href="https://youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV&amp;feature=shared">Git y GitHub para Poetas</a></li>
+</ul>
+<h2 id="7-anexos">7. Anexos<a class="headerlink" href="#7-anexos" title="Permanent link">&para;</a></h2>
+<h3 id="71-paso-de-repositorio-https-a-ssh">7.1. Paso de repositorio HTTPS a SSH<a class="headerlink" href="#71-paso-de-repositorio-https-a-ssh" title="Permanent link">&para;</a></h3>
+<p>Tenga en cuenta que si ya ha clonado el repositorio con HTTPS y desea usar SSH será necesario modificar la configuración de los remotos.</p>
+<p>Para ello puede seguir estas indicaciones<a href="https://docs.github.com/es/get-started/git-basics/managing-remote-repositories#changing-a-remote-repositorys-url">Cambiar la URL del repositorio remoto</a></p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>remote<span class="w"> </span>-v
+&gt;<span class="w"> </span>origin<span class="w">  </span>https://github.com/OWNER/REPOSITORY.git<span class="w"> </span><span class="o">(</span>fetch<span class="o">)</span>
+&gt;<span class="w"> </span>origin<span class="w">  </span>https://github.com/OWNER/REPOSITORY.git<span class="w"> </span><span class="o">(</span>push<span class="o">)</span>
+
+$<span class="w"> </span>git<span class="w"> </span>remote<span class="w"> </span>set-url<span class="w"> </span>origin<span class="w"> </span>git@github.com:OWNER/REPOSITORY.git
+
+$<span class="w"> </span>git<span class="w"> </span>remote<span class="w"> </span>-v
+<span class="c1"># Verify new remote URL</span>
+&gt;<span class="w"> </span>origin<span class="w">  </span>git@github.com:OWNER/REPOSITORY.git<span class="w"> </span><span class="o">(</span>fetch<span class="o">)</span>
+&gt;<span class="w"> </span>origin<span class="w">  </span>git@github.com:OWNER/REPOSITORY.git<span class="w"> </span><span class="o">(</span>push<span class="o">)</span>
+$
+</code></pre></div>
+<h3 id="72-acceso-a-github-con-tokens">7.2. Acceso a GitHub con tokens<a class="headerlink" href="#72-acceso-a-github-con-tokens" title="Permanent link">&para;</a></h3>
+<p>Otra forma de acceder a Github es usando su usuario y un   PAT (<em>personal access token</em>)</p>
+<p>En este enlace <a href="https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/">https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/</a> lo más destacable:</p>
+<blockquote>
+<p>Use of tokens offer a number of security benefits over password-based authentication:</p>
+<ol>
+<li><strong>Unique</strong> – tokens are specific to GitHub and can be generated per use or per device</li>
+<li><strong>Revocable</strong> – tokens can can be individually revoked at any time without needing to update unaffected credentials</li>
+<li><strong>Limited</strong> – tokens can be narrowly scoped to allow only the access necessary for the use case</li>
+<li><strong>Random</strong> – tokens are not subject to the types of dictionary or brute force attempts that simpler passwords that you need to remember or enter regularly might be</li>
+</ol>
+</blockquote>
+<p>Lo que nos interesa: <strong>crear un token y utilizarlo en lugar de usuario/clave</strong>.</p>
+<ul>
+<li><a href="https://github.com/settings/tokens">Enlace directo a creación de tokens</a></li>
+<li><a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">Instrucciones de cómo crear el token</a></li>
+</ul>
+<p>Para esta práctica basta generar un token "clásico" y darle todos los permisos al <em>scope</em> <code>repo</code>. Almacene el token en un lugar seguro, lo necesitará a continuación.</p>
+<p>Para comprobar que todo es correcto intentar clonar el repositorio usando como <em>password</em> el token obtenido:</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/angoies/test-md-clase.git
+Clonando<span class="w"> </span>en<span class="w"> </span><span class="s1">&#39;test-md-clase&#39;</span>...
+Username<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;https://github.com&#39;</span>:<span class="w"> </span>angoies
+Password<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;https://angoies@github.com&#39;</span>:<span class="w"> </span>
+remote:<span class="w"> </span>Enumerating<span class="w"> </span>objects:<span class="w"> </span><span class="m">15</span>,<span class="w"> </span><span class="k">done</span>.
+remote:<span class="w"> </span>Counting<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">15</span>/15<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+remote:<span class="w"> </span>Compressing<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">12</span>/12<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+remote:<span class="w"> </span>Total<span class="w"> </span><span class="m">15</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">2</span><span class="o">)</span>,<span class="w"> </span>reused<span class="w"> </span><span class="m">9</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">1</span><span class="o">)</span>,<span class="w"> </span>pack-reused<span class="w"> </span><span class="m">0</span>
+Recibiendo<span class="w"> </span>objetos:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">15</span>/15<span class="o">)</span>,<span class="w"> </span>listo.
+Resolviendo<span class="w"> </span>deltas:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">2</span>/2<span class="o">)</span>,<span class="w"> </span>listo.
+$
+</code></pre></div>
+<p>Cada vez que intente acceder a un repositorio le pedirá usuario y token. Para trabajar con más comodidad es posible almacenar  usuario y token en cache usando  el comando <code>git config --global credential.helper 'cache --timeout 3600'</code> (<em>timeout</em> especificado en segundos). Tras ejecutarlo le pedirá autenticarse una vez y eso datos se quedan en cache con ese tiempo de refresco.</p>
+<div class="highlight"><pre><span></span><code><span class="gp">$ </span><span class="nb">cd</span><span class="w"> </span>test-md-clase/
+<span class="go">~/test-md-clase$ git config --global credential.helper &#39;cache --timeout 3600&#39;</span>
+<span class="go">~/test-md-clase$ git push</span>
+<span class="go">Username for &#39;https://github.com&#39;: angoies</span>
+<span class="go">Password for &#39;https://angoies@github.com&#39;: </span>
+<span class="go">Everything up-to-date</span>
+<span class="go">~/test-md-clase$ git push</span>
+<span class="go">Everything up-to-date</span>
+<span class="go">~/test-md-clase$ </span>
+</code></pre></div>
+<p>Es posible  almacenar el token de forma permanente, pero tenga en cuenta que lo hará en texto plano en el fichero <code>~/.git-credentials</code>.</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>credential.helper<span class="w"> </span>store
+$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>http://example.com/repo.git
+Username:<span class="w"> </span>&lt;<span class="nb">type</span><span class="w"> </span>your<span class="w"> </span>username&gt;
+Password:<span class="w"> </span>&lt;<span class="nb">type</span><span class="w"> </span>your<span class="w"> </span>password&gt;
+
+<span class="o">[</span>several<span class="w"> </span>days<span class="w"> </span>later<span class="o">]</span>
+$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>http://example.com/repo.git
+<span class="o">[</span>your<span class="w"> </span>credentials<span class="w"> </span>are<span class="w"> </span>used<span class="w"> </span>automatically<span class="o">]</span>
+</code></pre></div>
+<p>Si quiere personalizar el fichero donde se almacena puede usar la opción <code>git config --global credential.helper "store --file ~/.my-credentials"</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>
