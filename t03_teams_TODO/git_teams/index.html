@@ -419,9 +419,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#16-en-el-lado-de-repositorio-original" class="md-nav__link">
+  <a href="#16-en-el-lado-del-repositorio-original" class="md-nav__link">
     <span class="md-ellipsis">
-      1.6. En el lado de repositorio original
+      1.6. En el lado del repositorio original
     </span>
   </a>
   
@@ -893,9 +893,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#16-en-el-lado-de-repositorio-original" class="md-nav__link">
+  <a href="#16-en-el-lado-del-repositorio-original" class="md-nav__link">
     <span class="md-ellipsis">
-      1.6. En el lado de repositorio original
+      1.6. En el lado del repositorio original
     </span>
   </a>
   
@@ -1124,7 +1124,7 @@ remote:      https://github.com/clases-alu-01/CETI-PPS-Bloque02/pull/new/feature
 <p><img alt="" src="../figuras/github_teams_PR_01.png" /></p>
 <p>Observe que tiene la opción de añadir información en la PR: nombre de la PR, descripción, etc. Y en la siguiente figura vea que además puede revisar su propia PR ya que se muestran en la misma ventana los commits de la rama <code>featureA</code> y las diferencias entre <code>main</code> y la nueva rama:</p>
 <p><img alt="" src="../figuras/github_teams_PR_02.png" /></p>
-<h3 id="16-en-el-lado-de-repositorio-original">1.6. En el lado de repositorio original<a class="headerlink" href="#16-en-el-lado-de-repositorio-original" title="Permanent link">&para;</a></h3>
+<h3 id="16-en-el-lado-del-repositorio-original">1.6. En el lado del repositorio original<a class="headerlink" href="#16-en-el-lado-del-repositorio-original" title="Permanent link">&para;</a></h3>
 <p>Una vez realizada la PR en el directorio forkeado el propietario del repositorio original recibe la petición y puede acceder a ella a través de la pestaña  <strong>Pull Requests</strong> que en este caso aparece con un 1 a su derecha indicando las PR pendientes:</p>
 <p><img alt="" src="../figuras/github_teams_PR_03.png" /></p>
 <p>Si accedemos a las PR vemos que hay una pendiente (open):</p>
@@ -1228,7 +1228,7 @@ clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>
 <li>Fusionar  los cambios de la rama <code>upstream/main</code> a tu rama maestra local (<code>git merge upstream/main</code>). Esto hará que tu rama <code>main</code> se sincronice con el repositorio <code>upstream</code> sin perder tus cambios locales.</li>
 <li>Envíar (<code>git push origin main</code>) los cambios al repositorio forkeado. Esto actualiza los cambios en el repositorio forkeado, y si es necesario genera la posibilidad de una PR.</li>
 </ol>
-<p>Paso 1: observe los remotos originales (creados al hacer <code>git clone</code>) y los que se añaden como <code>upstream</code>
+<p>Paso 1: observe los remotos originales (creados al hacer <code>git clone</code>) y los que se añaden como <code>upstream</code></p>
 <div class="highlight"><pre><span></span><code>clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>remote<span class="w"> </span>-v
 origin<span class="w">  </span>https://github.com/clases-alu-01/CETI-PPS-Bloque02.git<span class="w"> </span><span class="o">(</span>fetch<span class="o">)</span>
 origin<span class="w">  </span>https://github.com/clases-alu-01/CETI-PPS-Bloque02.git<span class="w"> </span><span class="o">(</span>push<span class="o">)</span>
@@ -1240,8 +1240,8 @@ origin<span class="w">  </span>https://github.com/clases-alu-01/CETI-PPS-Bloque0
 upstream<span class="w">        </span>https://github.com/IES-Francisco-Romero-Vargas/CETI-PPS-Bloque02.git<span class="w"> </span><span class="o">(</span>fetch<span class="o">)</span>
 upstream<span class="w">        </span>https://github.com/IES-Francisco-Romero-Vargas/CETI-PPS-Bloque02.git<span class="w"> </span><span class="o">(</span>push<span class="o">)</span>
 clases@vm:~/tmp/CETI-PPS-Bloque02$
-</code></pre></div></p>
-<p>Paso 2: Descargamos del repositorio original (<code>git fetch upstream</code>):
+</code></pre></div>
+<p>Paso 2: Descargamos del repositorio original (<code>git fetch upstream</code>):</p>
 <div class="highlight"><pre><span></span><code>clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>fetch<span class="w"> </span>upstream<span class="w"> </span>
 Username<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;https://github.com&#39;</span>:<span class="w"> </span>clases.alu+01@gmail.com
 Password<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="s1">&#39;https://clases.alu+01@gmail.com@github.com&#39;</span>:<span class="w"> </span>
@@ -1252,7 +1252,7 @@ Desempaquetando<span class="w"> </span>objetos:<span class="w"> </span><span cla
 Desde<span class="w"> </span>https://github.com/IES-Francisco-Romero-Vargas/CETI-PPS-Bloque02
 <span class="w"> </span>*<span class="w"> </span><span class="o">[</span>nueva<span class="w"> </span>rama<span class="o">]</span><span class="w">      </span>main<span class="w">       </span>-&gt;<span class="w"> </span>upstream/main
 clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>
-</code></pre></div></p>
+</code></pre></div>
 <p>Se ha creado  una rama <code>upstream/main</code> que podemos fusionar con nuestro <code>main</code> local</p>
 <p>Paso 3: desde la rama <code>main</code> local hacemos un merge con la rama descargada</p>
 <div class="highlight"><pre><span></span><code>clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>switch<span class="w"> </span>main

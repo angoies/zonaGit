@@ -628,9 +628,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-actualizar-repo-github" class="md-nav__link">
+  <a href="#4-actualizar-repositorio-en-github" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Actualizar repo GitHub
+      4. Actualizar repositorio en GitHub
     </span>
   </a>
   
@@ -646,9 +646,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-si-modifica-el-repositorio-en-casa" class="md-nav__link">
+  <a href="#6-si-modifica-el-repositorio-en-casa-y-regresa-al-aula" class="md-nav__link">
     <span class="md-ellipsis">
-      6. Si modifica el repositorio en casa
+      6. Si modifica el repositorio en casa y regresa al aula
     </span>
   </a>
   
@@ -755,9 +755,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-actualizar-repo-github" class="md-nav__link">
+  <a href="#4-actualizar-repositorio-en-github" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Actualizar repo GitHub
+      4. Actualizar repositorio en GitHub
     </span>
   </a>
   
@@ -773,9 +773,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-si-modifica-el-repositorio-en-casa" class="md-nav__link">
+  <a href="#6-si-modifica-el-repositorio-en-casa-y-regresa-al-aula" class="md-nav__link">
     <span class="md-ellipsis">
-      6. Si modifica el repositorio en casa
+      6. Si modifica el repositorio en casa y regresa al aula
     </span>
   </a>
   
@@ -808,15 +808,14 @@
 
 <h1 id="borrador-uso-github-como-drive-en-lmsgi">Borrador: uso GitHub como "Drive" en LMSGI<a class="headerlink" href="#borrador-uso-github-como-drive-en-lmsgi" title="Permanent link">&para;</a></h1>
 <h2 id="1-introduccion">1. Introducción<a class="headerlink" href="#1-introduccion" title="Permanent link">&para;</a></h2>
-<p>Se pretende tener sincronizado el contenidos de sus ejemplos de clase con un repositorio en GitHub. </p>
-<p>Por otra parte las intrucciones suponen que se está usando la máquina virtual del modulo y que el editor de trabajo es VsCode.</p>
+<p>Se pretende tener sincronizado el contenido de sus ejemplos de clase con un repositorio en GitHub. Las intrucciones suponen que se está usando la máquina virtual del módulo y que el editor de trabajo es VsCode. No se usa la autenticación SSH en este ejemplo. </p>
 <h2 id="2-paso-inicial-crear-repositorio-local">2. Paso inicial: Crear repositorio local<a class="headerlink" href="#2-paso-inicial-crear-repositorio-local" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Abrir con Vscode el directorio que queremos mantener (el nombre de la carpeta será el nombre del repositorio en Github)</li>
-<li>Iniciar repositorio: Source Control / iniciar repo</li>
-<li>Añadir ficheros a la zona de <em>stage</em>: en <em>Source Control</em> se muestran los ficheros modificados bajo la etiqueta "Changes". Puede añadirlos todos los ficheros de golpe o ir seleccionando pulsando el símbolo +.</li>
-<li>Los ficheros ahora se muetran en "Staged Changes"</li>
-<li>Antes de hacer commit debe configurar el user.name y user.email de git (se puede usar la opción --global)
+<li>Abrir con Vscode el directorio que quiere mantener (el nombre de la carpeta será el nombre del repositorio en Github)</li>
+<li>Iniciar repositorio: Source Control / Iniciar repo</li>
+<li>Añadir ficheros a la zona de <em>stage</em>: en <em>Source Control</em> se muestran los ficheros modificados bajo la etiqueta "Changes". Puede añadir todos los ficheros de golpe o ir seleccionando uno a uno pulsando el símbolo +.</li>
+<li>Los ficheros ahora se muestran en "Staged Changes"</li>
+<li>Antes de hacer commit debe configurar el <code>user.name</code> y <code>user.email</code> de git (se puede usar la opción <code>--global</code>)
     <div class="highlight"><pre><span></span><code>git config user.name Ana
 git config user.email ana.perez@miempresa.internal
 </code></pre></div></li>
@@ -825,44 +824,46 @@ git config user.email ana.perez@miempresa.internal
 <h2 id="3-subircrear-repositorio-en-github">3. Subir/crear repositorio en Github<a class="headerlink" href="#3-subircrear-repositorio-en-github" title="Permanent link">&para;</a></h2>
 <p>(GitHub &lt;= Repositorio local)</p>
 <ol>
-<li>Crear/subir repo a GitHub: <strong>Publish Branch</strong><ol>
+<li>Crear/subir repositorio a GitHub: <strong>Publish Branch</strong><ol>
 <li>Vscode pide autenticarse en GitHub (Allow)</li>
-<li>Se abre navegador: introducir dtos, etc.</li>
-<li>PErmitir abrir el enlace desde Vscode, etc.</li>
-<li>Aperecen en VScode dos opciones:  (privado o publico)</li>
+<li>Se abre navegador: introducir datos, etc.</li>
+<li>Permitir abrir el enlace desde Vscode, etc.</li>
+<li>Aparecen en VScode dos opciones:  (privado o publico)</li>
 </ol>
 </li>
 <li>Una vez "publicado" tiene la opción de abrir el repo en Github para comprobar, etc</li>
 </ol>
-<h2 id="4-actualizar-repo-github">4. Actualizar repo GitHub<a class="headerlink" href="#4-actualizar-repo-github" title="Permanent link">&para;</a></h2>
+<h2 id="4-actualizar-repositorio-en-github">4. Actualizar repositorio en GitHub<a class="headerlink" href="#4-actualizar-repositorio-en-github" title="Permanent link">&para;</a></h2>
 <p>Tras una sesión de trabajo en el aula la cosa es más sencilla </p>
 <ol>
 <li>Añadir ficheros modificados (pasar de <em>Changes</em> a <em>Staged Changes</em>)</li>
 <li>Hacer Commit </li>
 <li>Sincronizar cambios con Github</li>
 </ol>
-<p>Eso mismo en un terminal de VScode sería</p>
+<p>Eso mismo en un terminal sería</p>
 <div class="highlight"><pre><span></span><code>git add &lt;directorio&gt; &lt;files&gt;...
 git commit -m &quot;mensaje descriptivo&quot;
 git push
 </code></pre></div>
 <h2 id="5-trabajar-en-casa">5. Trabajar en casa<a class="headerlink" href="#5-trabajar-en-casa" title="Permanent link">&para;</a></h2>
 <p>La primera vez en casa:</p>
-<ol>
+<ul>
 <li>Clonar el repositorio en Vscode utilizando la URL que proporciona GitHub en el botón "Code" del repositorio</li>
-</ol>
+</ul>
 <p>A partir de ese momento:
 1. Actualizar el repositorio local (GitHub =&gt; Repositorio local) (git pull)
-2. Si hace cambios el proceso habitual
-   1. Añadir ficheros modificados o nuevos a Staged
-   2. hacer commit
-   3. publicar los cambios en GitHub</p>
-<h2 id="6-si-modifica-el-repositorio-en-casa">6. Si modifica el repositorio en casa<a class="headerlink" href="#6-si-modifica-el-repositorio-en-casa" title="Permanent link">&para;</a></h2>
-<p>y quiere tener los cambios en el aula. En este caso es necesario sincronizar el directorio de clase con el directorio de Github (GitHub =&gt; Repositorio local aula). Para ello basta hacer un <code>git pull</code> (o buscar la misma opción desde los menús de VSCode)</p>
+2. Si hace cambios en casa el proceso sería:</p>
+<ol>
+<li>Añadir ficheros modificados o nuevos a Staged</li>
+<li>hacer commit</li>
+<li>publicar los cambios en GitHub</li>
+</ol>
+<h2 id="6-si-modifica-el-repositorio-en-casa-y-regresa-al-aula">6. Si modifica el repositorio en casa y regresa al aula<a class="headerlink" href="#6-si-modifica-el-repositorio-en-casa-y-regresa-al-aula" title="Permanent link">&para;</a></h2>
+<p>Si quiere tener los cambios en el aula es necesario sincronizar el directorio de clase con el directorio de Github (GitHub =&gt; Repositorio local aula). Para ello basta hacer un <code>git pull</code> (o buscar la misma opción desde los menús de VSCode)</p>
 <h2 id="7-almacenamiento-de-las-credenciales">7. Almacenamiento de las credenciales<a class="headerlink" href="#7-almacenamiento-de-las-credenciales" title="Permanent link">&para;</a></h2>
 <ul>
 <li>En Github aparece en Integración / Aplicaciones / Authorized OAuth Apps</li>
-<li>En local VSCode las almacena en el anillo de claves del Sistema Operativo. Si no está disponible guarda el token de autenticación en su propio almacenamiento interno .</li>
+<li>En local el editor VSCode las almacena en el anillo de claves del Sistema Operativo. Si no está disponible guarda el token de autenticación en su propio almacenamiento interno.</li>
 </ul>
 
 
