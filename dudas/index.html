@@ -676,6 +676,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#18-modificar-el-ultimo-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.8. Modificar el ultimo commit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.8. Modificar el ultimo commit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#181-el-mensaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.8.1. el mensaje
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#182-modificacion-de-archivos-confirmados" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.8.2. Modificación de archivos confirmados
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -858,6 +891,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#18-modificar-el-ultimo-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.8. Modificar el ultimo commit
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.8. Modificar el ultimo commit">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#181-el-mensaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.8.1. el mensaje
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#182-modificacion-de-archivos-confirmados" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.8.2. Modificación de archivos confirmados
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1024,6 +1090,21 @@ git commit -m &quot;Descripción de la funcionalidad&quot;.
 <li>Copia el hash del commit (el código alfanumérico (ej: abc1234)</li>
 <li>Ejecuta el comando: <code>git reset --hard abc1234.</code></li>
 </ul>
+<h2 id="18-modificar-el-ultimo-commit">1.8. Modificar el ultimo commit<a class="headerlink" href="#18-modificar-el-ultimo-commit" title="Permanent link">&para;</a></h2>
+<p><a href="https://www.atlassian.com/es/git/tutorials/rewriting-history">Atlassian: Reescritura del historial</a></p>
+<h3 id="181-el-mensaje">1.8.1. el mensaje<a class="headerlink" href="#181-el-mensaje" title="Permanent link">&para;</a></h3>
+<p>Para modificar solamente el mensaje del último commit en Git ejecuta </p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>commit<span class="w"> </span>--amend<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Nuevo mensaje&quot;</span>.<span class="w"> </span>
+</code></pre></div>
+<h3 id="182-modificacion-de-archivos-confirmados">1.8.2. Modificación de archivos confirmados<a class="headerlink" href="#182-modificacion-de-archivos-confirmados" title="Permanent link">&para;</a></h3>
+<p>El ejemplo siguiente muestra una situación habitual en el desarrollo basado en Git. Supongamos que hemos editado algunos archivos que queremos confirmar en una sola instantánea, pero que nos olvidamos de añadir uno. Arreglar este error tan solo es cuestión de preparar el otro archivo y confirmar con la marca --amend:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Edit hello.py and main.py</span>
+git<span class="w"> </span>add<span class="w"> </span>hello.py
+git<span class="w"> </span>commit<span class="w"> </span>
+<span class="c1"># Realize you forgot to add the changes from main.py </span>
+git<span class="w"> </span>add<span class="w"> </span>main.py<span class="w"> </span>
+git<span class="w"> </span>commit<span class="w"> </span>--amend<span class="w"> </span>--no-edit
+</code></pre></div>
 
 
 
