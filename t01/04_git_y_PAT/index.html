@@ -534,12 +534,120 @@
   
   
   
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Formatos
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Formatos
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t05/JSON_YAML_TOML/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JSON/YAML/TOML
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t05/ejemplos/ejemplos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ejemplos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../fuentes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     Ficheros
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../t04_git_seguro/git_seguro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Seguridad
     
   </span>
   
@@ -563,10 +671,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -578,8 +686,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Utiles
           </label>
@@ -770,6 +878,38 @@
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>credential.helper<span class="w"> </span>store
 </code></pre></div>
 <p>En ese caso las credenciales se almacenan en texto plano en el fichero <code>~/.git-credentials</code>.</p>
+<h1 id="2-ssh-acceder-sin-frase-de-paso">2. SSH: acceder sin frase de paso<a class="headerlink" href="#2-ssh-acceder-sin-frase-de-paso" title="Permanent link">&para;</a></h1>
+<p>Se puede añadir la frase de paso SSH al <em>agente SSH</em> para que no la pida reiteradamente. Para ello:</p>
+<ol>
+<li>
+<p>Primero compruebe si está iniciado el agente ssh con el comando <code>ssh-add -l</code></p>
+<div class="highlight"><pre><span></span><code>alu@tos:~$<span class="w"> </span>ssh-add<span class="w"> </span>-l
+Could<span class="w"> </span>not<span class="w"> </span>open<span class="w"> </span>a<span class="w"> </span>connection<span class="w"> </span>to<span class="w"> </span>your<span class="w"> </span>authentication<span class="w"> </span>agent.
+alu@tos:~$<span class="w"> </span>
+</code></pre></div>
+</li>
+<li>
+<p>Si indica que no puede abrir la conexión es necesario iniciar el agente SSH. Si no puede pasar al paso 3.</p>
+<div class="highlight"><pre><span></span><code>alu@tos:~$<span class="w"> </span><span class="nb">eval</span><span class="w"> </span><span class="sb">`</span>ssh-agent<span class="w"> </span>-s<span class="sb">`</span>
+Agent<span class="w"> </span>pid<span class="w"> </span><span class="m">916589</span>
+alu@tos:~$<span class="w"> </span>ssh-add<span class="w"> </span>-l
+The<span class="w"> </span>agent<span class="w"> </span>has<span class="w"> </span>no<span class="w"> </span>identities.
+alu@tos:~$
+</code></pre></div>
+</li>
+<li>
+<p>Añadir la clave con <code>ssh-add -t &lt;time&gt; &lt;file&gt;</code> (si se omite <code>-t time</code> se añade de forma permanente). Si se omite <code>file</code> toma la clave por defecto. Puede comprobar que se ha añadido con <code>ssh-add -l</code>:</p>
+<div class="highlight"><pre><span></span><code>alu@tos:~$<span class="w"> </span>ssh-add<span class="w"> </span>-t<span class="w"> </span>2h
+Enter<span class="w"> </span>passphrase<span class="w"> </span><span class="k">for</span><span class="w"> </span>/home/alu/.ssh/id_ed25519:<span class="w"> </span>
+Identity<span class="w"> </span>added:<span class="w"> </span>/home/alu/.ssh/id_ed25519<span class="w"> </span><span class="o">(</span>clases.alu+01@gmail.com<span class="o">)</span>
+Lifetime<span class="w"> </span><span class="nb">set</span><span class="w"> </span>to<span class="w"> </span><span class="m">7200</span><span class="w"> </span>seconds
+alu@tos:~$<span class="w"> </span>ssh-add<span class="w"> </span>-l
+<span class="m">256</span><span class="w"> </span>SHA256:W9Ka18JIVwQfuC68EUUplwpv7acGwroNdzucFnG4wr4<span class="w"> </span>clases.alu+01@gmail.com<span class="w"> </span><span class="o">(</span>ED25519<span class="o">)</span>
+alu@tos:~$
+</code></pre></div>
+</li>
+</ol>
+<p>Ya puede usar la clave SSH durante ese periodo sin introducir la frase de paso. Se pueden borrar las claves del agente con <code>ssh-add -D</code>.</p>
 
 
 
