@@ -9,18 +9,22 @@
       
       
       
+        <link rel="prev" href="../03_git_intro_merge/">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="next" href="../../t03_teams_TODO/git_teams/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
     
     
       
-        <title>Zona Git / GitHub</title>
+        <title>Github y PAT - Zona Git / GitHub</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
       
       
 
@@ -39,7 +43,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -57,6 +61,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#1-acceso-con-token" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -69,7 +78,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Zona Git / GitHub" class="md-header__button md-logo" aria-label="Zona Git / GitHub" data-md-component="logo">
+    <a href="../.." title="Zona Git / GitHub" class="md-header__button md-logo" aria-label="Zona Git / GitHub" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -89,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Github y PAT
             
           </span>
         </div>
@@ -164,7 +173,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Zona Git / GitHub" class="md-nav__button md-logo" aria-label="Zona Git / GitHub" data-md-component="logo">
+    <a href="../.." title="Zona Git / GitHub" class="md-nav__button md-logo" aria-label="Zona Git / GitHub" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -182,7 +191,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -200,17 +209,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -225,7 +236,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Intro
@@ -239,7 +250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/t01/01_git_y_github/" class="md-nav__link">
+      <a href="../01_git_y_github/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -261,7 +272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/t01/02_git_local/" class="md-nav__link">
+      <a href="../02_git_local/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -283,7 +294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/t01/03_git_intro_merge/" class="md-nav__link">
+      <a href="../03_git_intro_merge/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -302,10 +313,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/t01/04_git_y_PAT/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Github y PAT
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -315,6 +347,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-creacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Creación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-uso-de-helpers" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Uso de helpers
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -327,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/t03_teams_TODO/git_teams/" class="md-nav__link">
+      <a href="../../t03_teams_TODO/git_teams/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -392,7 +462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/t02/git_pages/" class="md-nav__link">
+      <a href="../../t02/git_pages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -414,7 +484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/t02/git_mkdocs/" class="md-nav__link">
+      <a href="../../t02/git_mkdocs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -436,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/t02/markdown/" class="md-nav__link">
+      <a href="../../t02/markdown/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -465,7 +535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/fuentes/" class="md-nav__link">
+      <a href="../../fuentes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -522,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/utiles/git_vscode/" class="md-nav__link">
+      <a href="../../utiles/git_vscode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -544,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/dudas/" class="md-nav__link">
+      <a href="../../dudas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -566,7 +636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/utiles/git_como_drive_UTILES/" class="md-nav__link">
+      <a href="../../utiles/git_como_drive_UTILES/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -627,6 +697,34 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-creacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Creación
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-uso-de-helpers" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Uso de helpers
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -638,8 +736,53 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="1-acceso-con-token">1. Acceso con token<a class="headerlink" href="#1-acceso-con-token" title="Permanent link">&para;</a></h1>
+<p>En algunos casos es posible que no tenga acceso por SSH. En esa situación no podrá usar certificados SSH.</p>
+<p>En su lugar puede usar el acceso a GitHub usando  HTTP e identificandose con:</p>
+<ul>
+<li>su usuario</li>
+<li>y un <em>Personal Acces Token</em> (PAT), qeu sustituye a la contraseña.</li>
+</ul>
+<p>Tenga en cuenta que al clonar el repositorio debe usar la opción HTTPS, donde la URL tiene un formato similar a <code>https://github.com/user/nombrerepo.git</code>.</p>
+<h2 id="11-creacion">1.1. Creación<a class="headerlink" href="#11-creacion" title="Permanent link">&para;</a></h2>
+<p>El PAT se crea a en los <em>Settings</em> del usuario, <em>Developer Settings</em> y puede usar el tipo <em>Tokens (classic)</em>.</p>
+<p><img alt="github PAT" src="../figuras/github_pat_01.png" /></p>
+<p>En los <code>scopes</code> y para el uso en estos ejemplos basta activar <code>repo</code> y <code>workflow</code> (en realidad workflow incluye repo).</p>
+<p><img alt="github PAT" src="../figuras/github_pat_02.png" /></p>
+<p>Ya sólo queda anotar y usar el PAT como clave cuando la solicite.</p>
+<p><img alt="github PAT" src="../figuras/github_pat_03.png" /></p>
+<h2 id="12-uso-de-helpers">1.2. Uso de helpers<a class="headerlink" href="#12-uso-de-helpers" title="Permanent link">&para;</a></h2>
+<p>Para no tener que estar copiando y pegando  el valor del PAT se usa el comando
+<code>git config --global credential.helper 'cache --timeout=segundos'</code></p>
+<p>Este comando permite no tener que estar escribiendo ni el nombre de usuario y contraseña (o token) cada vez que hace un git push o git pull, pero sin dejar sus claves grabadas en el disco duro.</p>
+<p>Básicamente guarda las credenciales <strong>en la memoria RAM por un rato y luego las olvída</strong>". El tiempo por defecto son 900 segundos (15 minutos)</p>
+<p>Por ejemplo si quiere que recuerde por una hora (3600 segundos), el comando sería:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>credential.helper<span class="w"> </span><span class="s1">&#39;cache --timeout=3600&#39;</span>
+</code></pre></div>
+<blockquote>
+<p>El flag <code>--global</code> es para que se aplique a todos sus repositorios y no solo al que tenga abierto en la terminal.</p>
+</blockquote>
+<p>Otra opción es almacenar en el disco duro de forma permanente usando como helper <code>store</code> en vez de <code>cache</code>:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>credential.helper<span class="w"> </span>store
+</code></pre></div>
+<p>En ese caso las credenciales se almacenan en texto plano en el fichero <code>~/.git-credentials</code>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -673,12 +816,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["content.code.copy"], "search": "/assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
-        <script src="/js/open_in_new_tab.js"></script>
+        <script src="../../js/open_in_new_tab.js"></script>
       
     
   </body>
