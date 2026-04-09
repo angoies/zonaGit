@@ -12,7 +12,7 @@
         <link rel="prev" href="../../t05/ejemplos.zip">
       
       
-        <link rel="next" href="../../t04_git_seguro/git_seguro/">
+        <link rel="next" href="../git_teams_tarea/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -908,42 +908,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-todo-revisar-ejercicios" class="md-nav__link">
+  <a href="#5-enlaces" class="md-nav__link">
     <span class="md-ellipsis">
-      5. TODO REVISAr Ejercicios
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5. TODO REVISAr Ejercicios">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51-ejercicio-01-hacer-proceso-pull-reqeust" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.1. Ejercicio 01: Hacer proceso Pull Reqeust
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#52-ejercicio-02-procesar-pull-request" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.2. Ejercicio 02: Procesar Pull request
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-enlaces" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Enlaces
+      5. Enlaces
     </span>
   </a>
   
@@ -953,6 +920,28 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git_teams_tarea/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teams Ejercicio
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1295,42 +1284,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-todo-revisar-ejercicios" class="md-nav__link">
+  <a href="#5-enlaces" class="md-nav__link">
     <span class="md-ellipsis">
-      5. TODO REVISAr Ejercicios
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="5. TODO REVISAr Ejercicios">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#51-ejercicio-01-hacer-proceso-pull-reqeust" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.1. Ejercicio 01: Hacer proceso Pull Reqeust
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#52-ejercicio-02-procesar-pull-request" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.2. Ejercicio 02: Procesar Pull request
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-enlaces" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Enlaces
+      5. Enlaces
     </span>
   </a>
   
@@ -1356,13 +1312,13 @@
 <h2 id="1-introduccion-al-trabajo-en-equipo">1. Introducción al trabajo en equipo<a class="headerlink" href="#1-introduccion-al-trabajo-en-equipo" title="Permanent link">&para;</a></h2>
 <p>Cuando se colabora en el desarrollo de algún proyecto de SW libre o al participar en un grupo de trabajo cerrado <strong>se hace un fork</strong> del repositorio para poder trabajar con él. Al hacerlo obtenemos una copia de todo el repositorio (con todo su historial) en nuestra cuenta de GitHub.</p>
 <p>Antes de seguir con este documento es recomendable consultar este enlace: <em>Difference between Git Clone and Git Fork:</em> <a href="https://www.toolsqa.com/git/difference-between-git-clone-and-git-fork/">https://www.toolsqa.com/git/difference-between-git-clone-and-git-fork/</a> donde se explica de forma gráfica la diferencia entre hacer un clone y un fork, y el proceso de colaboración a través de <strong>Pulls Requests (PR)</strong> que se puede resumir en esta figura:</p>
-<p><img alt="" src="../figuras/4.1_Pull-Request.png" /></p>
+<p><img alt="figuras/4.1_Pull-Request.png" src="../figuras/4.1_Pull-Request.png" /></p>
 <p>Veremos que el proceso de incorporar cambios al repositorio central o principal es a través de PR desde el directorio <strong>forkeado</strong>. El trabajo en local se hace tras clonar el repositorio <em>forkeado</em>.</p>
 <h3 id="11-primer-paso-fork-del-repositorio">1.1. Primer paso: fork del repositorio<a class="headerlink" href="#11-primer-paso-fork-del-repositorio" title="Permanent link">&para;</a></h3>
 <p>Iniciamos el proceso de forma práctica. Para hacer un fork iniciamos sesión en GitHub, buscamos el repositorio principal y hacemos clic en el botón <strong>fork</strong> de la parte superior de la página. Esto creará una instancia del repositorio completo en nuestra cuenta.</p>
-<p><img alt="" src="../figuras/github_teams_fork.png" /></p>
+<p><img alt="figuras/github_teams_fork.png" src="../figuras/github_teams_fork.png" /></p>
 <p>Una vez creado el fork lo podemos ver en nuestra cuenta, con la leyenda <strong>forked from</strong></p>
-<p><img alt="" src="../figuras/github_teams_forkeado.png" /></p>
+<p><img alt="figuras/github_teams_forkeado.png" src="../figuras/github_teams_forkeado.png" /></p>
 <h3 id="12-segundo-paso-clonar-el-repositorio-forkeado">1.2. Segundo paso: clonar el repositorio forkeado<a class="headerlink" href="#12-segundo-paso-clonar-el-repositorio-forkeado" title="Permanent link">&para;</a></h3>
 <p>Una vez que el repositorio esté en tu cuenta, puede clonarlo a su computador para trabajarlo en local. Ya conocemos esta parte: <code>$ git clone [&lt;dir coderepo&gt;</code></p>
 <div class="highlight"><pre><span></span><code>clases@vm:~/tmp$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/clases-alu-01/CETI-PPS-Bloque02.git
@@ -1384,11 +1340,11 @@ bdc2f28<span class="w"> </span>Primera<span class="w"> </span>práctica<span cla
 ef0ee73<span class="w"> </span>Initial<span class="w"> </span>commit
 clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>
 </code></pre></div>
-<p>Si lo desea puede modificar la configuración o iniciar la configuración de trabajo en local. Por ejemplo 
+<p>Si lo desea puede modificar la configuración o iniciar la configuración de trabajo en local. Por ejemplo</p>
 <div class="highlight"><pre><span></span><code>clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>user.name<span class="w"> </span><span class="s2">&quot;Clases Alu 01&quot;</span>
 clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--local<span class="w"> </span>user.email<span class="w"> </span><span class="s2">&quot;clases.alu+01@gmail.com&quot;</span>
 clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>credential.helper<span class="w"> </span><span class="s1">&#39;cache --timeout 7200&#39;</span>
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="13-trabajar-en-local">1.3. Trabajar en local<a class="headerlink" href="#13-trabajar-en-local" title="Permanent link">&para;</a></h3>
 <p>En esta fase se modifica el código, se hacen pruebas, etc. Al final se añade al seguimiento y se hacen commits etc. Lo más correcto sería trabajar sobre una rama creada para ese nuevo código. mejora o corrección de errores:</p>
 <div class="highlight"><pre><span></span><code>clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>branch<span class="w"> </span>featureA
@@ -1436,9 +1392,10 @@ To<span class="w"> </span>https://github.com/clases-alu-01/CETI-PPS-Bloque02.git
 clases@vm:~/tmp/CETI-PPS-Bloque02$
 </code></pre></div>
 <p>Si vamos a nuestro repositorio en GitHub se puede observar la rama <code>main</code></p>
-<p><img alt="" src="../figuras/github_teams_forkeado_main.png" /></p>
+<p><img alt="figuras/github_teams_forkeado_main.png" src="../figuras/github_teams_forkeado_main.png" /></p>
 <p>Y la rama <code>featureA</code> con los nuevos ficheros:</p>
-<p><img alt="" src="../figuras/github_teams_forkeado_featureA.png" /></p>
+<p><img alt="(figuras/github_teams_forkeado_featureA.png)
+" src="../figuras/github_teams_forkeado_featureA.png" /></p>
 <p>Tengamos en cuenta que esta rama se ha incorporado al repositorio <em>forkeado</em>, no al inicial.</p>
 <p>Puede observar al hacer <code>git push</code> que además de subir el código a nuestro repositorio, nos indica como iniciar un <strong>Pull Request</strong> a través de un enlace:</p>
 <div class="highlight"><pre><span></span><code>remote: Create a pull request for &#39;featureA&#39; on GitHub by visiting:
@@ -1446,27 +1403,29 @@ remote:      https://github.com/clases-alu-01/CETI-PPS-Bloque02/pull/new/feature
 </code></pre></div>
 <h3 id="15-hacer-pull-request">1.5. Hacer Pull Request<a class="headerlink" href="#15-hacer-pull-request" title="Permanent link">&para;</a></h3>
 <p>El objetivo es incorporar el código de la rama <code>featureA</code> al repositorio original (que no es nuestro). Para eso se debe hacer un <em>Pull Request</em> (PR), una petición para que los cambios se incorporen al código.</p>
-<p>Se puede hacer el PR
--  usando directamente el enlace que se ofrece al hacer <code>git push</code>
--  o buscando en GitHub en el repositorio forkeado dicha opción:</p>
-<p><img alt="" src="../figuras/github_teams_PR_01.png" /></p>
+<p>Se puede hacer el PR</p>
+<ul>
+<li>usando directamente el enlace que se ofrece al hacer <code>git push</code></li>
+<li>o buscando en GitHub en el repositorio forkeado dicha opción:</li>
+</ul>
+<p><img alt="figuras/github_teams_PR_01.png" src="../figuras/github_teams_PR_01.png" /></p>
 <p>Observe que tiene la opción de añadir información en la PR: nombre de la PR, descripción, etc. Y en la siguiente figura vea que además puede revisar su propia PR ya que se muestran en la misma ventana los commits de la rama <code>featureA</code> y las diferencias entre <code>main</code> y la nueva rama:</p>
-<p><img alt="" src="../figuras/github_teams_PR_02.png" /></p>
+<p><img alt="figuras/github_teams_PR_02.png" src="../figuras/github_teams_PR_02.png" /></p>
 <h3 id="16-en-el-lado-del-repositorio-original">1.6. En el lado del repositorio original<a class="headerlink" href="#16-en-el-lado-del-repositorio-original" title="Permanent link">&para;</a></h3>
 <p>Una vez realizada la PR en el directorio forkeado el propietario del repositorio original recibe la petición y puede acceder a ella a través de la pestaña  <strong>Pull Requests</strong> que en este caso aparece con un 1 a su derecha indicando las PR pendientes:</p>
-<p><img alt="" src="../figuras/github_teams_PR_03.png" /></p>
+<p><img alt="figuras/github_teams_PR_03.pn" src="../figuras/github_teams_PR_03.png" /></p>
 <p>Si accedemos a las PR vemos que hay una pendiente (open):</p>
-<p><img alt="" src="../figuras/github_teams_PR_04.png" /></p>
+<p><img alt="figuras/github_teams_PR_04.png" src="../figuras/github_teams_PR_04.png" /></p>
 <p>Y si accede a ella podrá ver los commits, el código, etc:</p>
-<p><img alt="" src="../figuras/github_teams_PR_05.png" /></p>
+<p><img alt="figuras/github_teams_PR_05.pn" src="../figuras/github_teams_PR_05.png" /></p>
 <p>En este caso en vez de aceptar directamente los cambios vamos a realizar un comentario solicitando cambios en el código.</p>
-<p><img alt="" src="../figuras/github_teams_PR_06_comentario.png" /></p>
+<p><img alt="figuras/github_teams_PR_06_comentario.png" src="../figuras/github_teams_PR_06_comentario.png" /></p>
 <p>En este caso el usuario <code>clases.alu+01</code> ve los comentarios a su PR y modifica el código y los nombres de los ficheros (directamente desde el interfaz de GitHub, creando dos nuevos commits a la rama.</p>
-<p><img alt="" src="../figuras/github_teams_PR_07_commit_tras_comentario.png" /></p>
+<p><img alt="figuras/github_teams_PR_07_commit_tras_comentario.png" src="../figuras/github_teams_PR_07_commit_tras_comentario.png" /></p>
 <p>Y vea que en este caso no tiene que hacer una nueva PR puesto que los cambios en la rama <code>featureA</code> son accesibles desde la pestaña de las PR:</p>
-<p><img alt="" src="../figuras/github_teams_PR_08_commit_tras_comentario_en_propietario.png" /></p>
+<p><img alt="figuras/github_teams_PR_08_commit_tras_comentario_en_propietario.png" src="../figuras/github_teams_PR_08_commit_tras_comentario_en_propietario.png" /></p>
 <p>En ese momento si el propietario está de acuerdo puede hacer la fusión con <strong>Merge Pull Request</strong>. O puede cerrar la petición con un comentario y no aceptar los cambios.</p>
-<p><img alt="" src="../figuras/github_teams_PR_09_closed_sin_merge.png" /></p>
+<p><img alt="figuras/github_teams_PR_09_closed_sin_merge.png" src="../figuras/github_teams_PR_09_closed_sin_merge.png" /></p>
 <h3 id="17-pr-que-se-acepta">1.7. PR que se acepta<a class="headerlink" href="#17-pr-que-se-acepta" title="Permanent link">&para;</a></h3>
 <p>Preparamos un escenario donde se crea una nueva rama <code>ejemplos_git_merge</code></p>
 <div class="highlight"><pre><span></span><code>clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>git<span class="w"> </span>switch<span class="w"> </span>main<span class="w"> </span>
@@ -1532,24 +1491,24 @@ To<span class="w"> </span>https://github.com/clases-alu-01/CETI-PPS-Bloque02.git
 clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>
 </code></pre></div>
 <p>Ahora nos queda hacer el PR (tenemos el enlace en la salida del comando <code>git push</code>) y que el propietario lo acepte. De hecho sin usar el enlace al acceder a GitHub nos ofrece hacer el PR:</p>
-<p><img alt="" src="../figuras/github_teams_PR_10.png" /></p>
+<p><img alt="figuras/github_teams_PR_10.png" src="../figuras/github_teams_PR_10.png" /></p>
 <p>Accedemos a la ventana de creación de PR:</p>
-<p><img alt="" src="../figuras/github_teams_PR_11.png" /></p>
+<p><img alt="figuras/github_teams_PR_11.png" src="../figuras/github_teams_PR_11.png" /></p>
 <p>Y tras crearla vemos como queda:</p>
-<p><img alt="" src="../figuras/github_teams_PR_12.png" /></p>
+<p><img alt="figuras/github_teams_PR_12.png" src="../figuras/github_teams_PR_12.png" /></p>
 <p>Ahora vemos de nuevo como el propietario del repositorio vería el PR abierto:</p>
-<p><img alt="" src="../figuras/github_teams_PR_13.png" /></p>
+<p><img alt="figuras/github_teams_PR_13.png" src="../figuras/github_teams_PR_13.png" /></p>
 <p>Lo abrimos si queremos ver los detalles. Y en este caso lo aceptamos haciendo <strong>Merge Pull Request</strong></p>
-<p><img alt="" src="../figuras/github_teams_PR_14.png" /></p>
+<p><img alt="figuras/github_teams_PR_14.png" src="../figuras/github_teams_PR_14.png" /></p>
 <p>Ahora el PR está aceptado y cerrado, y los ficheros se han incorporado a la rama <code>main</code> del repositorio inicial.</p>
-<p><img alt="" src="../figuras/github_teams_PR_15.png" /></p>
+<p><img alt="figuras/github_teams_PR_15.png" src="../figuras/github_teams_PR_15.png" /></p>
 <p>Puede apreciar dos commits nuevos en <code>main</code>: el original de la rama fusionada y uno más de la fusión realizada:</p>
-<p><img alt="" src="../figuras/github_teams_PR_16.png" /></p>
+<p><img alt="figuras/github_teams_PR_16.png" src="../figuras/github_teams_PR_16.png" /></p>
 <p>Y confirmamos que el fichero se ha incorporado a <code>main</code>:</p>
-<p><img alt="" src="../figuras/github_teams_PR_17.png" /></p>
+<p><img alt="figuras/github_teams_PR_17.png" src="../figuras/github_teams_PR_17.png" /></p>
 <h2 id="2-actualizar-repositorios-clone-y-forked-upstream-del-original">2. Actualizar repositorios clone y forked (<em>upstream</em> del original)<a class="headerlink" href="#2-actualizar-repositorios-clone-y-forked-upstream-del-original" title="Permanent link">&para;</a></h2>
 <p>Ahora tenemos algo que considerar: el repositorio principal está actualizado, pero el repositorio <em>forkeado</em> y/o el clonado no. Además es posible que haya incorporaciones de código de otras personas que no tengamos tampoco.</p>
-<p>Los pasos a dar para conseguir que los repositorios clonados y forkeado estén  actualizados serían: </p>
+<p>Los pasos a dar para conseguir que los repositorios clonados y forkeado estén  actualizados serían:</p>
 <ol>
 <li>Agregar en local el repositorio Git original como un <strong>repositorio upstream</strong>. Eso nos permite extraer los cambios desde el repositorio original a la versión local (<code>git remote add upstream &lt;repo_original&gt;</code>).</li>
 <li>Descargar el repositorio original (<code>git fetch upstream</code>). Las confirmaciones (commits) del repositorio original serán almacenadas en una rama local llamada <code>upstream/main</code>.</li>
@@ -1621,12 +1580,12 @@ nada<span class="w"> </span>para<span class="w"> </span>hacer<span class="w"> </
 clases@vm:~/tmp/CETI-PPS-Bloque02$<span class="w"> </span>
 </code></pre></div>
 <p>Nota: <strong>es muy recomendable actualizar el repositorio local antes de hacer un PR</strong> ya que es más sencillo solucionar los posibles conflictos en local antes de incorporarlos a GitHub. Esta gráfica le puede servir de referencia: antes de hacer <code>push</code> y <code>pull request</code> actualizamos el repositorio en local a través de <em>upstream</em>.</p>
-<p><img alt="" src="../figuras/github_teams_fork-clone-upstream.png" /></p>
+<p><img alt="github_teams_fork-clone-upstream.png" src="../figuras/github_teams_fork-clone-upstream.png" /></p>
 <h2 id="3-git-flow">3. Git Flow<a class="headerlink" href="#3-git-flow" title="Permanent link">&para;</a></h2>
 <p>Hemos visto un ejemplo sencillo de cómo funciona el trabajo en equipo y las PR. Cuando la aplicación y el equipo crece es fundamental definir un flujo de trabajo.</p>
 <p>Eso es lo que pretende git flow: sistematizar el uso (y nombres) de las ramas, cómo incorporar nuevas características, resolver fallos ,etc.</p>
 <p>En este primer enlace <a href="https://www.programoergosum.es/tutoriales/flujo-de-trabajo-en-git-con-gitflow/">https://www.programoergosum.es/tutoriales/flujo-de-trabajo-en-git-con-gitflow/</a> se muestra una gráfica que resume todo el funcionamiento de git flow:</p>
-<p><img alt="" src="../figuras/gitflow-ramas.jpg" /></p>
+<p><img alt="figuras/gitflow-ramas.jpg" src="../figuras/gitflow-ramas.jpg" /></p>
 <blockquote>
 <p>El modelo de GitFlow cuenta con dos ramas principales, master y develop, y varias de soporte para estas que podrán ser ramas de feature, release y hotfix.</p>
 <ul>
@@ -1653,9 +1612,9 @@ git<span class="w"> </span>branch<span class="w"> </span>-D<span class="w"> </sp
 <div class="highlight"><pre><span></span><code><span class="w">  </span>git<span class="w"> </span>flow<span class="w"> </span>hotfix<span class="w"> </span>finish<span class="w"> </span>hotfix_branch
 </code></pre></div>
 </blockquote>
-<p>Si quiere profundizar más tiene un Curso en Openwebminar sobre <code>git flow</code>: https://openwebinars.net/academia/aprende/gitflow/</p>
+<p>Si quiere profundizar más tiene un Curso en Openwebminar sobre <code>git flow</code>: <a href="https://openwebinars.net/academia/aprende/gitflow/">https://openwebinars.net/academia/aprende/gitflow/</a></p>
 <h2 id="4-buenas-practicas">4. Buenas prácticas<a class="headerlink" href="#4-buenas-practicas" title="Permanent link">&para;</a></h2>
-<p>Cada empresa tiene su método de trabajo, etc. Pero hay una serie de recomendaciones generales que se pueden aplicar siempre</p>
+<p>Cada empresa tiene su método de trabajo, etc. Pero hay una serie de recomendaciones generales que se pueden aplicar siempre.</p>
 <h3 id="41-buenas-practicas-en-los-commits">4.1. Buenas prácticas en los commits<a class="headerlink" href="#41-buenas-practicas-en-los-commits" title="Permanent link">&para;</a></h3>
 <p>En este artículo "Cómo escribir un buen mensaje de commit en Git" <a href="https://geekytheory.com/como-escribir-buen-mensaje-commit-git/">https://geekytheory.com/como-escribir-buen-mensaje-commit-git/</a> tiene ejemplos. En particular hace referencia a la guía de estilo que se aplica en el desarrollo de angular, <em>Git Commit Guidelines</em> <a href="https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits">https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits</a></p>
 <h3 id="42-buenas-practicas-en-los-pr">4.2. Buenas prácticas en los PR<a class="headerlink" href="#42-buenas-practicas-en-los-pr" title="Permanent link">&para;</a></h3>
@@ -1667,64 +1626,42 @@ git<span class="w"> </span>branch<span class="w"> </span>-D<span class="w"> </sp
 <li>Haz Pull Requests pequeñas</li>
 <li>etc..</li>
 </ul>
-<h2 id="5-todo-revisar-ejercicios">5. TODO REVISAr Ejercicios<a class="headerlink" href="#5-todo-revisar-ejercicios" title="Permanent link">&para;</a></h2>
-<h3 id="51-ejercicio-01-hacer-proceso-pull-reqeust">5.1. Ejercicio 01: Hacer proceso Pull Reqeust<a class="headerlink" href="#51-ejercicio-01-hacer-proceso-pull-reqeust" title="Permanent link">&para;</a></h3>
-<p>Pasos:</p>
+<h2 id="5-enlaces">5. Enlaces<a class="headerlink" href="#5-enlaces" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Artículos tipo <em>Paso a paso</em></p>
 <ul>
-<li>Hacer fork del repositorio <code>CETI-PPS-aficiones</code> en GitHub.</li>
-<li>Clonar en local</li>
-<li>Cambiar a rama <code>develop</code></li>
-<li>Crear nueva rama (<code>feature-&lt;user&gt;</code>) y trabajar en ella</li>
-<li>Incluir un fichero en formato Markdown en el directorio <code>docs</code> con una breve reseña de su serie, libro o programa preferido y hacer commit del mismo.</li>
-<li>Modificar el fichero <code>indice.md</code> en la raíz y añada una línea con su nombre, su serie, libro o programa preferido, y un enlace al nombre del fichero creado previamente en el directorio <code>docs</code>. El formato de un enlace en MarkDown es <code>[Texto del enlace](ruta_al_documento)</code>. Vuelva a hacer commit para añadir este fichero al repositorio.</li>
-<li>Hacer <code>git push</code> al repositorio <em>forkeado</em> de la rama creada: <code>git push origin feature-&lt;user&gt;</code></li>
-<li>Observe que en el propio mensaje de push indica la posibilidad de hacer PR (y muestra un enlace para hacerlo)</li>
-<li>Hacer el Pull Request desde el enlace (o desde el repositorio <em>forkeado</em>). Tenga en cuenta que debe hacer el PR <strong>a la rama <code>develop</code> del repositorio principal</strong>.</li>
-<li>Esperar que se acepte su PR (o se le propongan modificaciones)</li>
+<li><a href="https://www.freecodecamp.org/espanol/news/como-hacer-tu-primer-pull-request-en-github/">Cómo hacer tu primer PR</a></li>
+<li><a href="https://blog.desdelinux.net/tutorial-simple-primer-pr-pull-request/">Tutorial simple para hacer tu primer PR</a>. <em>Añade sobre el anterior la configuración de remote y su uso tras la aceptación del PR final actualizar el repositorio local clonado</em></li>
+<li><a href="https://dev.to/colocodes/learn-how-to-use-git-and-github-in-a-team-like-a-pro-2dk7">Dos usuarios trabajando a través de PR</a>. <em>Añade el uso de "*issues</em>" y asignaciones.*</li>
 </ul>
-<p>Esperar a que se acepten varios PR de otros miembros del equipo en el repositorio original. En ese momento el repositorio clonado y el forkeado no  coinciden con original.
-- Configurar un remote upstream y hacer <code>fetch &amp; merge</code> del repositorio principal en su repositorio clonado y luego update del forkeado.</p>
-<h3 id="52-ejercicio-02-procesar-pull-request">5.2. Ejercicio 02: Procesar Pull request<a class="headerlink" href="#52-ejercicio-02-procesar-pull-request" title="Permanent link">&para;</a></h3>
+</li>
+<li>
+<p><a href="https://www.toolsqa.com/git/difference-between-git-clone-and-git-fork">Difference between Git Clone and Git Fork</a> <em>Explicación del proceso fork/clone/push/PR</em></p>
+</li>
+<li><a href="https://medium.com/@androidmatheny/using-git-and-github-on-group-projects-d636be2cdd4d">Github on Group Projects</a>. <em>Buena explicación gráfica de clone/fork/upstream.</em> </li>
+<li>
+<p>Enlaces sobre <strong>Git flow</strong>:</p>
 <ul>
-<li>Crear un repositorio en GitHub</li>
-<li>Añadir algunos fichero y commits.</li>
-<li>Crear rama <code>develop</code>.</li>
-<li>Que un compañero intente añadir un documento y modificar un  fichero existente sobre su repositorio y haga un PR</li>
-<li>Aceptar el PR sobre la rama develop o sugerir cambios antes de aceptar el PR.</li>
-</ul>
-<h2 id="6-enlaces">6. Enlaces<a class="headerlink" href="#6-enlaces" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Artículos tipo Paso a paso</li>
-<li>Cómo hacer tu primer PR, muy clarito: <a href="https://www.freecodecamp.org/espanol/news/como-hacer-tu-primer-pull-request-en-github/">https://www.freecodecamp.org/espanol/news/como-hacer-tu-primer-pull-request-en-github/</a></li>
-<li>Añade sobre el anterior la configuración de remote y su uso tras la aceptación del PR final actualizar el repositorio local clonado: <a href="https://blog.desdelinux.net/tutorial-simple-primer-pr-pull-request/">https://blog.desdelinux.net/tutorial-simple-primer-pr-pull-request/</a></li>
-<li>
-<p>Ejemplo paso a paso de dos usuarios trabajando a través de PR. Añade el uso de "<em>issues</em>" y asignaciones.  Potions online: <a href="https://dev.to/colocodes/learn-how-to-use-git-and-github-in-a-team-like-a-pro-2dk7">https://dev.to/colocodes/learn-how-to-use-git-and-github-in-a-team-like-a-pro-2dk7</a></p>
-</li>
-<li>
-<p>Explicación del proceso fork/clone/push/PR: <a href="https://www.toolsqa.com/git/difference-between-git-clone-and-git-fork">https://www.toolsqa.com/git/difference-between-git-clone-and-git-fork</a></p>
-</li>
-<li>Buena explicación gráfica de clone/fork/upstream: <a href="https://medium.com/@androidmatheny/using-git-and-github-on-group-projects-d636be2cdd4d">https://medium.com/@androidmatheny/using-git-and-github-on-group-projects-d636be2cdd4d</a></li>
-<li>
-<p>Diferencia entre fork y clone: <a href="https://www.toolsqa.com/git/difference-between-git-clone-and-git-fork/">https://www.toolsqa.com/git/difference-between-git-clone-and-git-fork/</a></p>
-</li>
-<li>
-<p>Git flow:</p>
-</li>
 <li>Gráfica resumen y comandos <code>git flow</code>: <a href="https://www.programoergosum.es/tutoriales/flujo-de-trabajo-en-git-con-gitflow/">https://www.programoergosum.es/tutoriales/flujo-de-trabajo-en-git-con-gitflow/</a></li>
-<li>Git flow: explica uso cada rama y comandos git flow y comandos git equivalentes: <a href="https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow">https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow</a></li>
-<li>
-<p>Curso Openwebminar git flow (1h:15m) : <a href="https://openwebinars.net/academia/aprende/gitflow/">https://openwebinars.net/academia/aprende/gitflow/</a></p>
+<li>Git flow: explica uso cada rama y comandos git flow y comandos git equivalentes: <a href="https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow">https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow</a><ul>
+<li>Curso Openwebminar git flow (1h:15m) : <a href="https://openwebinars.net/academia/aprende/gitflow/">https://openwebinars.net/academia/aprende/gitflow/</a></li>
+</ul>
+</li>
+</ul>
 </li>
 <li>
 <p>Buenas prácticas</p>
-</li>
-<li>en PR: <a href="https://geekytheory.com/como-crear-pull-request-buenas-practicas/">https://geekytheory.com/como-crear-pull-request-buenas-practicas/</a></li>
-<li>en commits: <a href="https://geekytheory.com/como-escribir-buen-mensaje-commit-git/">https://geekytheory.com/como-escribir-buen-mensaje-commit-git/</a></li>
-<li>en GitHub Issues: <a href="https://www.backhub.co/blog/best-practices-for-using-github-issues">https://www.backhub.co/blog/best-practices-for-using-github-issues</a><ul>
-<li>Sobre Issues: <a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues">https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues</a></li>
+<ul>
+<li><a href="https://geekytheory.com/como-crear-pull-request-buenas-practicas/">en PR</a></li>
+<li><a href="https://geekytheory.com/como-escribir-buen-mensaje-commit-git/">en commits</a></li>
+<li><a href="https://www.backhub.co/blog/best-practices-for-using-github-issues">en GitHub Issues</a></li>
 </ul>
 </li>
-</ul>
+<li>
+<p>About issues: <a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues">Learn how you can use GitHub Issues to track ideas, feedback, tasks, or bugs</a></p>
+</li>
+</ol>
 
 
 
