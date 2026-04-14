@@ -953,6 +953,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="5. Práctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio Opcional
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1317,6 +1332,21 @@
       5. Práctica
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="5. Práctica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicio-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicio Opcional
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1737,18 +1767,14 @@ Nissan was allegedly running a Bitbucket Git server with the default credentials
 <li>Deberá conectar ese repositorio con un repositorio remoto en GitHub. Este deberá ser público y deberá indicar su URL en la práctica.</li>
 <li>Verificar que su repositorio no tiene fugas con la utilidad <em>gitleaks</em>. Añada un fichero de entorno con alguna clave como la del tema para comprobar que si hay fugas las detecta. Finalmente incluya el fichero de variables de entorno al <code>.gitignore</code> para evitar que se añada al repositorio.</li>
 <li>Crear hook pre-commit en repositorio local para comprobar las fugas con gitleaks antes de hacer el commit.</li>
-<li>Añadir al hook pre-commit el linting del código. Probar con algún fichero python con errores para verificar.</li>
-<li>
-<p>Opcional: Usar la firma GPG en al menos un commit.</p>
-</li>
-<li>
-<p>Ejercicio: pre-commit con linter. Crear un pre-commit para una aplicación en Python que verifique:</p>
-</li>
-<li>
-<p>que el código Python supera el linting con <code>flake8</code> o <code>pylint</code>.</p>
-</li>
-<li>que el código Python supere un test unitario.</li>
+<li>Comprimir el directorio del repositorio y subir a la plataforma</li>
 </ol>
+<h3 id="ejercicio-opcional">Ejercicio Opcional<a class="headerlink" href="#ejercicio-opcional" title="Permanent link">&para;</a></h3>
+<p>Crear un pre-commit para una aplicación en Python que verifique:</p>
+<ul>
+<li>que el código Python supera el linting (<code>flake8</code> o <code>pylint</code>).</li>
+<li>que el código Python supere un test unitario.</li>
+</ul>
 <h2 id="6-anexos">6. Anexos<a class="headerlink" href="#6-anexos" title="Permanent link">&para;</a></h2>
 <h3 id="61-commits-verificados-con-gpg">6.1. Commits verificados con GPG<a class="headerlink" href="#61-commits-verificados-con-gpg" title="Permanent link">&para;</a></h3>
 <p>En GitHub puede ver la información de los commit realizados justo debajo del botón "<em>Code</em>" (el de color  verde). Justo a la izquierda del <em>hash</em> aparece una marca indicando si el <em>commit</em> tiene un autor "<strong>verificado</strong>";</p>
