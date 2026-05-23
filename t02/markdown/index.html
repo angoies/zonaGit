@@ -529,18 +529,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-basico" class="md-nav__link">
+  <a href="#3-sintaxis-basico" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Básico
+      3. sintaxis básico
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-tareas" class="md-nav__link">
+  <a href="#4-tareas-propuestas" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Tareas
+      4. Tareas propuestas
     </span>
   </a>
   
@@ -566,9 +566,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#52-especificaciones" class="md-nav__link">
+  <a href="#52-especificaciones-markdwon" class="md-nav__link">
     <span class="md-ellipsis">
-      5.2. Especificaciones
+      5.2. Especificaciones Markdwon
     </span>
   </a>
   
@@ -578,15 +578,6 @@
   <a href="#53-utilidades" class="md-nav__link">
     <span class="md-ellipsis">
       5.3. Utilidades
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#54-vscode-plugins" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.4. VScode plugins
     </span>
   </a>
   
@@ -1146,18 +1137,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-basico" class="md-nav__link">
+  <a href="#3-sintaxis-basico" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Básico
+      3. sintaxis básico
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-tareas" class="md-nav__link">
+  <a href="#4-tareas-propuestas" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Tareas
+      4. Tareas propuestas
     </span>
   </a>
   
@@ -1183,9 +1174,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#52-especificaciones" class="md-nav__link">
+  <a href="#52-especificaciones-markdwon" class="md-nav__link">
     <span class="md-ellipsis">
-      5.2. Especificaciones
+      5.2. Especificaciones Markdwon
     </span>
   </a>
   
@@ -1195,15 +1186,6 @@
   <a href="#53-utilidades" class="md-nav__link">
     <span class="md-ellipsis">
       5.3. Utilidades
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#54-vscode-plugins" class="md-nav__link">
-    <span class="md-ellipsis">
-      5.4. VScode plugins
     </span>
   </a>
   
@@ -1234,56 +1216,119 @@
 <h2 id="1-introduccion">1. Introducción<a class="headerlink" href="#1-introduccion" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>Markdown[9] is a lightweight markup language for creating formatted text using a plain-text editor. John Gruber and Aaron Swartz created Markdown in 2004 as a markup language that is appealing to human readers in its source code form.</p>
-<p>Its key design goal was readability, that the language be readable as-is,</p>
+<p>Its key design goal was <strong>readability</strong>, that the language be readable as-is,</p>
 </blockquote>
-<p>Ojo con las versiones. Por ejemplo la de GitHub nos dice:</p>
+<p>Tenga en cuenta que hay <em>versiones</em>. Por ejemplo GitHub nos dice:</p>
 <blockquote>
 <p>1.1What is GitHub Flavored Markdown?</p>
-<p>GitHub Flavored Markdown, often shortened as GFM, is the dialect of Markdown that is currently supported for user content on GitHub.com and GitHub Enterprise.</p>
-<p>This formal specification, based on the CommonMark Spec, defines the syntax and semantics of this dialect.</p>
-<p>GFM is a strict superset of CommonMark. All the features which are supported in GitHub user content and that are not specified on the original CommonMark Spec are hence known as extensions, and highlighted as such.</p>
-<p>While GFM supports a wide range of inputs, it’s worth noting that GitHub.com and GitHub Enterprise perform additional post-processing and sanitization after GFM is converted to HTML to ensure security and consistency of the website.</p>
+<p>GitHub Flavored Markdown, often shortened as GFM, <strong>is the dialect of Markdown</strong> that is currently supported for user content on GitHub.com and GitHub Enterprise.</p>
+<p>This formal specification, <strong>based on the CommonMark Spec</strong>, defines the syntax and semantics of this dialect.</p>
+<p>GFM is a strict <strong>superset of CommonMark</strong>. All the features which are supported in GitHub user content and that are not specified on the original CommonMark Spec are hence known as extensions, and highlighted as such.
+</p>
 </blockquote>
 <h2 id="2-utilizacion">2. Utilización<a class="headerlink" href="#2-utilizacion" title="Permanent link">&para;</a></h2>
+<p>Posibles usos de Markdown</p>
 <ul>
-<li>Documentación (permite control de versiones)</li>
-<li>GitHub (publica directamente en formato Markdown) o en GitHub Pages usando <code>mkdocs</code></li>
-<li>Mapas (markmap)</li>
-<li>Presentaciones (marp)</li>
+<li>Documentación técnica (permite control de versiones).</li>
+<li>Uso en los repositorios de GitHub (preprocesa el formato Markdown para previsualizarlo).</li>
+<li>Uso conjunto con la herramienta <code>mkdocs</code> y GitHub Pages.</li>
+<li>Otros posibles usos:</li>
+<li>Esquemas con la herramienta <code>markmap</code>.</li>
+<li>Presentaciones tipo slides con la herramienta <code>marp</code>.</li>
 </ul>
-<h2 id="3-basico">3. Básico<a class="headerlink" href="#3-basico" title="Permanent link">&para;</a></h2>
-<p>En general debe ser suficiente este conjunto de marcas:</p>
+<h2 id="3-sintaxis-basico">3. sintaxis básico<a class="headerlink" href="#3-sintaxis-basico" title="Permanent link">&para;</a></h2>
+<p>En general debe ser suficiente conocer este conjunto de marcas:</p>
 <ul>
 <li>Cabeceras de nivel</li>
 <li>Párrafos</li>
 <li>Citas</li>
+<li>strong / em</li>
 <li>Listas</li>
 <li>Enlaces</li>
 <li>Imágenes</li>
-<li>Código</li>
-<li>Bloques de código</li>
-<li>Separadores</li>
-<li>strong / em</li>
+<li>Código en línea</li>
+<li>Bloques de código (con especificación del lenguaje)</li>
 </ul>
-<p>Y puede ampliar con otras marcas:</p>
+<p>Puede ampliar con otras marcas como:</p>
 <ul>
 <li>Tablas</li>
 <li>Listas de tareas</li>
 <li>emoticonos</li>
+<li>separadores</li>
 </ul>
-<h2 id="4-tareas">4. Tareas<a class="headerlink" href="#4-tareas" title="Permanent link">&para;</a></h2>
+<p>En este enlace encontrará ejemplos sencillos del uso de todas estas marcas:
+<a href="https://tutorialmarkdown.com/sintaxis">Sintaxis básica de Markdown</a>. Se muestra a continuación un resumen abreviado de las mismas.</p>
+<p>Primer ejemplo: cabeceras, párrafos, cita, negrita y cursiva</p>
+<div class="highlight"><pre><span></span><code><span class="gh"># Título: Cabecera nivel 1</span>
+
+Esto es un párrafo, no lleva marcas. 
+
+El texto en negita o cursiva se marca con <span class="sb">`*`</span>. Por ejemplo <span class="gs">**destacamos esta parte del párrafo en negrita**</span> y <span class="ge">*esta otra en cursiva*</span>.  
+
+<span class="gu">## 1. Apartado: Cabecera nivel 2</span>
+
+Ejemplo de cita: según los autores de Markdwon
+
+<span class="k">&gt; </span><span class="ge">Thus, “Markdown” is two things: (1) a plain text formatting syntax; and (2) a software tool, written in Perl, that converts the plain text formatting to HTML. See the Syntax page for details pertaining to Markdown’s formatting syntax. You can try it out, right now, using the online Dingus.</span>
+
+<span class="gu">### 1.1 Subapartado: Cabecera nivel 3</span>
+</code></pre></div>
+<p>Segundo ejemplo: listas.</p>
+<div class="highlight"><pre><span></span><code>Lista numerada (basta usar un número seguid ode punto y espacio)
+
+<span class="k">1.</span> item 01
+<span class="k">1.</span> item 02
+<span class="k">1.</span> item 03
+
+O lista no numerada (se puede usar también el caracter <span class="sb">`*`</span> o <span class="sb">`+`</span>)
+
+<span class="k">-</span><span class="w"> </span>item 01
+<span class="k">-</span><span class="w"> </span>item 02
+<span class="w">    </span><span class="k">*</span><span class="w"> </span>sublista 01
+<span class="w">    </span><span class="k">*</span><span class="w"> </span>sublista 02
+<span class="k">-</span><span class="w"> </span>item 03
+</code></pre></div>
+<p>Tercer ejemplo: código</p>
+<div class="highlight"><pre><span></span><code>Se puede marcar código en linea <span class="sb">`x = media (lista);`</span> o en bloque:
+
+```css
+h1 {
+    color: red;
+}
+</code></pre></div>
+<p>Cuarto ejemplo: enlaces e imágenes</p>
+<div class="highlight"><pre><span></span><code><span class="gu">## Enlaces </span>
+
+<span class="k">*</span><span class="w"> </span>[<span class="nt">Texto del enlace</span>](<span class="na">destino del enlace</span>)
+<span class="k">*</span><span class="w"> </span>&lt;destino del enlace&gt;
+
+<span class="gu">## Imágenes</span>
+
+![<span class="nt">texto alt</span>](<span class="na">http://ruta_a_la_imagen</span>)
+![<span class="nt">texto alt</span>](<span class="na">ruta_relativa_local_a_la_imagen</span>)
+</code></pre></div>
+<h2 id="4-tareas-propuestas">4. Tareas propuestas<a class="headerlink" href="#4-tareas-propuestas" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Crear documento Markdown. Incluir distintos tipos de marcas.</li>
-<li>Ampliar: añadir plugins VScode. Intentar numeración  de secciones/cabeceras, añadir tabla de contenidos o imprimir a PDF.</li>
-<li>Ampliar: añadir plugin VScode. Crear esquema que se traduce a mapa (markmap)</li>
+<li>
+<p>Ampliar: añadir plugins en VScode para:</p>
+<ul>
+<li>Intentar numeración de secciones/cabeceras</li>
+<li>Añadir tabla de contenidos</li>
+<li>Convertir a formatos HTML, PDF o imágenes.</li>
+</ul>
+</li>
+<li>
+<p>Ampliar: añadir plugin <code>markmap</code> en VScode para crear esquemas (HTML o imagen) a partir de listas.</p>
+</li>
 </ul>
 <h2 id="5-enlaces">5. Enlaces<a class="headerlink" href="#5-enlaces" title="Permanent link">&para;</a></h2>
 <h3 id="51-tutoriales">5.1. Tutoriales<a class="headerlink" href="#51-tutoriales" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Markdown original: <a href="https://daringfireball.net/projects/markdown/basics">https://daringfireball.net/projects/markdown/basics</a></li>
 <li>Tutorial: <a href="https://tutorialmarkdown.com/sintaxis">https://tutorialmarkdown.com/sintaxis</a></li>
+<li>Markdown original: <a href="https://daringfireball.net/projects/markdown/basics">https://daringfireball.net/projects/markdown/basics</a></li>
 </ul>
-<h3 id="52-especificaciones">5.2. Especificaciones<a class="headerlink" href="#52-especificaciones" title="Permanent link">&para;</a></h3>
+<h3 id="52-especificaciones-markdwon">5.2. Especificaciones Markdwon<a class="headerlink" href="#52-especificaciones-markdwon" title="Permanent link">&para;</a></h3>
 <ul>
 <li>CommonMark Spec: <a href="https://spec.commonmark.org/0.30/">https://spec.commonmark.org/0.30/</a></li>
 <li>Github Markdown: <a href="https://github.github.com/gfm/#what-is-github-flavored-markdown">https://github.github.com/gfm/#what-is-github-flavored-markdown</a></li>
@@ -1293,13 +1338,15 @@
 <li>Markmap: <a href="https://markmap.js.org/repl">https://markmap.js.org/repl</a></li>
 <li>Marp: <a href="https://marp.app/">https://marp.app/</a></li>
 <li>Typora: <a href="https://typora.io/">https://typora.io/</a></li>
-</ul>
-<h3 id="54-vscode-plugins">5.4. VScode plugins<a class="headerlink" href="#54-vscode-plugins" title="Permanent link">&para;</a></h3>
+<li>
+<p>Plugins VS-code:</p>
 <ul>
-<li>Markmap:<a href="https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode">https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode</a></li>
+<li>Markmap: <a href="https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode">https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode</a></li>
 <li>Marp: <a href="https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode">https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode</a></li>
 <li>MD All in One: <a href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one">https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one</a></li>
 <li>Markdown to PDF: <a href="https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf">https://marketplace.visualstudio.com/items?itemName=yzane.markdown-pdf</a></li>
+</ul>
+</li>
 </ul>
 
 

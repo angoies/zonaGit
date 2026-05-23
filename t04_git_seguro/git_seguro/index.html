@@ -1778,11 +1778,16 @@ $<span class="s2"> </span>
 <h3 id="44-ejemplos-de-fugas-por-git">4.4. Ejemplos de fugas por git<a class="headerlink" href="#44-ejemplos-de-fugas-por-git" title="Permanent link">&para;</a></h3>
 <ul>
 <li>
+<p><a href="https://unaaldia.hispasec.com/2024/04/empleados-de-microsoft-expusieron-contrasenas-internas-en-github.html">Empleados de Microsoft expusieron contraseñas internas en Github</a></p>
+<blockquote>
+<p>El servidor de almacenamiento de Azure albergaba código, scripts y archivos de configuración que contenían contraseñas, claves y credenciales utilizadas por los empleados de Microsoft para acceder a otras bases de datos y sistemas internos. Sin embargo, el servidor de almacenamiento no estaba protegido con una contraseña y podía ser accedido por cualquier persona.</p>
+</blockquote>
+</li>
+<li>
 <p><a href="https://securereading.com/data-of-16-million-brazilian-covid-19-patients-exposed-online/">Data of 16 million Brazilian COVID-19 patients exposed online</a>:</p>
 <blockquote>
-<p>The personal and healthcare records of 16 million Brazilian COVID-19 patients, including government representatives, exposed online.</p>
-<p>The leak came to limelight after a GitHub user noticed the spreadsheet containing the passwords on the personal GitHub account of an employee working with Albert Einstein Hospital in the city of Sao Paulo.</p>
-<p>The spreadsheet included the login credentials for systems including E-SUS-VE and Sivep-Gripe, two government databases used to store information on COVID-19 patients.</p>
+<p>The leak came to limelight after a GitHub user noticed the spreadsheet containing the passwords on the personal GitHub account of an employee working with Albert Einstein Hospital in the city of Sao Paulo.
+</p>
 </blockquote>
 </li>
 <li>
@@ -1790,35 +1795,53 @@ $<span class="s2"> </span>
 </li>
 </ul>
 <blockquote>
-<p>Nissan source code leaked online after Git repo misconfiguration
-Nissan was allegedly running a Bitbucket Git server with the default credentials of admin/admin.</p>
+<p>Nissan source code leaked online after Git repo misconfiguration:
+Nissan was allegedly running a Bitbucket <strong>Git server with the default credentials of admin/admin</strong>.</p>
 </blockquote>
 <h3 id="45-github-seguro-recomendaciones">4.5. GitHub seguro: Recomendaciones<a class="headerlink" href="#45-github-seguro-recomendaciones" title="Permanent link">&para;</a></h3>
 <p>En este apartado se enumeran algunas recomendaciones específicas para GitHub tomadas de <a href="https://cycode.com/blog/security-best-practices-for-github/">Security Best Practices for Github</a>.</p>
 <p>Entre ellas:</p>
 <ul>
-<li>Autenticación:</li>
-<li>Usar <a href="https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-two-factor-authentication-for-your-organization/requiring-two-factor-authentication-in-your-organization">doble factor de autenticación</a></li>
-<li>limitar la IP de acceso a GitHub</li>
-<li>Configuración de los repositorios</li>
-<li>fijar al mínimo los permisos base para los repositorio de la organización a ninguno. Esto obkliga a especificar los permisos en cada repositorio</li>
+<li>
+<p>Autenticación:</p>
+</li>
+<li>
+<p>Usar <a href="https://docs.github.com/en/organizations/keeping-your-organization-secure/managing-two-factor-authentication-for-your-organization/requiring-two-factor-authentication-in-your-organization">doble factor de autenticación</a></p>
+</li>
+<li>
+<p>limitar la IP de acceso a GitHub</p>
+</li>
+<li>
+<p>Configuración de los repositorios</p>
+</li>
+<li>
+<p>fijar al mínimo los permisos base para los repositorio de la organización a ninguno. Esto obkliga a especificar los permisos en cada repositorio</p>
+</li>
 <li>Controlar el acceso de loscolaboradores externos, fijando sus permisos al mínimo posible.</li>
 <li>Revisar permisos de acceso en la configuración del repositorio:
     <img alt="figuras/github-seguro-01.png" src="../figuras/github-seguro-01.png" /></li>
-<li>Controlar el forking de un repositorio:<ul>
+<li>
+<p>Controlar el forking de un repositorio:</p>
+<ul>
 <li>Es dificil manejar la seguridad de cada fork.</li>
 <li>Puede crearse un copia del fork en la cuenta personal del usuario lo cual puede ser otro problema de seguridad.</li>
 </ul>
 </li>
-<li>No permitir cambios en la visibilidad de los repositorios (público/privado)</li>
+<li>
+<p>No permitir cambios en la visibilidad de los repositorios (público/privado)</p>
+</li>
 <li>Elegir si los miembros pueden crear repositorios en tu organización o no. Si se permite que los miembros creen repositorios, elegir si pueden crear tanto repositorios públicos como privados o solo públicos.</li>
-<li>Habilitar las reglas de protección de ramas (<em>branch protection rules</em>)<ul>
+<li>
+<p>Habilitar las reglas de protección de ramas (<em>branch protection rules</em>)</p>
+<ul>
 <li>Revisar el código antes de hacer un merge</li>
 <li>Forzar un número de revisores para permitir un commit</li>
 <li>Obligar a que los commits estén firmados</li>
 </ul>
 </li>
-<li>Seguridad en el código fuente y<ul>
+<li>
+<p>Seguridad en el código fuente y</p>
+<ul>
 <li>Habilitar chequeo de dependencias</li>
 <li>Revisar los logs</li>
 <li>Revisar el acceso de terceros y de aplicaciones a GitHub</li>
